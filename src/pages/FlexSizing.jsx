@@ -1,12 +1,15 @@
 import CodeBlock from '../components/CodeBlock';
 
+/**
+ * Flex and Sizing utilities documentation page component
+ * @returns {JSX.Element} The rendered FlexSizing page
+ */
 export default function FlexSizing() {
   return (
-    <article>
-      <h2>Flex & Sizing Utilities</h2>
-      <p>
-        Complete utilities for flexbox layouts, sizing, and display. The <code>.flex</code> class
-        includes <code>gap: 1rem</code> by default.
+    <article className="glass p-6 rounded-xl">
+      <h2 className="text-2xl font-bold mb-2">Flex &amp; Sizing Utilities</h2>
+      <p className="text-secondary mb-4">
+        Complete Tailwind-inspired flexbox layout, alignment, gap, and sizing utilities.
       </p>
 
       <h3>Flex Container</h3>

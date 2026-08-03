@@ -48,18 +48,22 @@ const sections = [
   },
 ];
 
+/**
+ * Documentation navigation sidebar component
+ * @returns {JSX.Element} The rendered sidebar component
+ */
 export default function Sidebar() {
   return (
-    <aside>
+    <aside className="glass p-4 rounded-xl border">
       {sections.map((section) => (
-        <div key={section.title}>
-          <h4>{section.title}</h4>
+        <div key={section.title} className="mb-4">
+          <h4 className="text-xs uppercase tracking-wider text-muted font-bold mb-2">{section.title}</h4>
           {section.links.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
               end={link.to === '/'}
-              className={({ isActive }) => isActive ? 'active' : ''}
+              className={({ isActive }) => isActive ? 'active badge-glow' : 'hover-lift'}
             >
               {link.label}
             </NavLink>

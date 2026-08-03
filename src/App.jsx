@@ -31,8 +31,10 @@ const themes = [
   { value: 'old_material.css', label: 'Old Material' },
 ];
 
+/**
+ * Main Application Layout component featuring glassmorphic navigation header
+ */
 function Layout() {
-  const [theme, setTheme] = useState('lila.css');
   const [isDark, setIsDark] = useState(false);
   const location = useLocation();
 
@@ -47,22 +49,25 @@ function Layout() {
     setIsDark(newTheme === 'dark');
   };
 
-  const handleThemeChange = (e) => {
-    const val = e.target.value;
-    setTheme(val);
-    const stylesheet = document.getElementById('theme-stylesheet');
-    if (stylesheet) {
-      stylesheet.setAttribute('href', '/' + val);
-    }
-  };
-
   return (
     <>
-      <header>
-        <nav>
-          <h2 className="font-semibold text-xl">Lila CSS</h2>
+      <header className="sticky top-0 z-50 border-b bg-surface">
+        <nav className="flex items-center justify-between py-3">
           <div className="flex items-center gap-2">
-            <button className="fill" onClick={toggleMode}>
+            <span className="text-2xl">🐦</span>
+            <h2 className="font-bold text-xl tracking-tight">Blue Bird CSS</h2>
+            <span className="badge badge-secondary badge-sm hidden-sm">v1.0</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <a 
+              href="https://github.com/seip25/Blue-bird-css" 
+              target="_blank" 
+              rel="noreferrer"
+              className="badge badge-outline hover-lift flex items-center gap-1"
+            >
+              <span>GitHub ⭐</span>
+            </a>
+            <button className="secondary hover-lift" onClick={toggleMode}>
               {isDark ? '☀️ Light' : '🌙 Dark'}
             </button>
           </div>
@@ -77,7 +82,7 @@ function Layout() {
       </main>
 
       <footer>
-        <p className="text-muted">Lila CSS © {new Date().getFullYear()}</p>
+        <p className="text-muted">Blue Bird CSS © {new Date().getFullYear()} — Built for modern & sleek web development</p>
       </footer>
     </>
   );

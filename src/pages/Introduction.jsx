@@ -1,22 +1,22 @@
 import CodeBlock from '../components/CodeBlock';
 
+/**
+ * Introduction documentation page component showcasing Blue Bird CSS features
+ * @returns {JSX.Element} The rendered Introduction page
+ */
 export default function Introduction() {
   const handleDownload = () => {
-    const themeStylesheet = document.getElementById('theme-stylesheet');
-    const cssFile = themeStylesheet ? themeStylesheet.getAttribute('href').replace(/^\//, '') : 'lila.css';
-    const jsFile = 'lila.js';
-
     const cssLink = document.createElement('a');
-    cssLink.href = '/lila-css/' + cssFile;
-    cssLink.download = cssFile.split('/').pop();
+    cssLink.href = 'bluebird.css';
+    cssLink.download = 'bluebird.css';
     document.body.appendChild(cssLink);
     cssLink.click();
     document.body.removeChild(cssLink);
 
     setTimeout(() => {
       const jsLink = document.createElement('a');
-      jsLink.href = '/lila-css/' + jsFile;
-      jsLink.download = jsFile;
+      jsLink.href = 'bluebird.js';
+      jsLink.download = 'bluebird.js';
       document.body.appendChild(jsLink);
       jsLink.click();
       document.body.removeChild(jsLink);
@@ -25,130 +25,160 @@ export default function Introduction() {
 
   return (
     <>
-      <article className="text-center">
-        <h1 className="font-bold">Lila CSS Framework</h1>
-        <p className="text-secondary">
-          A semantic, modern CSS framework inspired by Pico.css, Material Design and shadcn/ui.
+      <article className="border rounded-xl text-center p-8 mb-8 shadow-sm bg-surface">
+        <span className="text-4xl mb-3 inline-block">🐦</span>
+        <h1 className="font-bold text-4xl mb-3 tracking-tight">Blue Bird CSS</h1>
+        <p className="text-secondary text-lg max-w-2xl mx-auto mb-6">
+          A lightweight, semantic, modern CSS framework built with pure shadcn/ui design principles and Tailwind utility power.
         </p>
-        <p>This documentation provides a complete guide to all the components and utilities available in Lila CSS.</p>
-        <a href="https://github.com/seip25/lila-css" role="button">
-          Give it a ⭐ on GitHub
-        </a>
+        <div className="flex justify-center items-center gap-3 flex-wrap my-6">
+          <span className="badge badge-primary badge-lg">Semantic HTML</span>
+          <span className="badge badge-secondary badge-lg">shadcn Design</span>
+          <span className="badge badge-outline badge-lg">Tailwind Utilities</span>
+          <span className="badge badge-success badge-lg">Zero Build Required</span>
+        </div>
+        <div className="flex justify-center items-center gap-4 mt-8 flex-wrap">
+          <button className="primary hover-lift px-6 py-2" onClick={handleDownload}>
+            Download bluebird.css + bluebird.js
+          </button>
+          <a 
+            href="https://github.com/seip25/Blue-bird-css" 
+            role="button" 
+            className="outline hover-lift px-6 py-2"
+            target="_blank" 
+            rel="noreferrer"
+          >
+            Star on GitHub ⭐
+          </a>
+        </div>
       </article>
 
-      <article>
-        <h2>Install</h2>
-        <p>Include the Lila CSS file in your HTML file via CDN:</p>
+      <article className="glass p-6 rounded-xl mb-6">
+        <h2 className="text-2xl font-semibold mb-2">Quick CDN Install</h2>
+        <p className="text-muted mb-4">Include Blue Bird CSS directly in your HTML file via CDN:</p>
         <CodeBlock language="html">
-{`<link rel="stylesheet" href="https://seip25.github.io/lila-css/lila.css" />
-<script src="https://seip25.github.io/lila-css/lila.js"><\/script>`}
+{`<link rel="stylesheet" href="https://seip25.github.io/Blue-bird-css/bluebird.css" />
+<script src="https://seip25.github.io/Blue-bird-css/bluebird.js"><\/script>`}
         </CodeBlock>
-        <p>Or download the files and include them locally:</p>
-        <button className="primary" onClick={handleDownload}>Download lila.css + lila.js</button>
+        <p className="mt-4 text-muted">Or download files locally and include them in your head tag:</p>
         <CodeBlock language="html">
-{`<link rel="stylesheet" href="lila.css" />
-<script src="lila.js"><\/script>`}
+{`<link rel="stylesheet" href="bluebird.css" />
+<script src="bluebird.js"><\/script>`}
         </CodeBlock>
       </article>
 
-      <article>
-        <h2>Semantic HTML First</h2>
-        <p>
-          Lila CSS is built around <strong>semantic HTML</strong>. Most elements are styled automatically
-          — you rarely need utility classes. Here's a complete page with zero classes:
+      <article className="glass p-6 rounded-xl mb-6">
+        <h2 className="text-2xl font-semibold mb-2">Semantic HTML First</h2>
+        <p className="mb-4">
+          Blue Bird CSS is designed around <strong>semantic HTML5 elements</strong>. Base tags (headers, buttons, forms, tables, cards) look stunning out of the box with zero class boilerplate:
         </p>
         <CodeBlock language="html">
 {`<!DOCTYPE html>
-<html data-theme="light">
+<html data-theme="dark">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lila CSS - Lightweight Modern CSS Framework</title>
-    <link rel="stylesheet" href="lila.css" />
-    <script src="lila.js"><\/script>
+    <title>Blue Bird CSS App</title>
+    <link rel="stylesheet" href="bluebird.css" />
+    <script src="bluebird.js"><\/script>
 </head>
 <body>
-  <header>
-    <nav>
-      <h2>My App</h2>
-      <div class="flex">
-        <button class="outline">Login</button>
-        <button>Register</button>
+  <header className="glass">
+    <nav className="flex items-center justify-between">
+      <h2>App Name</h2>
+      <div className="flex items-center gap-2">
+        <button className="outline">Login</button>
+        <button className="badge-glow">Get Started</button>
       </div>
     </nav>
   </header>
 
   <main>
-    <article>
-      <h1>Welcome</h1>
-      <p>This page uses zero CSS classes.</p>
-      <a href="https://seip25.github.io/lila-css/" role="button">Get Started</a>
+    <article className="glass-card">
+      <h1 className="text-gradient">Modern CSS Framework</h1>
+      <p>Clean semantic markup enhanced with modern design aesthetics.</p>
     </article>
-
-    <div class="grid">
-      <article>
-        <h2>Card 1</h2>
-        <p>This is a card.</p>
-      </article>
-      <article>
-        <h2>Card 2</h2>
-        <p>This is a card.</p>
-      </article>
-      <article>
-        <h2>Card 3</h2>
-        <p>This is a card.</p>
-      </article>
-    </div>
   </main>
-
-  <footer>
-    <p>© 2026 My App</p>
-  </footer>
 </body>
 </html>`}
         </CodeBlock>
 
-        <h3>What Lila applies automatically:</h3>
-        <table>
+        <h3 className="text-lg font-bold mt-6 mb-3">Automatic Semantic Enhancements</h3>
+        <table className="w-full">
           <thead>
             <tr>
-              <th>Element</th>
-              <th>Default style</th>
+              <th>Element / Selector</th>
+              <th>Automatic Enhancement</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td><code>body</code></td><td>Surface background, flex column, min-height 100vh</td></tr>
-            <tr><td><code>header</code></td><td>Background color + shadow</td></tr>
-            <tr><td><code>header &gt; nav</code></td><td>Container width, flex space-between</td></tr>
-            <tr><td><code>main</code></td><td>Container width, flex: 1</td></tr>
-            <tr><td><code>footer</code></td><td>Centered text, border-top</td></tr>
-            <tr><td><code>article / section</code></td><td>Card-like with bg, padding, shadow</td></tr>
-            <tr><td><code>button</code></td><td>Primary style + ripple effect</td></tr>
-            <tr><td><code>input / select / textarea</code></td><td>Full width, outlined, focus ring</td></tr>
-            <tr><td><code>aside</code> (in main)</td><td>Sticky sidebar, mobile drawer</td></tr>
-            <tr><td><code>.flex</code></td><td>display: flex + gap: 1rem</td></tr>
-            <tr><td><code>.grid</code></td><td>Auto-fit grid + gap: 1rem</td></tr>
+            <tr><td><code>body</code></td><td>Surface background, flex column layout, min-height 100vh</td></tr>
+            <tr><td><code>header</code></td><td>Glassmorphism backdrop-blur header with subtle borders</td></tr>
+            <tr><td><code>header &gt; nav</code></td><td>Auto-centered container with flex space-between alignment</td></tr>
+            <tr><td><code>article / section</code></td><td>Glass card background, smooth border radii &amp; subtle shadows</td></tr>
+            <tr><td><code>button</code></td><td>Primary theme styling with interactive material ripple effects</td></tr>
+            <tr><td><code>.badge</code></td><td>Pill badge chip with multiple color &amp; glow variants</td></tr>
+            <tr><td><code>.avatar</code></td><td>Rounded user avatar container with group overlapping support</td></tr>
+            <tr><td><code>[data-tooltip]</code></td><td>Instant CSS-only floating tooltip on hover</td></tr>
           </tbody>
         </table>
       </article>
 
-      <article>
-        <h2>Dark Mode</h2>
-        <p>Toggle between light and dark themes by changing the <code>data-theme</code> attribute:</p>
-        <CodeBlock language="html">
-{`<!-- Light (default) -->
-<html data-theme="light">
+      <article className="border rounded-xl p-6 mb-6 bg-surface shadow-sm">
+        <h2 className="text-2xl font-semibold mb-2">New shadcn UI Components</h2>
+        <p className="text-muted mb-4">High-utility components added to Blue Bird CSS for modern web apps:</p>
 
-<!-- Dark -->
-<html data-theme="dark">`}
-        </CodeBlock>
-        <CodeBlock language="javascript">
-{`// Toggle with JavaScript
-document.documentElement.setAttribute(
-  'data-theme',
-  document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light'
-);`}
-        </CodeBlock>
+        <h3 className="text-lg font-bold mt-6 mb-2">Alerts &amp; Callouts</h3>
+        <div className="flex flex-col gap-3 my-4">
+          <div className="alert alert-info">
+            <span className="text-xl">ℹ️</span>
+            <div>
+              <div className="alert-title">Information Alert</div>
+              <p className="alert-description">This is a clean informational alert callout built in shadcn style.</p>
+            </div>
+          </div>
+          <div className="alert alert-success">
+            <span className="text-xl">✅</span>
+            <div>
+              <div className="alert-title">Success Alert</div>
+              <p className="alert-description">Changes have been saved successfully.</p>
+            </div>
+          </div>
+          <div className="alert alert-destructive">
+            <span className="text-xl">🚨</span>
+            <div>
+              <div className="alert-title">Destructive Alert</div>
+              <p className="alert-description">Your session has expired. Please log in again.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 className="text-lg font-bold mt-6 mb-2">Tabs Navigation</h3>
+        <div className="tabs my-4">
+          <div className="tab-list">
+            <button className="tab-trigger active">Account</button>
+            <button className="tab-trigger">Password</button>
+            <button className="tab-trigger">Notifications</button>
+          </div>
+        </div>
+
+        <h3 className="text-lg font-bold mt-6 mb-2">Breadcrumb &amp; Toggle Switch</h3>
+        <div className="flex items-center justify-between flex-wrap gap-4 my-4 p-4 border rounded-lg bg-background">
+          <nav className="breadcrumb">
+            <a href="#" className="breadcrumb-item">Home</a>
+            <span className="breadcrumb-separator">/</span>
+            <a href="#" className="breadcrumb-item">Docs</a>
+            <span className="breadcrumb-separator">/</span>
+            <span className="text-primary font-semibold">Components</span>
+          </nav>
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-medium">Notifications</span>
+            <label className="switch">
+              <input type="checkbox" defaultChecked />
+              <span className="switch-slider"></span>
+            </label>
+          </div>
+        </div>
       </article>
     </>
   );

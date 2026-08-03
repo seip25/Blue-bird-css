@@ -1,8 +1,18 @@
 import CodeBlock from '../components/CodeBlock';
 
+/**
+ * Snackbar documentation page component showing toast notifications
+ * @returns {JSX.Element} The rendered Snackbar page
+ */
 export default function Snackbar() {
   const showSnackbar = (type) => {
-    if (window.lila) {
+    if (window.bluebird) {
+      window.bluebird('snackbar', {
+        message: `This is a ${type} snackbar!`,
+        duration: 3000,
+        type,
+      });
+    } else if (window.lila) {
       window.lila('snackbar', {
         message: `This is a ${type} snackbar!`,
         duration: 3000,
@@ -12,79 +22,39 @@ export default function Snackbar() {
   };
 
   return (
-    <article>
-      <h2>Snackbar</h2>
-      <p>
-        Brief notification messages that appear at the bottom of the screen and auto-dismiss.
-        Powered by <code>lila.js</code>. Call <code>lila('snackbar', options)</code> from JavaScript.
+    <article className="glass p-6 rounded-xl">
+      <h2 className="text-2xl font-bold mb-2">Snackbar</h2>
+      <p className="text-secondary mb-4">
+        Brief toast notification messages that appear dynamically at the bottom of the screen.
+        Powered by <code>bluebird.js</code>. Call <code>bluebird('snackbar', options)</code> or <code>snackbar(options)</code>.
       </p>
 
-      <h3>Types</h3>
-      <p>Click each button to see the snackbar type:</p>
-      <div className="example">
-        <div className="flex flex-wrap gap-2">
-          <button className="bg-green" onClick={() => showSnackbar('success')}>Success</button>
-          <button className="bg-red" onClick={() => showSnackbar('error')}>Error</button>
-          <button className="bg-yellow" onClick={() => showSnackbar('warning')}>Warning</button>
-          <button onClick={() => showSnackbar('info')}>Info</button>
-          <button className="secondary" onClick={() => showSnackbar('secondary')}>Secondary</button>
+      <h3 className="text-xl font-bold mt-6 mb-2">Notification Types</h3>
+      <p className="mb-3">Click any button to trigger interactive toasts:</p>
+      <div className="example glass-card p-4 rounded-xl my-4">
+        <div className="flex flex-wrap gap-3">
+          <button className="bg-green hover-lift" onClick={() => showSnackbar('success')}>Success</button>
+          <button className="bg-red hover-lift" onClick={() => showSnackbar('error')}>Error</button>
+          <button className="bg-yellow hover-lift" onClick={() => showSnackbar('warning')}>Warning</button>
+          <button className="badge-glow hover-lift" onClick={() => showSnackbar('info')}>Info Glow</button>
+          <button className="secondary hover-lift" onClick={() => showSnackbar('secondary')}>Secondary</button>
         </div>
       </div>
 
-      <h3>Usage</h3>
+      <h3 className="text-xl font-bold mt-6 mb-2">JavaScript API</h3>
       <CodeBlock language="html">
-{`<!-- 1. Include lila.js -->
-<script src="lila.js"><\/script>
+{`<!-- 1. Include bluebird.js -->
+<script src="bluebird.js"><\/script>
 
-<!-- 2. Call from JavaScript -->
+<!-- 2. Trigger notification -->
 <script>
-  lila('snackbar', {
-    message: 'Changes saved successfully!',
-    type: 'success',     // success | error | warning | info | secondary
-    duration: 3000       // ms (default: 3000)
+  bluebird('snackbar', {
+    message: 'Settings updated successfully!',
+    type: 'success',
+    duration: 3000
   });
 <\/script>`}
       </CodeBlock>
-
-      <h3>Inline Example</h3>
-      <CodeBlock language="html">
-{`<button onclick="lila('snackbar', {
-  message: 'Item deleted',
-  type: 'error',
-  duration: 5000
-})">Delete</button>
-
-<button onclick="lila('snackbar', {
-  message: 'Settings updated',
-  type: 'success'
-})">Save</button>`}
-      </CodeBlock>
-
-      <h3>Options</h3>
-      <table>
-        <thead>
-          <tr><th>Option</th><th>Type</th><th>Default</th><th>Description</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><code>message</code></td><td>string</td><td><code>""</code></td><td>The text to display</td></tr>
-          <tr><td><code>type</code></td><td>string</td><td><code>"info"</code></td><td>success, error, warning, info, secondary</td></tr>
-          <tr><td><code>duration</code></td><td>number</td><td><code>3000</code></td><td>Auto-dismiss time in ms</td></tr>
-        </tbody>
-      </table>
-
-      <h3>Type Colors</h3>
-      <table>
-        <thead>
-          <tr><th>Type</th><th>Color</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><code>success</code></td><td>Green (--green-600)</td></tr>
-          <tr><td><code>error</code></td><td>Red (--destructive)</td></tr>
-          <tr><td><code>warning</code></td><td>Yellow (--yellow-600)</td></tr>
-          <tr><td><code>info</code></td><td>Primary (--primary)</td></tr>
-          <tr><td><code>secondary</code></td><td>Secondary (--secondary)</td></tr>
-        </tbody>
-      </table>
     </article>
   );
 }

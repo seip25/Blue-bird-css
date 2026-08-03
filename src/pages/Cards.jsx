@@ -1,22 +1,61 @@
 import CodeBlock from '../components/CodeBlock';
 
+/**
+ * Cards documentation page component displaying standard cards, glassmorphic cards and glow effects
+ * @returns {JSX.Element} The rendered Cards page
+ */
 export default function Cards() {
   return (
-    <article>
-      <h2>Card / Content Block</h2>
-      <p>
-        Use <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, or <code>.card</code> to create
-        content blocks. They all share the same base style: background, padding, border-radius, and shadow.
+    <article className="glass p-6 rounded-xl">
+      <h2 className="text-2xl font-bold mb-2">Card / Content Block</h2>
+      <p className="text-secondary mb-4">
+        Semantic <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>.card</code>, and modern <code>.glass-card</code> variants.
       </p>
 
-      <h3>Semantic Cards</h3>
-      <p>Just use HTML tags — no classes needed:</p>
-      <div className="example grid cols-2">
-        <article>
+      <h3 className="text-xl font-bold mt-6 mb-2">Glassmorphism &amp; Glow Cards</h3>
+      <div className="example grid cols-2 gap-4">
+        <article className="glass-card hover-lift border-glow p-5">
+          <div className="flex items-center gap-2 mb-2">
+            <span className="avatar avatar-sm">AI</span>
+            <span className="badge badge-glow">Gemini Aesthetic</span>
+          </div>
+          <h4 className="text-gradient text-xl font-bold">Glassmorphic Card</h4>
+          <p className="text-secondary">Subtle blur backdrop filter with smooth borders and glow effects.</p>
+        </article>
+
+        <article className="glass-card glow-purple hover-lift p-5">
+          <div className="flex items-center gap-2 mb-2">
+            <span className="badge badge-secondary">Purple Glow</span>
+          </div>
+          <h4 className="text-xl font-bold">Glow Purple Variant</h4>
+          <p className="text-secondary">Glowing shadow borders for key highlight elements and dashboards.</p>
+        </article>
+      </div>
+      <CodeBlock language="html">
+{`<!-- Glassmorphic Card -->
+<article class="glass-card border-glow p-5">
+  <div class="flex items-center gap-2 mb-2">
+    <span class="avatar avatar-sm">AI</span>
+    <span class="badge badge-glow">Gemini Aesthetic</span>
+  </div>
+  <h4 class="text-gradient">Glassmorphic Card</h4>
+  <p>Content...</p>
+</article>
+
+<!-- Glow Purple Variant -->
+<article class="glass-card glow-purple p-5">
+  <h4 class="text-xl font-bold">Glow Purple</h4>
+  <p>Content...</p>
+</article>`}
+      </CodeBlock>
+
+      <h3 className="text-xl font-bold mt-6 mb-2">Semantic Cards</h3>
+      <div className="example grid cols-2 gap-4">
+        <article className="hover-lift">
           <h4>Article Card</h4>
           <p>Self-contained content block using <code>&lt;article&gt;</code>.</p>
         </article>
-        <section>
+        <section className="hover-lift">
           <h4>Section Card</h4>
           <p>A thematic grouping using <code>&lt;section&gt;</code>.</p>
         </section>
@@ -31,107 +70,6 @@ export default function Cards() {
   <h4>Section Card</h4>
   <p>Content...</p>
 </section>`}
-      </CodeBlock>
-
-      <h3>Card with Header & Footer</h3>
-      <p>
-        Add <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> inside for structured content.
-        Images in headers get full-bleed treatment.
-      </p>
-      <div className="example grid cols-2">
-        <article>
-          <header>
-            <img src="https://placehold.co/600x300" alt="Card image" />
-          </header>
-          <h4>Card Title</h4>
-          <p>Card content with an image header.</p>
-          <footer>
-            <button className="ghost">Cancel</button>
-            <button>Save</button>
-          </footer>
-        </article>
-        <article>
-          <header>
-            <h3>Dashboard</h3>
-          </header>
-          <p>Card with a text header and action footer.</p>
-          <footer>
-            <a role="button" className="secondary">View Details</a>
-          </footer>
-        </article>
-      </div>
-      <CodeBlock language="html">
-{`<article>
-  <header>
-    <img src="photo.jpg" alt="" />
-  </header>
-  <h4>Card Title</h4>
-  <p>Content...</p>
-  <footer>
-    <button class="ghost">Cancel</button>
-    <button>Save</button>
-  </footer>
-</article>
-
-<article>
-  <header>
-    <h3>Dashboard</h3>
-  </header>
-  <p>Content...</p>
-  <footer>
-    <a role="button" class="secondary">View Details</a>
-  </footer>
-</article>`}
-      </CodeBlock>
-
-      <h3>Card with .card Class</h3>
-      <p>Use <code>.card</code> on a <code>&lt;div&gt;</code> for the same styling:</p>
-      <div className="example">
-        <div className="card">
-          <h4>Div Card</h4>
-          <p>Same styling as article/section, using a <code>.card</code> class.</p>
-        </div>
-      </div>
-      <CodeBlock language="html">
-{`<div class="card">
-  <h4>Title</h4>
-  <p>Content...</p>
-</div>`}
-      </CodeBlock>
-
-      <h3>Card Variants</h3>
-      <div className="example grid cols-2">
-        <article className="secondary">
-          <h4>Surface Card</h4>
-          <p>Uses <code>.secondary</code> or <code>.surface</code> for a muted background.</p>
-        </article>
-        <article className="border">
-          <h4>Bordered Card</h4>
-          <p>Add <code>.border</code> for an explicit border.</p>
-        </article>
-      </div>
-      <CodeBlock language="html">
-{`<!-- Surface variant -->
-<article class="secondary">...</article>
-<article class="surface">...</article>
-
-<!-- With explicit border -->
-<article class="border">...</article>
-
-<!-- Shadow variants -->
-<article class="shadow">...</article>
-<article class="shadow-none">...</article>`}
-      </CodeBlock>
-
-      <h3>CSS Applied</h3>
-      <CodeBlock language="css">
-{`article, section, .card {
-  background-color: var(--background);
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: var(--shadow);
-}`}
       </CodeBlock>
     </article>
   );
