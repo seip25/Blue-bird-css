@@ -1,3 +1,68 @@
+function lila(component, options) {
+  if (component === "snackbar") {
+    let snackbar = document.getElementById("snackbar");
+
+    if (!snackbar) {
+      snackbar = document.createElement("div");
+      snackbar.id = "snackbar";
+      document.body.appendChild(snackbar);
+    }
+
+    snackbar.className = "show";
+
+    if (options.type) {
+      snackbar.classList.add(options.type);
+    } else {
+      snackbar.classList.add("info");
+    }
+
+    snackbar.textContent = options.message || "";
+    setTimeout(() => {
+      snackbar.classList.add("show");
+    }, 10);
+
+    const duration = options.duration || 3000;
+    if (snackbar.timeoutId) {
+      clearTimeout(snackbar.timeoutId);
+    }
+
+    snackbar.timeoutId = setTimeout(function () {
+      snackbar.className = "";
+    }, duration);
+  }
+}
+function snackbar(options){
+    let snackbar = document.getElementById("snackbar");
+
+    if (!snackbar) {
+      snackbar = document.createElement("div");
+      snackbar.id = "snackbar";
+      document.body.appendChild(snackbar);
+    }
+
+    snackbar.className = "show";
+
+    if (options.type) {
+      snackbar.classList.add(options.type);
+    } else {
+      snackbar.classList.add("info");
+    }
+
+    snackbar.textContent = options.message || "";
+    setTimeout(() => {
+      snackbar.classList.add("show");
+    }, 10);
+
+    const duration = options.duration || 3000;
+    if (snackbar.timeoutId) {
+      clearTimeout(snackbar.timeoutId);
+    }
+
+    snackbar.timeoutId = setTimeout(function () {
+      snackbar.className = "";
+    }, duration);
+}
+ 
 document.addEventListener("click", function (e) {
   const btn = e.target.closest("button, a[role='button']");
   if (!btn || btn.classList.contains("fab")) return;
@@ -16,22 +81,22 @@ document.addEventListener("click", function (e) {
   btn.appendChild(ripple);
   ripple.addEventListener("animationend", () => ripple.remove());
 });
-
+ 
 (function () {
   function initDrawer() {
     const mainEl = document.querySelector("main");
     const aside = mainEl ? mainEl.querySelector(":scope > aside") : null;
     if (!aside || document.querySelector(".lila-drawer")) return;
-
+ 
     const overlay = document.createElement("div");
     overlay.className = "lila-drawer-overlay";
     document.body.appendChild(overlay);
-
+ 
     const drawer = document.createElement("div");
     drawer.className = "lila-drawer";
     drawer.innerHTML = aside.innerHTML;
     document.body.appendChild(drawer);
-
+ 
     const toggle = document.createElement("button");
     toggle.className = "lila-drawer-toggle";
     toggle.innerHTML = "☰";
@@ -86,41 +151,18 @@ document.addEventListener("click", function (e) {
   } else {
     setTimeout(initDrawer, 100);
   }
+ 
+  let debounceTimer;
+  const observer = new MutationObserver(function () {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(function () {
+      const drawer = document.querySelector(".lila-drawer");
+      const aside = document.querySelector("main > aside");
+      if (drawer && aside) {
+        drawer.innerHTML = aside.innerHTML;
+      }
+    }, 200);
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
 })();
-
-function lila(component, options) {
-  if (component === "snackbar") {
-    snackbar(options);
-  }
-}
-function snackbar(options) {
-  let snackbar = document.getElementById("snackbar");
-
-  if (!snackbar) {
-    snackbar = document.createElement("div");
-    snackbar.id = "snackbar";
-    document.body.appendChild(snackbar);
-  }
-
-  snackbar.className = "show";
-
-  if (options.type) {
-    snackbar.classList.add(options.type);
-  } else {
-    snackbar.classList.add("info");
-  }
-
-  snackbar.textContent = options.message || "";
-  setTimeout(() => {
-    snackbar.classList.add("show");
-  }, 10);
-
-  const duration = options.duration || 3000;
-  if (snackbar.timeoutId) {
-    clearTimeout(snackbar.timeoutId);
-  }
-
-  snackbar.timeoutId = setTimeout(function () {
-    snackbar.className = "";
-  }, duration);
-}
