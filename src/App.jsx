@@ -24,12 +24,13 @@ import Shadows from './pages/Shadows';
 import Borders from './pages/Borders';
 import BottomNav from './pages/BottomNav';
 import AsideDrawer from './pages/AsideDrawer';
+import ComponentsDoc from './pages/ComponentsDoc';
 
-const themes = [
-  { value: 'lila.css', label: 'Default' },
-  { value: 'material.css', label: 'Material' },
-  { value: 'old_material.css', label: 'Old Material' },
-];
+// const themes = [
+//   { value: 'lila.css', label: 'Default' },
+//   { value: 'material.css', label: 'Material' },
+//   { value: 'old_material.css', label: 'Old Material' },
+// ];
 
 /**
  * Main Application Layout component featuring glassmorphic navigation header
@@ -63,11 +64,12 @@ function Layout() {
               href="https://github.com/seip25/Blue-bird-css" 
               target="_blank" 
               rel="noreferrer"
-              className="badge badge-outline hover-lift flex items-center gap-1"
+              role='button'
+              className="secondary flex items-center gap-1"
             >
               <span>GitHub ⭐</span>
             </a>
-            <button className="secondary hover-lift" onClick={toggleMode}>
+            <button className="secondary py-3 px-4" onClick={toggleMode}>
               {isDark ? '☀️ Light' : '🌙 Dark'}
             </button>
           </div>
@@ -101,6 +103,7 @@ function App() {
         <Route path="/grid" element={<Grid />} />
         <Route path="/spacing" element={<Spacing />} />
         <Route path="/cards" element={<Cards />} />
+        <Route path="/components-doc" element={<ComponentsDoc />} />
         <Route path="/accordion" element={<Accordion />} />
         <Route path="/dialog" element={<Dialog />} />
         <Route path="/dropdown" element={<Dropdown />} />

@@ -28,6 +28,7 @@ const sections = [
     title: 'Components',
     links: [
       { to: '/cards', label: 'Card Content Block' },
+      { to: '/components-doc', label: 'shadcn Components' },
       { to: '/accordion', label: 'Accordion' },
       { to: '/dialog', label: 'Dialog (Modal)' },
       { to: '/dropdown', label: 'Dropdown' },
