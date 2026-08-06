@@ -29,7 +29,7 @@ export default function Buttons() {
       </p>
       <div className="example border p-4 rounded-xl my-4 flex flex-col gap-4">
         <div className="flex items-center gap-3 flex-wrap">
-          <button className="primary hover-lift">Primary</button>
+          <button  >Primary</button>
           <button className="secondary hover-lift">Secondary</button>
           <button className="outline hover-lift">Outline</button>
           <button className="destructive hover-lift">Destructive</button>
@@ -46,7 +46,12 @@ export default function Buttons() {
         </div>
       </div>
       <CodeBlock language="html">
-{`<button class="primary btn-sm">Small Primary</button>
+        {`<button >Primary</button>
+<button class="secondary ">Secondary</button>
+<button class="outline">Outline</button>
+<button class="destructive">Destructive</button>
+<button class="ghost">Ghost</button>
+<button class="primary btn-sm">Small Primary</button>
 <button class="secondary btn-md">Medium Secondary</button>
 <button class="outline btn-lg">Large Outline</button>
 <button class="primary btn-icon">+</button>`}
@@ -78,7 +83,7 @@ export default function Buttons() {
         </div>
       </div>
       <CodeBlock language="html">
-{`<button class="bg-blue">Blue</button>
+        {`<button class="bg-blue">Blue</button>
 <button class="bg-purple">Purple</button>
 <button class="bg-emerald">Emerald</button>
 <button class="btn-orange">Orange (btn-orange)</button>`}
@@ -107,7 +112,7 @@ export default function Buttons() {
         </div>
       </div>
       <CodeBlock language="html">
-{`<button class="bg-primary-subtle">Primary Subtle (bg-primary-subtle)</button>
+        {`<button class="bg-primary-subtle">Primary Subtle (bg-primary-subtle)</button>
 <button class="bg-blue-subtle">Blue Subtle (bg-blue-100)</button>
 <button class="btn-subtle-emerald">Emerald Subtle (btn-subtle-emerald)</button>
 <button class="btn-subtle-purple">Purple Subtle (btn-subtle-purple)</button>`}
@@ -125,7 +130,7 @@ export default function Buttons() {
         <button className="btn-link">Link Button (Button Tag)</button>
       </div>
       <CodeBlock language="html">
-{`<button class="primary">Solid Button</button>
+        {`<button class="primary">Solid Button</button>
 <a href="#" class="btn-link">Link Button (Anchor)</a>
 <button class="btn-link">Link Button (Button)</button>`}
       </CodeBlock>
@@ -150,7 +155,7 @@ export default function Buttons() {
         </div>
       </div>
       <CodeBlock language="html">
-{`<button class="glow-cyberpunk">Cyberpunk Neon</button>
+        {`<button class="glow-cyberpunk">Cyberpunk Neon</button>
 <button class="primary glow-pulse">Energy Pulse</button>
 <button class="bg-blue glow-blue">Glow Blue</button>
 <button class="bg-pink glow-pink">Glow Pink</button>`}
