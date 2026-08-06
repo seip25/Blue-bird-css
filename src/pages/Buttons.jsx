@@ -135,30 +135,65 @@ export default function Buttons() {
 <button class="btn-link">Link Button (Button)</button>`}
       </CodeBlock>
 
-      {/* Cyberpunk Glow Buttons */}
-      <h3 className="text-xl font-bold mt-6 mb-2">5. Cyberpunk Glow Buttons</h3>
+      {/* Cyberpunk Glow & Futuristic Buttons */}
+      <h3 className="text-xl font-bold mt-6 mb-2">5. Cyberpunk Neon &amp; Futuristic Buttons</h3>
       <p className="text-muted mb-3">
-        Interactive futuristic buttons with neon Cyberpunk glow shadows and energy pulse keyframes:
+        Interactive futuristic buttons with neon Cyberpunk glow shadows, chamfered cut corners (<code>.btn-cyberpunk-cut</code>), RGB glitch effects (<code>.btn-cyberpunk-glitch</code>), and multiple neon color palettes (cyan, blue, red, pink, yellow, green, purple, orange, indigo, white):
       </p>
-      <div className="example border p-4 rounded-xl my-4">
-        <div className="flex items-center gap-3 flex-wrap mb-4">
-          <button className="glow-cyberpunk">Cyberpunk Neon</button>
-          <button className="primary glow-pulse">Energy Pulse</button>
+      <div className="example border p-4 rounded-xl my-4 flex flex-col gap-4 bg-surface">
+        <div>
+          <h4 className="text-sm font-semibold text-muted mb-2">Standard Neon Glow Colors</h4>
+          <div className="flex items-center gap-3 flex-wrap">
+            <button className="btn-cyberpunk">Neon Cyan</button>
+            <button className="btn-cyberpunk-blue">Neon Blue</button>
+            <button className="btn-cyberpunk-red">Neon Red</button>
+            <button className="btn-cyberpunk-pink">Neon Pink</button>
+            <button className="btn-cyberpunk-yellow">Neon Yellow</button>
+            <button className="btn-cyberpunk-green">Neon Green</button>
+            <button className="btn-cyberpunk-purple">Neon Purple</button>
+            <button className="btn-cyberpunk-orange">Neon Orange</button>
+            <button className="btn-cyberpunk-indigo">Neon Indigo</button>
+            <button className="btn-cyberpunk-white">Chrome White</button>
+          </div>
         </div>
-        <div className="flex items-center gap-3 flex-wrap">
-          <button className="bg-blue glow-blue">Glow Blue</button>
-          <button className="bg-indigo glow-indigo">Glow Indigo</button>
-          <button className="bg-pink glow-pink">Glow Pink</button>
-          <button className="bg-red glow-red">Glow Red</button>
-          <button className="bg-violet glow-purple">Glow Purple</button>
-          <button className="bg-green glow-green">Glow Green</button>
+
+        <div>
+          <h4 className="text-sm font-semibold text-muted mb-2">Chamfered Cut Corner Modifier (<code>.btn-cyberpunk-cut</code>)</h4>
+          <div className="flex items-center gap-3 flex-wrap">
+            <button className="btn-cyberpunk btn-cyberpunk-cut">Cut Cyan</button>
+            <button className="btn-cyberpunk-pink btn-cyberpunk-cut">Cut Pink</button>
+            <button className="btn-cyberpunk-yellow btn-cyberpunk-cut">Cut Yellow</button>
+            <button className="btn-cyberpunk-green btn-cyberpunk-cut">Cut Green</button>
+            <button className="btn-cyberpunk-red btn-cyberpunk-cut">Cut Red</button>
+          </div>
+        </div>
+
+        <div>
+          <h4 className="text-sm font-semibold text-muted mb-2">Animations &amp; Special Effects</h4>
+          <div className="flex items-center gap-3 flex-wrap">
+            <button className="btn-cyberpunk btn-cyberpunk-glitch">RGB Glitch</button>
+            <button className="btn-cyberpunk-pink btn-cyberpunk-glitch">Glitch Pink</button>
+            <button className="primary glow-pulse">Energy Pulse</button>
+          </div>
         </div>
       </div>
       <CodeBlock language="html">
-        {`<button class="glow-cyberpunk">Cyberpunk Neon</button>
-<button class="primary glow-pulse">Energy Pulse</button>
-<button class="bg-blue glow-blue">Glow Blue</button>
-<button class="bg-pink glow-pink">Glow Pink</button>`}
+        {`<!-- Cyberpunk Neon Colors -->
+<button class="btn-cyberpunk">Neon Cyan</button>
+<button class="btn-cyberpunk-blue">Neon Blue</button>
+<button class="btn-cyberpunk-red">Neon Red</button>
+<button class="btn-cyberpunk-pink">Neon Pink</button>
+<button class="btn-cyberpunk-yellow">Neon Yellow</button>
+<button class="btn-cyberpunk-green">Neon Green</button>
+<button class="btn-cyberpunk-purple">Neon Purple</button>
+
+<!-- Cut Corner Chamfer Modifier -->
+<button class="btn-cyberpunk-pink btn-cyberpunk-cut">Cut Corner Pink</button>
+<button class="btn-cyberpunk-yellow btn-cyberpunk-cut">Cut Corner Yellow</button>
+
+<!-- RGB Glitch & Pulse Effects -->
+<button class="btn-cyberpunk btn-cyberpunk-glitch">RGB Glitch</button>
+<button class="primary glow-pulse">Energy Pulse</button>`}
       </CodeBlock>
 
       <h3 className="text-xl font-bold mt-6 mb-2">Badges &amp; Tooltips</h3>

@@ -49,7 +49,7 @@ A lightweight, semantic, modern design framework inspired by **shadcn/ui aesthet
 - **Subtle & Soft Tint Buttons**: Tinted soft background buttons (`bg-primary-subtle`, `bg-blue-subtle`, `bg-green-subtle`, `bg-purple-subtle`, `bg-red-subtle`, `bg-pink-subtle`, etc.).
 - **Perfectly Aligned Link Buttons**: Text link buttons (`.btn-link` or `a.link`) engineered to match standard button height and baseline vertical alignment exactly when placed side-by-side with solid buttons.
 - **Filled Floating Inputs**: Floating label inputs supporting both Outline style (`.floating`) and Material/Modern filled container style (`.floating-fill`).
-- **Cyberpunk Glow Buttons**: Interactive futuristic buttons with vibrant multi-layer neon box shadows (`.glow-cyberpunk`, `.glow-pulse`, `.glow-blue`, `.glow-pink`, `.glow-purple`, `.glow-green`).
+- **Cyberpunk Neon & Futuristic Buttons**: Interactive futuristic buttons with multi-layer neon glow shadows, chamfered cut corners (`.btn-cyberpunk-cut`), RGB glitch effects (`.btn-cyberpunk-glitch`), and color palettes (`.btn-cyberpunk-cyan`, `.btn-cyberpunk-blue`, `.btn-cyberpunk-red`, `.btn-cyberpunk-pink`, `.btn-cyberpunk-yellow`, `.btn-cyberpunk-green`, `.btn-cyberpunk-purple`, `.btn-cyberpunk-orange`, `.btn-cyberpunk-indigo`, `.btn-cyberpunk-white`).
 - **4-Direction Drawers**: Standalone slide-out panels from `.drawer-left`, `.drawer-right`, `.drawer-top`, or `.drawer-bottom` (mobile bottom sheet).
 - **Automatic Mobile Navigation Drawer**: Transforms the desktop `<aside>` sidebar inside `<main>` into a responsive mobile drawer (`☰`) on screens `<768px` via `bluebird.js`.
 - **Mobile Touch & Swipe Carousel**: Touch swipe physics, desktop mouse drag, arrow controls, indicator dots, and automatic cycling via `data-autoplay="true"`.
@@ -339,14 +339,27 @@ On small viewports (`<768px`), `bluebird.js` automatically hides the desktop `<a
 <button class="btn-link">Link Button (Button)</button>
 ```
 
-#### 4. Neon Cyberpunk & Glow Buttons
+#### 4. Neon Cyberpunk & Futuristic Buttons
 
 ```html
-<button class="glow-cyberpunk">Cyberpunk Neon</button>
+<!-- Cyberpunk Color Palette -->
+<button class="btn-cyberpunk">Neon Cyan</button>
+<button class="btn-cyberpunk-blue">Neon Blue</button>
+<button class="btn-cyberpunk-red">Neon Red</button>
+<button class="btn-cyberpunk-pink">Neon Pink</button>
+<button class="btn-cyberpunk-yellow">Neon Yellow</button>
+<button class="btn-cyberpunk-green">Neon Green</button>
+<button class="btn-cyberpunk-purple">Neon Purple</button>
+<button class="btn-cyberpunk-orange">Neon Orange</button>
+<button class="btn-cyberpunk-indigo">Neon Indigo</button>
+
+<!-- Chamfered Cut Corner Modifier -->
+<button class="btn-cyberpunk-pink btn-cyberpunk-cut">Cut Pink</button>
+<button class="btn-cyberpunk-yellow btn-cyberpunk-cut">Cut Yellow</button>
+
+<!-- Glitch & Pulse Effects -->
+<button class="btn-cyberpunk btn-cyberpunk-glitch">RGB Glitch</button>
 <button class="primary glow-pulse">Energy Pulse</button>
-<button class="bg-blue glow-blue">Glow Blue</button>
-<button class="bg-pink glow-pink">Glow Pink</button>
-<button class="bg-violet glow-purple">Glow Purple</button>
 ```
 
 ---
