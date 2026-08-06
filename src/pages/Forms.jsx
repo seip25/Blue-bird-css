@@ -80,28 +80,12 @@ export default function Forms() {
           <input type="email" id="float-email" placeholder=" " />
           <label htmlFor="float-email">Email Address</label>
         </div>
-
-        <h4 className="text-sm font-semibold mb-3 mt-4">Filled Floating Inputs (.floating-fill)</h4>
-        <div className="floating-fill">
-          <input type="text" id="float-filled-name" placeholder=" " />
-          <label htmlFor="float-filled-name">Full Name (Filled Style)</label>
-        </div>
-        <div className="floating-fill">
-          <input type="password" id="float-filled-pass" placeholder=" " />
-          <label htmlFor="float-filled-pass">Password (Filled Style)</label>
-        </div>
       </div>
       <CodeBlock language="html">
 {`<!-- Outline Floating Input -->
 <div class="floating">
   <input type="email" id="email" placeholder=" " />
   <label for="email">Email Address</label>
-</div>
-
-<!-- Filled Container Floating Input -->
-<div class="floating-fill">
-  <input type="text" id="name" placeholder=" " />
-  <label for="name">Full Name (Filled Style)</label>
 </div>`}
       </CodeBlock>
 
