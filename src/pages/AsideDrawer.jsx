@@ -1,46 +1,169 @@
 import CodeBlock from '../components/CodeBlock';
 
 /**
- * Aside & Drawer navigation documentation page component
+ * Aside & Drawer navigation documentation page component featuring 4-direction drawers and automatic mobile drawer logic
  * @returns {JSX.Element} The rendered AsideDrawer page
  */
 export default function AsideDrawer() {
+  const triggerDrawer = (id) => {
+    if (window.bluebird) {
+      window.bluebird('drawer', { id, action: 'toggle' });
+    }
+  };
+
   return (
     <>
-      <article className="glass p-6 rounded-xl">
-        <h2 className="text-2xl font-bold mb-2">Aside &amp; Drawer</h2>
+      <article className="border rounded-xl p-6 mb-6 bg-surface shadow-sm">
+        <h2 className="text-2xl font-bold mb-2">Aside &amp; Drawer System</h2>
         <p className="text-secondary mb-4">
-          Blue Bird CSS provides native <code>&lt;aside&gt;</code> support inside <code>&lt;main&gt;</code>.
-          On desktop, the aside acts as a sticky sidebar. On mobile screens (&lt;768px), the aside
-          automatically hides and a slide-in drawer appears via <code>bluebird.js</code>.
+          Blue Bird CSS provides two powerful drawer paradigms: <strong>Automatic Responsive Mobile Navigation</strong> and <strong>Custom 4-Direction Standalone Drawers</strong>.
         </p>
 
-        <h3 className="text-xl font-bold mt-6 mb-2">Basic Usage</h3>
-        <p className="mb-3">
-          Simply place an <code>&lt;aside&gt;</code> as a direct child of <code>&lt;main&gt;</code>,
-          followed by any content element:
+        {/* Section 1: Automatic Mobile Navigation Drawer */}
+        <h3 className="text-xl font-bold mt-6 mb-2">1. Automatic Mobile Navigation Drawer</h3>
+        <p className="mb-3 text-secondary">
+          When you place a standard <code>&lt;aside&gt;</code> element inside <code>&lt;main&gt;</code>, Blue Bird CSS automatically handles responsive behavior:
         </p>
+        <ul className="list-disc pl-5 mb-4 text-sm text-secondary gap-1">
+          <li><strong>Desktop (&gt;768px):</strong> Renders as a fixed/sticky sidebar on the left side of the layout.</li>
+          <li><strong>Mobile (&lt;768px):</strong> Automatically hides the desktop sidebar and injects a mobile menu button (<code>☰</code>) into the header. Clicking the button opens a smooth slide-over navigation drawer.</li>
+          <li><strong>MutationObserver Sync:</strong> <code>bluebird.js</code> continuously watches the DOM. If your app dynamically updates the sidebar links (e.g. React state changes or SPA route changes), the mobile drawer updates instantly without page reload.</li>
+        </ul>
+
         <CodeBlock language="html">
 {`<main>
   <aside>
     <h4>Navigation</h4>
-    <a href="/page1">Page 1</a>
-    <a href="/page2">Page 2</a>
-    <a href="/page3">Page 3</a>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/analytics">Analytics</a>
+    <a href="/settings">Settings</a>
   </aside>
   <div>
-    <h1>Page Title</h1>
-    <p>Content goes here...</p>
+    <h1>Main Content Area</h1>
+    <p>Your main page contents go here...</p>
   </div>
-</main>`}
+</main>
+
+<!-- Include bluebird.js for zero-config mobile drawer handling -->
+<script src="bluebird.js"></script>`}
         </CodeBlock>
 
-        <h3 className="text-xl font-bold mt-6 mb-2">Automatic Mobile Drawer</h3>
+        {/* Section 2: 4-Direction Standalone Drawers */}
+        <h3 className="text-xl font-bold mt-8 mb-2">2. Standalone 4-Direction Drawers</h3>
+        <p className="text-secondary mb-4">
+          Create slide-out panels from any direction: <strong>Left</strong>, <strong>Right</strong>, <strong>Top</strong>, or <strong>Bottom</strong> (mobile bottom sheets). Trigger them using <code>data-drawer-target="drawer-id"</code> or JavaScript <code>bluebird('drawer', &#123; id: '...', action: 'open' &#125;)</code>.
+        </p>
+
+        {/* Interactive Triggers */}
+        <div className="example border p-4 rounded-xl my-4">
+          <h4 className="font-semibold text-sm mb-3">Interactive Demo — Click to Test Directions:</h4>
+          <div className="flex items-center gap-3 flex-wrap">
+            <button className="bg-blue-subtle" onClick={() => triggerDrawer('demo-drawer-left')}>
+              Open Left Drawer
+            </button>
+            <button className="bg-purple-subtle" onClick={() => triggerDrawer('demo-drawer-right')}>
+              Open Right Drawer
+            </button>
+            <button className="bg-green-subtle" onClick={() => triggerDrawer('demo-drawer-top')}>
+              Open Top Drawer
+            </button>
+            <button className="bg-pink-subtle" onClick={() => triggerDrawer('demo-drawer-bottom')}>
+              Open Bottom Sheet Drawer
+            </button>
+          </div>
+        </div>
+
         <CodeBlock language="html">
-{`<!-- Include bluebird.js for automatic drawer initialization -->
-<script src="bluebird.js"><\/script>`}
+{`<!-- Trigger Buttons -->
+<button data-drawer-target="my-left-drawer">Open Left</button>
+<button data-drawer-target="my-right-drawer">Open Right</button>
+
+<!-- Standalone Drawer Structure -->
+<div id="my-left-drawer" class="drawer drawer-left">
+  <div class="drawer-header">
+    <h3>Navigation Title</h3>
+    <button data-drawer-close class="ghost">&times;</button>
+  </div>
+  <div class="drawer-body">
+    <p>Drawer content goes here...</p>
+  </div>
+  <div class="drawer-footer">
+    <button data-drawer-close class="secondary">Close</button>
+  </div>
+</div>`}
+        </CodeBlock>
+
+        <h3 className="text-xl font-bold mt-6 mb-2">JS Helper API</h3>
+        <CodeBlock language="javascript">
+{`// Programmatic API
+bluebird('drawer', { id: 'my-left-drawer', action: 'open' });
+bluebird('drawer', { id: 'my-left-drawer', action: 'close' });
+bluebird('drawer', { id: 'my-left-drawer', action: 'toggle' });`}
         </CodeBlock>
       </article>
+
+      {/* Render Demo Drawers */}
+      <div id="demo-drawer-left" className="drawer drawer-left">
+        <div className="drawer-header">
+          <h3 className="font-bold text-lg">Left Side Navigation Panel</h3>
+          <button data-drawer-close className="ghost py-1 px-3">&times;</button>
+        </div>
+        <div className="drawer-body">
+          <p className="text-sm text-secondary mb-4">This drawer slides in smoothly from the left side of the screen.</p>
+          <div className="flex flex-col gap-2">
+            <a href="#/aside-drawer" className="p-2 border rounded hover:bg-surface">Profile Overview</a>
+            <a href="#/aside-drawer" className="p-2 border rounded hover:bg-surface">Security &amp; Privacy</a>
+            <a href="#/aside-drawer" className="p-2 border rounded hover:bg-surface">Notification Preferences</a>
+          </div>
+        </div>
+        <div className="drawer-footer">
+          <button data-drawer-close className="secondary">Close</button>
+        </div>
+      </div>
+
+      <div id="demo-drawer-right" className="drawer drawer-right">
+        <div className="drawer-header">
+          <h3 className="font-bold text-lg">Right Shopping Cart / Filter</h3>
+          <button data-drawer-close className="ghost py-1 px-3">&times;</button>
+        </div>
+        <div className="drawer-body">
+          <p className="text-sm text-secondary mb-4">Great for shopping carts, notification lists, or filter drawers.</p>
+          <div className="border p-3 rounded mb-3 bg-surface">
+            <h4 className="font-bold text-sm">Item #1: Premium Theme</h4>
+            <p className="text-xs text-muted">$49.00 — Qty: 1</p>
+          </div>
+        </div>
+        <div className="drawer-footer">
+          <button data-drawer-close className="secondary">Cancel</button>
+          <button className="primary">Checkout</button>
+        </div>
+      </div>
+
+      <div id="demo-drawer-top" className="drawer drawer-top">
+        <div className="drawer-header">
+          <h3 className="font-bold text-lg">Top Announcement Banner Drawer</h3>
+          <button data-drawer-close className="ghost py-1 px-3">&times;</button>
+        </div>
+        <div className="drawer-body">
+          <p className="text-sm text-secondary">Important announcement or search bar overlay sliding down from top.</p>
+          <input type="text" className="mt-3" placeholder="Search entire site..." />
+        </div>
+      </div>
+
+      <div id="demo-drawer-bottom" className="drawer drawer-bottom">
+        <div className="drawer-header">
+          <h3 className="font-bold text-lg">Mobile Bottom Sheet Drawer</h3>
+          <button data-drawer-close className="ghost py-1 px-3">&times;</button>
+        </div>
+        <div className="drawer-body">
+          <p className="text-sm text-secondary mb-3">Mobile-friendly action sheet drawer with rounded top corners.</p>
+          <div className="flex flex-col gap-2">
+            <button className="secondary text-left">Share Link</button>
+            <button className="secondary text-left">Save to Favorites</button>
+            <button className="destructive text-left">Report Issue</button>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

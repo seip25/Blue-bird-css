@@ -13,10 +13,10 @@ export default function BottomNav() {
       <CodeBlock language="html">
 {`<nav class="bottom-nav">
   <ul>
-    <li><a href="/">🏠 Home</a></li>
-    <li><a href="/search">🔍 Search</a></li>
-    <li><a href="/cart">🛒 Cart</a></li>
-    <li><a href="/account">👤 Account</a></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/search">Search</a></li>
+    <li><a href="/cart">Cart</a></li>
+    <li><a href="/account">Account</a></li>
   </ul>
 </nav>`}
       </CodeBlock>

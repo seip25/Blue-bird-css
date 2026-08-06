@@ -44,7 +44,7 @@ export default function Snackbar() {
       <h3 className="text-xl font-bold mt-6 mb-2">JavaScript API</h3>
       <CodeBlock language="html">
 {`<!-- 1. Include bluebird.js -->
-<script src="bluebird.js"><\/script>
+<script src="bluebird.js"></script>
 
 <!-- 2. Trigger notification -->
 <script>
@@ -53,7 +53,7 @@ export default function Snackbar() {
     type: 'success',
     duration: 3000
   });
-<\/script>`}
+</script>`}
       </CodeBlock>
     </article>
   );

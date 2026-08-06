@@ -31,21 +31,18 @@ export default function ComponentsDoc() {
             </div>
           </div>
           <div className="alert alert-success">
-            <span className="text-xl">✅</span>
             <div>
               <div className="alert-title">Success</div>
               <p className="alert-description">Your profile settings have been saved successfully.</p>
             </div>
           </div>
           <div className="alert alert-warning">
-            <span className="text-xl">⚠️</span>
             <div>
               <div className="alert-title">Warning</div>
               <p className="alert-description">Your storage capacity is reaching 90% threshold.</p>
             </div>
           </div>
           <div className="alert alert-destructive">
-            <span className="text-xl">🚨</span>
             <div>
               <div className="alert-title">Destructive</div>
               <p className="alert-description">Your subscription has expired. Please renew to continue access.</p>

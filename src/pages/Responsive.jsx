@@ -12,9 +12,9 @@ export default function Responsive() {
       <h3>Show on Specific Screens</h3>
       <p>Elements with <code>.visible-*</code> are hidden by default and shown only at that breakpoint:</p>
       <div className="example">
-        <div className="card bg-green text-white text-center visible-sm p-4">📱 Visible on SM (≤640px)</div>
-        <div className="card bg-blue text-white text-center visible-md p-4">💻 Visible on MD (641–1024px)</div>
-        <div className="card bg-violet text-white text-center visible-lg p-4">🖥️ Visible on LG (≥1025px)</div>
+        <div className="card bg-green text-white text-center visible-sm p-4">Visible on SM (&le;640px)</div>
+        <div className="card bg-blue text-white text-center visible-md p-4">Visible on MD (641–1024px)</div>
+        <div className="card bg-violet text-white text-center visible-lg p-4">Visible on LG (&ge;1025px)</div>
       </div>
       <CodeBlock language="html">
 {`<!-- Show ONLY on mobile -->

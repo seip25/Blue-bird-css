@@ -26,7 +26,6 @@ export default function Introduction() {
   return (
     <>
       <article className="border rounded-xl text-center p-8 mb-8 shadow-sm bg-surface">
-        <span className="text-4xl mb-3 inline-block">🐦</span>
         <h1 className="font-bold text-4xl mb-3 tracking-tight">Blue Bird CSS</h1>
         <p className="text-secondary text-lg max-w-2xl mx-auto mb-6">
           A lightweight, semantic, modern CSS framework built with pure shadcn/ui design principles and Tailwind utility power.
@@ -48,7 +47,7 @@ export default function Introduction() {
             target="_blank" 
             rel="noreferrer"
           >
-            Star on GitHub ⭐
+            Star on GitHub
           </a>
         </div>
       </article>
@@ -58,12 +57,12 @@ export default function Introduction() {
         <p className="text-muted mb-4">Include Blue Bird CSS directly in your HTML file via CDN:</p>
         <CodeBlock language="html">
 {`<link rel="stylesheet" href="https://seip25.github.io/Blue-bird-css/bluebird.css" />
-<script src="https://seip25.github.io/Blue-bird-css/bluebird.js"><\/script>`}
+<script src="https://seip25.github.io/Blue-bird-css/bluebird.js"></script>`}
         </CodeBlock>
         <p className="mt-4 text-muted">Or download files locally and include them in your head tag:</p>
         <CodeBlock language="html">
 {`<link rel="stylesheet" href="bluebird.css" />
-<script src="bluebird.js"><\/script>`}
+<script src="bluebird.js"></script>`}
         </CodeBlock>
       </article>
 
@@ -80,7 +79,7 @@ export default function Introduction() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blue Bird CSS App</title>
     <link rel="stylesheet" href="bluebird.css" />
-    <script src="bluebird.js"><\/script>
+    <script src="bluebird.js"></script>
 </head>
 <body>
   <header className="glass">
@@ -125,58 +124,29 @@ export default function Introduction() {
       </article>
 
       <article className="border rounded-xl p-6 mb-6 bg-surface shadow-sm">
-        <h2 className="text-2xl font-semibold mb-2">New shadcn UI Components</h2>
-        <p className="text-muted mb-4">High-utility components added to Blue Bird CSS for modern web apps:</p>
+        <h2 className="text-2xl font-semibold mb-2">Explore Blue Bird CSS Features</h2>
+        <p className="text-muted mb-4">Explore our comprehensive set of UI components, layout tools, and framework guides:</p>
 
-        <h3 className="text-lg font-bold mt-6 mb-2">Alerts &amp; Callouts</h3>
-        <div className="flex flex-col gap-3 my-4">
-          <div className="alert alert-info">
-            <span className="text-xl">ℹ️</span>
-            <div>
-              <div className="alert-title">Information Alert</div>
-              <p className="alert-description">This is a clean informational alert callout built in shadcn style.</p>
-            </div>
+        <div className="grid cols-2 gap-4 my-4">
+          <div className="border p-4 rounded-lg bg-background">
+            <h3 className="font-bold text-lg mb-1">Next.js Integration</h3>
+            <p className="text-sm text-secondary mb-3">Complete guide for zero-config Next.js (App Router &amp; Pages Router) integration.</p>
+            <a href="#/nextjs" className="btn-subtle-blue px-3 py-1 text-sm font-medium inline-block">Read Next.js Guide &rarr;</a>
           </div>
-          <div className="alert alert-success">
-            <span className="text-xl">✅</span>
-            <div>
-              <div className="alert-title">Success Alert</div>
-              <p className="alert-description">Changes have been saved successfully.</p>
-            </div>
+          <div className="border p-4 rounded-lg bg-background">
+            <h3 className="font-bold text-lg mb-1">Touch Carousel</h3>
+            <p className="text-sm text-secondary mb-3">Mobile-first touch swipe &amp; autoplay card carousels for modern web apps.</p>
+            <a href="#/carousel" className="btn-subtle-purple px-3 py-1 text-sm font-medium inline-block">Explore Carousel &rarr;</a>
           </div>
-          <div className="alert alert-destructive">
-            <span className="text-xl">🚨</span>
-            <div>
-              <div className="alert-title">Destructive Alert</div>
-              <p className="alert-description">Your session has expired. Please log in again.</p>
-            </div>
+          <div className="border p-4 rounded-lg bg-background">
+            <h3 className="font-bold text-lg mb-1">4-Direction Drawers</h3>
+            <p className="text-sm text-secondary mb-3">Slide-out panels from left, right, top, or bottom with auto-mobile navigation support.</p>
+            <a href="#/aside-drawer" className="btn-subtle-green px-3 py-1 text-sm font-medium inline-block">Explore Drawers &rarr;</a>
           </div>
-        </div>
-
-        <h3 className="text-lg font-bold mt-6 mb-2">Tabs Navigation</h3>
-        <div className="tabs my-4">
-          <div className="tab-list">
-            <button className="tab-trigger active">Account</button>
-            <button className="tab-trigger">Password</button>
-            <button className="tab-trigger">Notifications</button>
-          </div>
-        </div>
-
-        <h3 className="text-lg font-bold mt-6 mb-2">Breadcrumb &amp; Toggle Switch</h3>
-        <div className="flex items-center justify-between flex-wrap gap-4 my-4 p-4 border rounded-lg bg-background">
-          <nav className="breadcrumb">
-            <a href="#" className="breadcrumb-item">Home</a>
-            <span className="breadcrumb-separator">/</span>
-            <a href="#" className="breadcrumb-item">Docs</a>
-            <span className="breadcrumb-separator">/</span>
-            <span className="text-primary font-semibold">Components</span>
-          </nav>
-          <div className="flex items-center gap-2">
-            <span className="text-sm font-medium">Notifications</span>
-            <label className="switch">
-              <input type="checkbox" defaultChecked />
-              <span className="switch-slider"></span>
-            </label>
+          <div className="border p-4 rounded-lg bg-background">
+            <h3 className="font-bold text-lg mb-1">CSS Animations</h3>
+            <p className="text-sm text-secondary mb-3">Spin, bounce, pulse, float, slide, shimmer, and cyberpunk glow animations.</p>
+            <a href="#/animations" className="btn-subtle-pink px-3 py-1 text-sm font-medium inline-block">Explore Animations &rarr;</a>
           </div>
         </div>
       </article>

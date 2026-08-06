@@ -5,6 +5,7 @@ const sections = [
     title: 'Getting Started',
     links: [
       { to: '/', label: 'Introduction' },
+      { to: '/nextjs', label: 'Next.js Guide' },
     ],
   },
   {
@@ -29,6 +30,7 @@ const sections = [
     links: [
       { to: '/cards', label: 'Card Content Block' },
       { to: '/components-doc', label: 'shadcn Components' },
+      { to: '/carousel', label: 'Touch Carousel' },
       { to: '/accordion', label: 'Accordion' },
       { to: '/dialog', label: 'Dialog (Modal)' },
       { to: '/dropdown', label: 'Dropdown' },
@@ -39,6 +41,7 @@ const sections = [
   {
     title: 'Utilities',
     links: [
+      { to: '/animations', label: 'CSS Animations' },
       { to: '/flex-sizing', label: 'Flex & Sizing' },
       { to: '/responsive', label: 'Responsive Visibility' },
       { to: '/colors', label: 'Colors' },

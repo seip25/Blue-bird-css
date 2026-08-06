@@ -39,7 +39,7 @@ export default function CodeBlock({ language = 'html', children }) {
         }}
         title="Copy code snippet"
       >
-        {copied ? '✓ Copied!' : '📋 Copy'}
+        {copied ? 'Copied' : 'Copy'}
       </button>
       <pre className="rounded-xl border shadow-sm p-4 overflow-x-auto">
         <code ref={codeRef} className={`language-${language}`}>

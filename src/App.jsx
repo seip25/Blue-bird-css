@@ -25,11 +25,12 @@ import Borders from './pages/Borders';
 import BottomNav from './pages/BottomNav';
 import AsideDrawer from './pages/AsideDrawer';
 import ComponentsDoc from './pages/ComponentsDoc';
+import NextjsGuide from './pages/NextjsGuide';
+import CarouselDoc from './pages/CarouselDoc';
+import Animations from './pages/Animations';
 
 // const themes = [
-//   { value: 'lila.css', label: 'Default' },
-//   { value: 'material.css', label: 'Material' },
-//   { value: 'old_material.css', label: 'Old Material' },
+//   { value: 'bluebird.css', label: 'Default' },
 // ];
 
 /**
@@ -55,7 +56,6 @@ function Layout() {
       <header className="sticky top-0 z-50 border-b bg-surface">
         <nav className="flex items-center justify-between py-3">
           <div className="flex items-center gap-2">
-            <span className="text-2xl">🐦</span>
             <h2 className="font-bold text-xl tracking-tight">Blue Bird CSS</h2>
             <span className="badge badge-secondary badge-sm hidden-sm">v1.0</span>
           </div>
@@ -67,10 +67,10 @@ function Layout() {
               role='button'
               className="secondary flex items-center gap-1"
             >
-              <span>GitHub ⭐</span>
+              <span>GitHub</span>
             </a>
             <button className="secondary py-3 px-4" onClick={toggleMode}>
-              {isDark ? '☀️ Light' : '🌙 Dark'}
+              {isDark ? 'Light Mode' : 'Dark Mode'}
             </button>
           </div>
         </nav>
@@ -84,7 +84,7 @@ function Layout() {
       </main>
 
       <footer>
-        <p className="text-muted">Blue Bird CSS © {new Date().getFullYear()} — Built for modern & sleek web development</p>
+        <p className="text-muted">Blue Bird CSS © {new Date().getFullYear()} — Built for modern &amp; sleek web development</p>
       </footer>
     </>
   );
@@ -95,6 +95,7 @@ function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Introduction />} />
+        <Route path="/nextjs" element={<NextjsGuide />} />
         <Route path="/buttons" element={<Buttons />} />
         <Route path="/forms" element={<Forms />} />
         <Route path="/typography" element={<Typography />} />
@@ -104,17 +105,19 @@ function App() {
         <Route path="/spacing" element={<Spacing />} />
         <Route path="/cards" element={<Cards />} />
         <Route path="/components-doc" element={<ComponentsDoc />} />
+        <Route path="/carousel" element={<CarouselDoc />} />
         <Route path="/accordion" element={<Accordion />} />
         <Route path="/dialog" element={<Dialog />} />
         <Route path="/dropdown" element={<Dropdown />} />
         <Route path="/snackbar" element={<Snackbar />} />
+        <Route path="/aside-drawer" element={<AsideDrawer />} />
+        <Route path="/animations" element={<Animations />} />
         <Route path="/flex-sizing" element={<FlexSizing />} />
         <Route path="/responsive" element={<Responsive />} />
         <Route path="/colors" element={<Colors />} />
         <Route path="/shadows" element={<Shadows />} />
         <Route path="/borders" element={<Borders />} />
         <Route path="/bottom-nav" element={<BottomNav />} />
-        <Route path="/aside-drawer" element={<AsideDrawer />} />
       </Route>
     </Routes>
   );
