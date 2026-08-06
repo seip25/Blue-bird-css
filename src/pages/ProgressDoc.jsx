@@ -5,12 +5,6 @@ import CodeBlock from '../components/CodeBlock';
  * @returns {JSX.Element} The rendered ProgressDoc page
  */
 export default function ProgressDoc() {
-  const triggerPopover = () => {
-    if (window.bluebird) {
-      window.bluebird('popover', { id: 'demo-popover-card', action: 'toggle' });
-    }
-  };
-
   return (
     <article className="border rounded-xl p-6 mb-6 bg-surface shadow-sm">
       <h2 className="text-2xl font-bold mb-2">Progress, Steps, Spinners &amp; Popovers</h2>
@@ -19,16 +13,14 @@ export default function ProgressDoc() {
       </p>
 
       {/* Progress Bars */}
-      <h3 className="text-xl font-bold mt-6 mb-2">1. Progress Bars</h3>
+      <h3 className="text-xl font-bold mt-6 mb-2">1. Progress Bars (Semantic HTML5 &amp; Custom)</h3>
       <div className="example border p-4 rounded-xl my-4 flex flex-col gap-4">
         <div>
           <div className="flex justify-between text-xs text-muted mb-1 font-medium">
-            <span>Downloading Assets...</span>
+            <span>Semantic HTML5 &lt;progress&gt; Element</span>
             <span>45%</span>
           </div>
-          <div className="progress">
-            <div className="progress-bar" style={{ width: '45%' }}></div>
-          </div>
+          <progress value="45" max="100"></progress>
         </div>
 
         <div>
@@ -53,10 +45,10 @@ export default function ProgressDoc() {
       </div>
 
       <CodeBlock language="html">
-        {`<div class="progress">
-  <div class="progress-bar" style="width: 45%"></div>
-</div>
+        {`<!-- Semantic HTML5 Progress Element -->
+<progress value="45" max="100"></progress>
 
+<!-- Custom Utility Progress Bar -->
 <div class="progress">
   <div class="progress-bar bg-green" style="width: 75%"></div>
 </div>`}

@@ -22,7 +22,7 @@ export default function TabsDoc() {
             <button className="tab-trigger" data-tab-target="tab-notifications">Notifications</button>
           </div>
 
-          <div id="tab-account" className="tab-content active  p-4 rounded-xl bg-background">
+          <div id="tab-account" className="tab-content active">
             <h4 className="font-bold text-lg mb-2">Account Settings</h4>
             <p className="text-sm text-secondary mb-3">Manage your public profile and email address.</p>
             <div className="floating mb-3">
@@ -32,7 +32,7 @@ export default function TabsDoc() {
             <button className="primary btn-sm">Save Profile</button>
           </div>
 
-          <div id="tab-password" className="tab-content  p-4 rounded-xl bg-background">
+          <div id="tab-password" className="tab-content">
             <h4 className="font-bold text-lg mb-2">Password Settings</h4>
             <p className="text-sm text-secondary mb-3">Change your password here. After saving, you will be logged out.</p>
             <div className="floating mb-3">
@@ -42,7 +42,7 @@ export default function TabsDoc() {
             <button className="secondary btn-sm">Update Password</button>
           </div>
 
-          <div id="tab-notifications" className="tab-content  p-4 rounded-xl bg-background">
+          <div id="tab-notifications" className="tab-content">
             <h4 className="font-bold text-lg mb-2">Notification Preferences</h4>
             <p className="text-sm text-secondary mb-3">Configure how you receive alert updates.</p>
             <label className="flex items-center gap-2 text-sm">
