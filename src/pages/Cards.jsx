@@ -49,16 +49,16 @@ export default function Cards() {
 </article>`}
       </CodeBlock>
 
-      <h3 className="text-xl font-bold mt-6 mb-2">Semantic Cards</h3>
+      <h3 className="text-xl font-bold mt-6 mb-2">Semantic Cards (&lt;article&gt;, &lt;figure&gt;)</h3>
       <div className="example grid cols-2 gap-4">
         <article className="hover-lift">
-          <h4>Article Card</h4>
-          <p>Self-contained content block using <code>&lt;article&gt;</code>.</p>
+          <h4>Article Card (&lt;article&gt;)</h4>
+          <p>Self-contained content block styled natively using <code>&lt;article&gt;</code> without extra class wrappers.</p>
         </article>
-        <section className="hover-lift">
-          <h4>Section Card</h4>
-          <p>A thematic grouping using <code>&lt;section&gt;</code>.</p>
-        </section>
+        <figure className="hover-lift">
+          <div className="p-6 bg-secondary text-center text-sm font-semibold">Media Image Canvas Placeholder</div>
+          <figcaption>&lt;figure&gt; &amp; &lt;figcaption&gt; media card caption</figcaption>
+        </figure>
       </div>
       <CodeBlock language="html">
 {`<article>
@@ -66,10 +66,10 @@ export default function Cards() {
   <p>Content...</p>
 </article>
 
-<section>
-  <h4>Section Card</h4>
-  <p>Content...</p>
-</section>`}
+<figure>
+  <img src="image.jpg" alt="Sample Media" />
+  <figcaption>Media Caption</figcaption>
+</figure>`}
       </CodeBlock>
     </article>
   );

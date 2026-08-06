@@ -12,16 +12,16 @@ export default function Accordion() {
       <h3>Basic Accordion</h3>
       <div className="example">
         <details>
-          <summary>What is Lila CSS?</summary>
-          <p>Lila CSS is a semantic CSS framework inspired by Pico.css, Material Design and shadcn/ui. It makes your HTML look great with minimal or no classes.</p>
+          <summary>What is Blue Bird CSS?</summary>
+          <p>Blue Bird CSS is a semantic CSS framework inspired by Pico.css, Material Design and shadcn/ui. It makes your HTML look great with pure semantic HTML tags.</p>
         </details>
         <details>
           <summary>Do I need JavaScript?</summary>
-          <p>For basic styling, no. Lila.css handles everything. Lila.js adds optional features like the ripple effect, snackbars, and mobile drawer.</p>
+          <p>For basic styling, no. Blue Bird CSS handles everything natively. BlueBird.js adds optional features like ripples, snackbars, toasts, and mobile drawer.</p>
         </details>
         <details>
           <summary>Is it responsive?</summary>
-          <p>Yes! Grids collapse on mobile, aside becomes a drawer, and all elements adapt to screen size.</p>
+          <p>Yes! Grids collapse on mobile, aside becomes a slide-out drawer, and all elements adapt to screen size.</p>
         </details>
       </div>
       <CodeBlock language="html">

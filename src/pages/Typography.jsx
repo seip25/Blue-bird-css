@@ -31,16 +31,16 @@ export default function Typography() {
       <div className="example">
         <p>Regular paragraph text with <strong>bold</strong> and <em>italic</em> content.</p>
         <p>
-          Use <mark>marked text</mark> for highlights, <code>inline code</code> for code snippets,
-          and <kbd>Ctrl</kbd>+<kbd>K</kbd> for keyboard shortcuts.
+          Use <mark>marked text</mark> for highlights, <output>Calculated State</output> for form outputs,
+          <code>inline code</code> for code snippets, and <kbd>Ctrl</kbd>+<kbd>K</kbd> for keyboard shortcuts.
         </p>
-        <p><small>Small text for captions and fine print.</small></p>
+        <p><small>Small text for captions, timestamped <time dateTime="2026-08-06">August 6, 2026</time>.</small></p>
         <p><a href="#">This is a link</a></p>
       </div>
       <CodeBlock language="html">
 {`<p>Regular paragraph with <strong>bold</strong> and <em>italic</em>.</p>
-<p>Use <mark>marked text</mark>, <code>inline code</code>, and <kbd>Ctrl</kbd>+<kbd>K</kbd>.</p>
-<p><small>Small text for fine print.</small></p>
+<p>Use <mark>marked text</mark>, <output>Form Output</output>, <code>code</code>, and <kbd>Ctrl</kbd>+<kbd>K</kbd>.</p>
+<p><small>Small text for fine print on <time datetime="2026-08-06">August 6, 2026</time>.</small></p>
 <a href="#">This is a link</a>`}
       </CodeBlock>
 
