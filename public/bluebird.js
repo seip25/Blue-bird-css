@@ -1,6 +1,6 @@
 /**
  * Blue Bird CSS Framework JS Helper
- * @param {string|object} component - Component name ('snackbar', 'drawer', 'carousel') or options
+ * @param {string|object} component - Component name ('snackbar', 'drawer', 'carousel', 'toast', 'tab', 'command', 'popover') or options
  * @param {object} [options] - Component configuration options
  */
 function bluebird(component, options) {
@@ -40,6 +40,111 @@ function bluebird(component, options) {
     snackbarEl.timeoutId = setTimeout(function () {
       snackbarEl.className = '';
     }, duration);
+  }
+
+  // --- MULTI-TOAST SYSTEM ---
+  if (component === 'toast') {
+    const position = (options && options.position) || 'bottom-right';
+    let container = document.querySelector(`.toast-container.${position}`);
+
+    if (!container) {
+      container = document.createElement('div');
+      container.className = `toast-container ${position}`;
+      document.body.appendChild(container);
+    }
+
+    const toastEl = document.createElement('div');
+    const typeClass = (options && options.type) ? `toast-${options.type}` : 'toast-info';
+    toastEl.className = `toast ${typeClass}`;
+
+    const title = (options && options.title) ? `<div class="toast-title">${options.title}</div>` : '';
+    const desc = (options && options.description) ? `<div class="toast-description">${options.description}</div>` : '';
+
+    toastEl.innerHTML = `
+      <div class="toast-content">
+        ${title}
+        ${desc}
+      </div>
+      <button class="toast-close" aria-label="Dismiss">&times;</button>
+    `;
+
+    const closeBtn = toastEl.querySelector('.toast-close');
+    closeBtn.addEventListener('click', () => dismissToast(toastEl));
+
+    container.appendChild(toastEl);
+
+    const duration = (options && options.duration) !== undefined ? options.duration : 4000;
+    if (duration > 0) {
+      setTimeout(() => dismissToast(toastEl), duration);
+    }
+  }
+
+  // --- TABS COMPONENT ---
+  if (component === 'tab') {
+    const targetId = options && options.id;
+    if (!targetId) return;
+
+    const targetContent = document.getElementById(targetId);
+    if (!targetContent) return;
+
+    const tabsContainer = targetContent.closest('.tabs');
+    if (!tabsContainer) return;
+
+    const allTriggers = tabsContainer.querySelectorAll('.tab-trigger');
+    const allContents = tabsContainer.querySelectorAll('.tab-content');
+
+    allContents.forEach(c => c.classList.remove('active'));
+    allTriggers.forEach(t => t.classList.remove('active'));
+
+    targetContent.classList.add('active');
+
+    const matchingTrigger = Array.from(allTriggers).find(t => 
+      t.getAttribute('data-tab-target') === targetId || t.getAttribute('href') === `#${targetId}`
+    );
+
+    if (matchingTrigger) {
+      matchingTrigger.classList.add('active');
+    }
+  }
+
+  // --- COMMAND PALETTE MODAL ---
+  if (component === 'command') {
+    const action = (options && options.action) || 'toggle';
+    let backdrop = document.querySelector('.command-backdrop');
+
+    if (!backdrop) {
+      backdrop = createCommandPaletteModal();
+    }
+
+    const isOpen = backdrop.classList.contains('open');
+
+    if (action === 'open' || (action === 'toggle' && !isOpen)) {
+      backdrop.classList.add('open');
+      const input = backdrop.querySelector('.command-input');
+      if (input) {
+        input.value = '';
+        setTimeout(() => input.focus(), 50);
+      }
+    } else if (action === 'close' || (action === 'toggle' && isOpen)) {
+      backdrop.classList.remove('open');
+    }
+  }
+
+  // --- POPOVER COMPONENT ---
+  if (component === 'popover') {
+    const id = options && options.id;
+    const action = (options && options.action) || 'toggle';
+    if (!id) return;
+
+    const popoverEl = document.getElementById(id) || document.querySelector(`[data-popover-id="${id}"]`);
+    if (!popoverEl) return;
+
+    const isOpen = popoverEl.classList.contains('open');
+    if (action === 'open' || (action === 'toggle' && !isOpen)) {
+      popoverEl.classList.add('open');
+    } else {
+      popoverEl.classList.remove('open');
+    }
   }
 
   // --- STANDALONE DRAWER COMPONENT ---
@@ -99,6 +204,86 @@ function snackbar(options) {
 }
 
 /**
+ * Global alias for toast notification
+ * @param {object} options - Toast configuration options
+ */
+function toast(options) {
+  bluebird('toast', options);
+}
+
+function dismissToast(toastEl) {
+  if (!toastEl || toastEl.isDismissing) return;
+  toastEl.isDismissing = true;
+  toastEl.style.opacity = '0';
+  toastEl.style.transform = 'translateY(-10px) scale(0.95)';
+  setTimeout(() => {
+    if (toastEl.parentNode) {
+      toastEl.remove();
+    }
+  }, 200);
+}
+
+/**
+ * Create default command palette DOM modal
+ */
+function createCommandPaletteModal() {
+  const backdrop = document.createElement('div');
+  backdrop.className = 'command-backdrop';
+  backdrop.innerHTML = `
+    <div class="command-dialog">
+      <div class="command-input-wrapper">
+        <span>🔍</span>
+        <input type="text" class="command-input" placeholder="Type a command or search documentation..." />
+        <kbd>ESC</kbd>
+      </div>
+      <div class="command-list">
+        <div class="command-group">
+          <div class="command-group-title">Navigation</div>
+          <div class="command-item" data-navigate="#/"><span>Documentation Home</span><kbd>↵</kbd></div>
+          <div class="command-item" data-navigate="#/nextjs"><span>Next.js Integration Guide</span><kbd>↵</kbd></div>
+          <div class="command-item" data-navigate="#/buttons"><span>Buttons & Badges</span><kbd>↵</kbd></div>
+          <div class="command-item" data-navigate="#/forms"><span>Forms & Inputs</span><kbd>↵</kbd></div>
+        </div>
+        <div class="command-group">
+          <div class="command-group-title">Components</div>
+          <div class="command-item" data-navigate="#/carousel"><span>Touch Carousel</span><kbd>↵</kbd></div>
+          <div class="command-item" data-navigate="#/aside-drawer"><span>Aside & Drawers</span><kbd>↵</kbd></div>
+          <div class="command-item" data-navigate="#/animations"><span>CSS Animations</span><kbd>↵</kbd></div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(backdrop);
+
+  backdrop.addEventListener('click', (e) => {
+    if (e.target === backdrop) {
+      bluebird('command', { action: 'close' });
+    }
+  });
+
+  const input = backdrop.querySelector('.command-input');
+  input.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase().trim();
+    const items = backdrop.querySelectorAll('.command-item');
+    items.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      item.style.display = text.includes(query) ? 'flex' : 'none';
+    });
+  });
+
+  backdrop.addEventListener('click', (e) => {
+    const item = e.target.closest('.command-item');
+    if (item && item.getAttribute('data-navigate')) {
+      window.location.hash = item.getAttribute('data-navigate');
+      bluebird('command', { action: 'close' });
+    }
+  });
+
+  return backdrop;
+}
+
+/**
  * Remove backdrops whose target drawer no longer exists in DOM
  */
 function cleanupOrphanedBackdrops() {
@@ -152,9 +337,46 @@ function initMobileDrawer() {
   }
 }
 
-// Global click listener for Material Ripples, Mobile Navigation Drawer, and Declarative Data Attributes
+// Global keyboard listener for Ctrl+K / Cmd+K Command Palette shortcut & ESC key
+document.addEventListener('keydown', function (e) {
+  if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+    e.preventDefault();
+    bluebird('command', { action: 'toggle' });
+  }
+
+  if (e.key === 'Escape') {
+    const commandBackdrop = document.querySelector('.command-backdrop.open');
+    if (commandBackdrop) {
+      bluebird('command', { action: 'close' });
+    }
+  }
+});
+
+// Global click listener for Material Ripples, Mobile Navigation Drawer, Tabs, Popovers & Declarative Data Attributes
 document.addEventListener('click', function (e) {
-  // 1. Mobile Navigation Toggle Button Click
+  // 1. Declarative Tab Trigger Click
+  const tabTrigger = e.target.closest('[data-tab-target], .tab-trigger');
+  if (tabTrigger) {
+    const targetId = tabTrigger.getAttribute('data-tab-target') || (tabTrigger.getAttribute('href') || '').replace('#', '');
+    if (targetId) {
+      e.preventDefault();
+      bluebird('tab', { id: targetId });
+    }
+  }
+
+  // 2. Declarative Popover Trigger Click
+  const popoverTrigger = e.target.closest('[data-popover-target]');
+  if (popoverTrigger) {
+    const popoverId = popoverTrigger.getAttribute('data-popover-target');
+    bluebird('popover', { id: popoverId, action: 'toggle' });
+  }
+
+  // Close open popovers when clicking outside
+  if (!e.target.closest('.popover') && !e.target.closest('[data-popover-target]')) {
+    document.querySelectorAll('.popover.open').forEach(p => p.classList.remove('open'));
+  }
+
+  // 3. Mobile Navigation Toggle Button Click
   const mobileToggle = e.target.closest('.bluebird-drawer-toggle');
   if (mobileToggle) {
     e.preventDefault();
@@ -177,7 +399,7 @@ document.addEventListener('click', function (e) {
     return;
   }
 
-  // 2. Mobile Navigation Overlay Click
+  // 4. Mobile Navigation Overlay Click
   if (e.target.closest('.bluebird-drawer-overlay')) {
     const drawer = document.querySelector('.bluebird-drawer');
     const overlay = document.querySelector('.bluebird-drawer-overlay');
@@ -187,7 +409,7 @@ document.addEventListener('click', function (e) {
     return;
   }
 
-  // 3. Mobile Navigation Drawer Link Click
+  // 5. Mobile Navigation Drawer Link Click
   if (e.target.closest('.bluebird-drawer a')) {
     const drawer = document.querySelector('.bluebird-drawer');
     const overlay = document.querySelector('.bluebird-drawer-overlay');

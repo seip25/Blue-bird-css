@@ -28,6 +28,11 @@ import ComponentsDoc from './pages/ComponentsDoc';
 import NextjsGuide from './pages/NextjsGuide';
 import CarouselDoc from './pages/CarouselDoc';
 import Animations from './pages/Animations';
+import TabsDoc from './pages/TabsDoc';
+import SkeletonDoc from './pages/SkeletonDoc';
+import ToastDoc from './pages/ToastDoc';
+import CommandDoc from './pages/CommandDoc';
+import ProgressDoc from './pages/ProgressDoc';
 
 // const themes = [
 //   { value: 'bluebird.css', label: 'Default' },
@@ -105,6 +110,11 @@ function App() {
         <Route path="/spacing" element={<Spacing />} />
         <Route path="/cards" element={<Cards />} />
         <Route path="/components-doc" element={<ComponentsDoc />} />
+        <Route path="/tabs" element={<TabsDoc />} />
+        <Route path="/skeleton" element={<SkeletonDoc />} />
+        <Route path="/toast" element={<ToastDoc />} />
+        <Route path="/command" element={<CommandDoc />} />
+        <Route path="/progress" element={<ProgressDoc />} />
         <Route path="/carousel" element={<CarouselDoc />} />
         <Route path="/accordion" element={<Accordion />} />
         <Route path="/dialog" element={<Dialog />} />

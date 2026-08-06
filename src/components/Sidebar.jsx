@@ -30,6 +30,11 @@ const sections = [
     links: [
       { to: '/cards', label: 'Card Content Block' },
       { to: '/components-doc', label: 'shadcn Components' },
+      { to: '/tabs', label: 'Tabs System' },
+      { to: '/skeleton', label: 'Skeleton Loading' },
+      { to: '/toast', label: 'Multi-Toast System' },
+      { to: '/command', label: 'Command Palette (Ctrl+K)' },
+      { to: '/progress', label: 'Progress, Steps & Spinners' },
       { to: '/carousel', label: 'Touch Carousel' },
       { to: '/accordion', label: 'Accordion' },
       { to: '/dialog', label: 'Dialog (Modal)' },
