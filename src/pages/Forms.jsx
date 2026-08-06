@@ -105,37 +105,39 @@ export default function Forms() {
 </div>`}
       </CodeBlock>
 
-      <h3>Checkbox, Radio & Switch</h3>
+      <h3>Checkbox, Radio &amp; Switch Variants</h3>
       <div className="example">
-        <div className="flex flex-col gap-2">
-          <label><input type="checkbox" /> Standard checkbox</label>
-          <label><input type="checkbox" defaultChecked /> Checked</label>
-          <label><input type="radio" name="demo" defaultChecked /> Radio option A</label>
-          <label><input type="radio" name="demo" /> Radio option B</label>
-          <label>
-            <input type="checkbox" role="switch" />
-            Switch toggle
-          </label>
-          <label>
-            <input type="checkbox" role="switch" defaultChecked />
-            Switch on
-          </label>
+        <div className="flex flex-col gap-3">
+          <div className="flex items-center gap-4 flex-wrap">
+            <label><input type="checkbox" /> Standard checkbox</label>
+            <label><input type="checkbox" defaultChecked /> Checked checkbox</label>
+          </div>
+          <div className="flex items-center gap-4 flex-wrap">
+            <label><input type="radio" name="demo" defaultChecked /> Radio option A</label>
+            <label><input type="radio" name="demo" /> Radio option B</label>
+          </div>
+          <div className="flex items-center gap-6 flex-wrap mt-1">
+            <label className="flex items-center gap-2">
+              <input type="checkbox" role="switch" defaultChecked />
+              <span>Standard Pill Switch</span>
+            </label>
+            <label className="flex items-center gap-2">
+              <input type="checkbox" className="switch-android" defaultChecked />
+              <span>Android Material Switch (.switch-android)</span>
+            </label>
+          </div>
         </div>
       </div>
       <CodeBlock language="html">
-{`<!-- Checkbox -->
-<label><input type="checkbox"> Unchecked</label>
+{`<!-- Checkbox & Radio -->
 <label><input type="checkbox" checked> Checked</label>
-
-<!-- Radio -->
 <label><input type="radio" name="group" checked> Option A</label>
-<label><input type="radio" name="group"> Option B</label>
 
-<!-- Switch -->
-<label>
-  <input type="checkbox" role="switch">
-  Toggle me
-</label>`}
+<!-- Standard Pill Switch -->
+<label><input type="checkbox" role="switch" checked> Pill Switch</label>
+
+<!-- Android Material Switch -->
+<label><input type="checkbox" class="switch-android" checked> Android Switch</label>`}
       </CodeBlock>
 
       <h3>Fieldset & Legend</h3>

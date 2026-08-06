@@ -12,8 +12,8 @@ export default function ProgressDoc() {
         Feedback indicators, multi-step progress controls, indeterminate spinners, popovers, and directional hover tooltips.
       </p>
 
-      {/* Progress Bars */}
-      <h3 className="text-xl font-bold mt-6 mb-2">1. Progress Bars (Semantic HTML5 &amp; Custom)</h3>
+      {/* Progress Bars & Meter */}
+      <h3 className="text-xl font-bold mt-6 mb-2">1. Progress Bars &amp; Gauge Meter (Semantic HTML5)</h3>
       <div className="example border p-4 rounded-xl my-4 flex flex-col gap-4">
         <div>
           <div className="flex justify-between text-xs text-muted mb-1 font-medium">
@@ -25,12 +25,10 @@ export default function ProgressDoc() {
 
         <div>
           <div className="flex justify-between text-xs text-muted mb-1 font-medium">
-            <span>Storage Usage</span>
-            <span>75%</span>
+            <span>Semantic HTML5 &lt;meter&gt; Gauge (Optimum / Warning States)</span>
+            <span>85%</span>
           </div>
-          <div className="progress">
-            <div className="progress-bar bg-green" style={{ width: '75%' }}></div>
-          </div>
+          <meter min="0" max="100" value="85" low="33" high="66" optimum="50"></meter>
         </div>
 
         <div>
@@ -48,9 +46,12 @@ export default function ProgressDoc() {
         {`<!-- Semantic HTML5 Progress Element -->
 <progress value="45" max="100"></progress>
 
+<!-- Semantic HTML5 Gauge Meter Element -->
+<meter min="0" max="100" value="85" low="33" high="66" optimum="50"></meter>
+
 <!-- Custom Utility Progress Bar -->
 <div class="progress">
-  <div class="progress-bar bg-green" style="width: 75%"></div>
+  <div class="progress-bar bg-purple" style="width: 90%"></div>
 </div>`}
       </CodeBlock>
 
