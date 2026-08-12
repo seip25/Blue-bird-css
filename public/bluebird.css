@@ -1108,63 +1108,120 @@ dialog {
 
 dialog {
   border: none;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-lg);
   padding: 0;
-  background: transparent;
-  max-width: 75vw;
+  background: var(--background);
+  max-width: min(560px, 92vw);
+  width: 100%;
   margin: auto;
-  color: var(--primary) !important;
+  color: var(--on-surface);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 dialog::backdrop {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 dialog>article {
   margin: 0;
+  padding: 1.5rem;
   box-shadow: var(--shadow-md);
-  background-color: var(--glass-bg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background-color: var(--background);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
   border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  color: var(--on-surface);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header inside Dialog Article */
+dialog>article>header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  margin: -1.5rem -1.5rem 1.25rem -1.5rem;
+  background-color: var(--background);
+  margin-bottom: 3rem;
+  box-shadow: none;
+}
+
+dialog>article>header h1,
+dialog>article>header h2,
+dialog>article>header h3,
+dialog>article>header h4,
+dialog>article>header h5,
+dialog>article>header h6 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+dialog>article>header .ghost,
+dialog>article>header button {
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  line-height: 1;
+  border-radius: var(--border-radius);
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+dialog>article>header .ghost:hover,
+dialog>article>header button:hover {
+  color: var(--text-primary);
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] dialog>article>header .ghost:hover,
+[data-theme="dark"] dialog>article>header button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Footer inside Dialog Article */
+dialog>article>footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  margin: 1.25rem -1.5rem -1.5rem -1.5rem;
+  background-color: var(--background);
+}
+
+dialog>article>footer button {
+  margin: 0;
 }
 
 dialog.dialog-full {
-  max-width: 100% !important;
-  max-height: 100% !important;
-  width: 100% !important;
-  height: 100% !important;
-  margin: 0;
-  border-radius: 0;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
 }
 
 dialog.dialog-full>article {
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  border-radius: 0;
-  border: none;
+  border-radius: 0 !important;
+  border: none !important;
 }
 
 dialog.dialog-full>article>footer {
   margin-top: auto;
 }
 
-dialog>p {
-  color: var(--on-surface);
-}
-
-dialog>article>p {
-  color: var(--on-surface);
-}
-
-dialog>section>p {
-  color: var(--on-surface);
-}
-
-dialog>div>p {
+dialog p,
+dialog article p,
+dialog section p,
+dialog div p {
   color: var(--on-surface);
 }
 
@@ -6015,6 +6072,21 @@ a[role="button"] .ripple {
 }
 
 
+
+button.glow,
+a[role="button"].glow,
+.glow {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+  box-shadow: 0 0 16px rgba(59, 130, 246, 0.45);
+}
+
+button.glow:hover,
+a[role="button"].glow:hover,
+.glow:hover {
+  box-shadow: 0 0 24px rgba(139, 92, 246, 0.65);
+}
 
 .badge-glow {
   background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
