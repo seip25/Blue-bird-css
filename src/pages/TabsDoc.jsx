@@ -9,7 +9,7 @@ export default function TabsDoc() {
     <article className=" rounded-xl p-6 mb-6 bg-surface shadow-sm">
       <h2 className="text-2xl font-bold mb-2">Tabs Component</h2>
       <p className="text-secondary mb-4">
-        A clean, accessible tabs component inspired by shadcn/ui. Supports pill tabs and line tabs with smooth content switching.
+        A clean, accessible tabs component. Supports pill tabs and line tabs with smooth content switching.
       </p>
 
       {/* Pill Tabs Demo */}

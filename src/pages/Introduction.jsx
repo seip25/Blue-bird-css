@@ -28,23 +28,23 @@ export default function Introduction() {
       <article className="border rounded-xl text-center p-8 mb-8 shadow-sm bg-surface">
         <h1 className="font-bold text-4xl mb-3 tracking-tight">Blue Bird CSS</h1>
         <p className="text-secondary text-lg max-w-2xl mx-auto mb-6">
-          A lightweight, semantic, modern CSS framework built with pure shadcn/ui design principles and Tailwind utility power.
+          A lightweight, semantic, modern CSS framework built with clean design principles and Tailwind utility power.
         </p>
         <div className="flex justify-center items-center gap-3 flex-wrap my-6">
           <span className="badge badge-primary badge-lg">Semantic HTML</span>
-          <span className="badge badge-secondary badge-lg">shadcn Design</span>
+          <span className="badge badge-secondary badge-lg">Modern Design</span>
           <span className="badge badge-outline badge-lg">Tailwind Utilities</span>
           <span className="badge badge-success badge-lg">Zero Build Required</span>
         </div>
         <div className="flex justify-center items-center gap-4 mt-8 flex-wrap">
-          <button className="primary hover-lift px-6 py-2" onClick={handleDownload}>
+          <button className="glow hover-lift px-6 py-2" onClick={handleDownload}>
             Download bluebird.css + bluebird.js
           </button>
-          <a 
-            href="https://github.com/seip25/Blue-bird-css" 
-            role="button" 
+          <a
+            href="https://github.com/seip25/Blue-bird-css"
+            role="button"
             className="outline hover-lift px-6 py-2"
-            target="_blank" 
+            target="_blank"
             rel="noreferrer"
           >
             Star on GitHub
@@ -56,12 +56,12 @@ export default function Introduction() {
         <h2 className="text-2xl font-semibold mb-2">Quick CDN Install</h2>
         <p className="text-muted mb-4">Include Blue Bird CSS directly in your HTML file via CDN:</p>
         <CodeBlock language="html">
-{`<link rel="stylesheet" href="https://seip25.github.io/Blue-bird-css/bluebird.css" />
+          {`<link rel="stylesheet" href="https://seip25.github.io/Blue-bird-css/bluebird.css" />
 <script src="https://seip25.github.io/Blue-bird-css/bluebird.js"></script>`}
         </CodeBlock>
         <p className="mt-4 text-muted">Or download files locally and include them in your head tag:</p>
         <CodeBlock language="html">
-{`<link rel="stylesheet" href="bluebird.css" />
+          {`<link rel="stylesheet" href="bluebird.css" />
 <script src="bluebird.js"></script>`}
         </CodeBlock>
       </article>
@@ -72,7 +72,7 @@ export default function Introduction() {
           Blue Bird CSS is designed around <strong>semantic HTML5 elements</strong>. Base tags (headers, buttons, forms, tables, cards) look stunning out of the box with zero class boilerplate:
         </p>
         <CodeBlock language="html">
-{`<!DOCTYPE html>
+          {`<!DOCTYPE html>
 <html data-theme="dark">
 <head>
     <meta charset="UTF-8" />

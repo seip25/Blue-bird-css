@@ -1,6 +1,6 @@
 # 🐦 Blue Bird CSS & JS Framework
 
-A lightweight, semantic, modern design framework inspired by **shadcn/ui aesthetics** and Tailwind-like utility speed. **Zero build step and zero configuration required**.
+A lightweight, semantic, modern design framework inspired by modern aesthetics and Tailwind-like utility speed. **Zero build step and zero configuration required**.
 
 📖 **[Live Interactive Documentation](https://seip25.github.io/Blue-bird-css/)**
 
@@ -45,7 +45,7 @@ A lightweight, semantic, modern design framework inspired by **shadcn/ui aesthet
 ## ⚡ Key Features
 
 - **Semantic HTML First**: Automatic out-of-the-box styling for base HTML tags (`button`, `header`, `main`, `aside`, `input`, `select`, `textarea`, `table`, `progress`, `dialog`, `<details><summary>`).
-- **shadcn/ui Inspired Design Language**: Clean borders, consistent rounded corners (`rounded-xl`), sleek dark palettes with high-contrast accents, and subtle glassmorphic shadows.
+- **Modern Design Language**: Clean borders, consistent rounded corners (`rounded-xl`), sleek dark palettes with high-contrast accents, and subtle glassmorphic shadows.
 - **Subtle & Soft Tint Buttons**: Tinted soft background buttons (`bg-primary-subtle`, `bg-blue-subtle`, `bg-green-subtle`, `bg-purple-subtle`, `bg-red-subtle`, `bg-pink-subtle`, etc.).
 - **Perfectly Aligned Link Buttons**: Text link buttons (`.btn-link` or `a.link`) engineered to match standard button height and baseline vertical alignment exactly when placed side-by-side with solid buttons.
 - **Filled Floating Inputs**: Floating label inputs supporting both Outline style (`.floating`) and Material/Modern filled container style (`.floating-fill`).
@@ -140,7 +140,7 @@ bluebird(component, options);
 
 ### Toast Notifications (`toast()`)
 
-Stacked, auto-dismissing toast notification system inspired by shadcn/ui Toast.
+Stacked, auto-dismissing toast notification system.
 
 ```javascript
 // Via global toast helper function:
@@ -186,7 +186,7 @@ bluebird('snackbar', {
 
 ### Command Palette (`Ctrl+K`)
 
-Fast, keyboard-accessible command menu modal modeled after shadcn Command. Press <kbd>Ctrl+K</kbd> or <kbd>Cmd+K</kbd> anywhere on the page to open or close.
+Fast, keyboard-accessible command menu modal. Press <kbd>Ctrl+K</kbd> or <kbd>Cmd+K</kbd> anywhere on the page to open or close.
 
 ```javascript
 // Open/close programmatically:

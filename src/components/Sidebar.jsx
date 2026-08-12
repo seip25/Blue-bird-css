@@ -29,7 +29,7 @@ const sections = [
     title: 'Components',
     links: [
       { to: '/cards', label: 'Card Content Block' },
-      { to: '/components-doc', label: 'shadcn Components' },
+      { to: '/components-doc', label: 'Modern Components' },
       { to: '/tabs', label: 'Tabs System' },
       { to: '/skeleton', label: 'Skeleton Loading' },
       { to: '/toast', label: 'Multi-Toast System' },

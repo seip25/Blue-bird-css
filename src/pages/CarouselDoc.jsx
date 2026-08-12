@@ -9,7 +9,7 @@ export default function CarouselDoc() {
     <article className="border rounded-xl p-6 mb-6 bg-surface shadow-sm">
       <h2 className="text-2xl font-bold mb-2">Mobile Touch &amp; Swipe Carousel</h2>
       <p className="text-secondary mb-4">
-        A lightweight, mobile-first carousel component with CSS scroll snap, native touch swipe physics, arrow controls, indicator dots, and optional autoplay. Inspired by shadcn &amp; Bootstrap, tailored for mobile devices.
+        A lightweight, mobile-first carousel component with CSS scroll snap, native touch swipe physics, arrow controls, indicator dots, and optional autoplay. Tailored for mobile devices.
       </p>
 
       {/* Interactive Card Carousel Demo */}
@@ -32,7 +32,7 @@ export default function CarouselDoc() {
 
             <div className="carousel-item responsive-card p-6 border rounded-xl bg-background shadow-sm">
               <h4 className="font-bold text-lg mb-1">Feature Card #2</h4>
-              <p className="text-sm text-secondary">Pure shadcn/ui design language with vibrant dark mode.</p>
+              <p className="text-sm text-secondary">Pure modern design language with vibrant dark mode.</p>
               <button className="bg-purple-subtle mt-4 text-xs py-1 px-3">Explore Design</button>
             </div>
 
@@ -90,7 +90,7 @@ export default function CarouselDoc() {
           <div className="carousel-track">
             <div className="carousel-item bg-primary-subtle p-8 text-center rounded-xl">
               <h3 className="text-2xl font-bold text-blue-100 mb-2">Hero Slide #1 — Blue Bird CSS</h3>
-              <p className="text-secondary max-w-md mx-auto">Semantic HTML, modern shadcn components, zero config.</p>
+              <p className="text-secondary max-w-md mx-auto">Semantic HTML, modern components, zero config.</p>
             </div>
 
             <div className="carousel-item bg-purple-subtle p-8 text-center rounded-xl">

@@ -13,7 +13,7 @@ export default function Accordion() {
       <div className="example">
         <details>
           <summary>What is Blue Bird CSS?</summary>
-          <p>Blue Bird CSS is a semantic CSS framework inspired by Pico.css, Material Design and shadcn/ui. It makes your HTML look great with pure semantic HTML tags.</p>
+          <p>Blue Bird CSS is a semantic CSS framework inspired by Pico.css and Material Design. It makes your HTML look great with pure semantic HTML tags.</p>
         </details>
         <details>
           <summary>Do I need JavaScript?</summary>

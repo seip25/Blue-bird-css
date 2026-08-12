@@ -19,7 +19,7 @@ export default function Buttons() {
     <article className="border rounded-xl p-6 mb-6 bg-surface shadow-sm">
       <h2 className="text-2xl font-bold mb-2">Buttons &amp; Badges</h2>
       <p className="text-secondary mb-4">
-        Clean shadcn button variants, size utilities (`btn-sm` to `btn-xl`), color shorthand buttons, subtle soft tint buttons, link buttons, pill badges, and Cyberpunk glow buttons.
+        Clean button variants, size utilities (`btn-sm` to `btn-xl`), color shorthand buttons, subtle soft tint buttons, link buttons, pill badges, and Cyberpunk glow buttons.
       </p>
 
       {/* Core Variants & Sizes */}

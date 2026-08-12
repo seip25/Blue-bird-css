@@ -15,7 +15,7 @@ export default function CommandDoc() {
     <article className="border rounded-xl p-6 mb-6 bg-surface shadow-sm">
       <h2 className="text-2xl font-bold mb-2">Command Palette (Ctrl+K Modal)</h2>
       <p className="text-secondary mb-4">
-        A fast, keyboard-accessible command menu dialog modeled after shadcn/ui Command palette. Press <kbd>Ctrl+K</kbd> or <kbd>Cmd+K</kbd> anywhere to open.
+        A fast, keyboard-accessible command menu dialog. Press <kbd>Ctrl+K</kbd> or <kbd>Cmd+K</kbd> anywhere to open.
       </p>
 
       {/* Interactive Command Trigger */}

@@ -21,7 +21,7 @@ export default function ToastDoc() {
     <article className="border rounded-xl p-6 mb-6 bg-surface shadow-sm">
       <h2 className="text-2xl font-bold mb-2">Multi-Toast System</h2>
       <p className="text-secondary mb-4">
-        Stackable, auto-dismissing toast notifications supporting custom positions, titles, descriptions, and color variants inspired by shadcn/ui Toast.
+        Stackable, auto-dismissing toast notifications supporting custom positions, titles, descriptions, and color variants.
       </p>
 
       {/* Toast Variants Demo */}

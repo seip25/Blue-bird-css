@@ -2,7 +2,7 @@ import { useState } from 'react';
 import CodeBlock from '../components/CodeBlock';
 
 /**
- * Comprehensive documentation page component for high-utility shadcn UI & Tailwind components
+ * Comprehensive documentation page component for high-utility modern & Tailwind components
  * @returns {JSX.Element} The rendered ComponentsDoc page
  */
 export default function ComponentsDoc() {
@@ -13,7 +13,7 @@ export default function ComponentsDoc() {
     <article className="border rounded-xl p-6 mb-6 bg-surface shadow-sm">
       <h2 className="text-2xl font-bold mb-2">High-Utility Components</h2>
       <p className="text-secondary mb-6">
-        Essential components inspired by shadcn/ui and Tailwind CSS designed for modern web applications.
+        Essential components inspired by modern web design and Tailwind CSS designed for modern web applications.
       </p>
 
       {/* Alerts Section */}
