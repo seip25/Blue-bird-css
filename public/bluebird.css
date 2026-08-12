@@ -1267,6 +1267,7 @@ aside a {
   transition:
     background-color 0.15s ease,
     color 0.15s ease;
+  margin-bottom: 0.5rem;
 }
 
 aside a:hover {
