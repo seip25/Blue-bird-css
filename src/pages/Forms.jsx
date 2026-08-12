@@ -23,19 +23,28 @@ export default function Forms() {
 <input type="number" placeholder="Number">`}
       </CodeBlock>
 
-      <h3>Fill Variant</h3>
-      <p>Add <code>.fill</code> for a filled background style (no visible border):</p>
+      <h3>Fill &amp; Outline Variants</h3>
+      <p>Add <code>.fill</code> for filled background style or <code>.outline</code> for explicit border style:</p>
       <div className="example">
+        <h4 className="text-sm font-semibold mb-2">Fill Variant (.fill)</h4>
         <input type="text" className="fill" placeholder="Fill Input" />
-        <select className="fill">
-          <option>Fill Select</option>
+        
+        <h4 className="text-sm font-semibold mb-2 mt-4">Outline Variant (.outline)</h4>
+        <input type="text" className="outline" placeholder="Outline Input" />
+        <select className="outline">
+          <option>Outline Select</option>
+          <option>Option 2</option>
         </select>
-        <textarea className="fill" placeholder="Fill Textarea" rows="2"></textarea>
+        <textarea className="outline" placeholder="Outline Textarea" rows="2"></textarea>
       </div>
       <CodeBlock language="html">
-{`<input type="text" class="fill" placeholder="Fill Input">
-<select class="fill">...</select>
-<textarea class="fill" placeholder="Fill Textarea"></textarea>`}
+{`<!-- Fill Variant -->
+<input type="text" class="fill" placeholder="Fill Input">
+
+<!-- Outline Variant -->
+<input type="text" class="outline" placeholder="Outline Input">
+<select class="outline">...</select>
+<textarea class="outline" placeholder="Outline Textarea"></textarea>`}
       </CodeBlock>
 
       <h3>Select</h3>
