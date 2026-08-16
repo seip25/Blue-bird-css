@@ -70,11 +70,11 @@ function Layout() {
               target="_blank"
               rel="noreferrer"
               role='button'
-              className="outline flex items-center gap-1"
+              className="outline flex items-center gap-1 rounded-full"
             >
               <span>GitHub</span>
             </a>
-            <button className="outline " onClick={toggleMode}>
+            <button className="outline rounded-full" onClick={toggleMode}>
               {isDark ? 'Light Mode' : 'Dark Mode'}
             </button>
           </div>
