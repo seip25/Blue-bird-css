@@ -202,27 +202,65 @@ export default function Buttons() {
 <button class="primary glow-pulse">Energy Pulse</button>`}
       </CodeBlock>
 
-      <h3 className="text-xl font-bold mt-6 mb-2">Badges &amp; Tooltips</h3>
+      <h3 className="text-xl font-bold mt-6 mb-2">5. Signature Glow Buttons (<kbd>.glow</kbd>)</h3>
       <p className="text-muted mb-3">
-        Pill badges and status chips with primary and secondary color options:
+        High-impact ambient illumination buttons for primary actions, CTAs, and featured elements:
       </p>
-      <div className="example border p-4 rounded-xl my-4">
-        <div className="flex items-center gap-2 flex-wrap">
-          <span className="badge badge-primary" data-tooltip="Primary Black/White">Primary</span>
-          <span className="badge badge-secondary" data-tooltip="Secondary Soft Gray">Secondary</span>
-          <span className="badge badge-pink">Pink</span>
-          <span className="badge badge-success">Success</span>
-          <span className="badge badge-warning">Warning</span>
-          <span className="badge badge-destructive">Destructive</span>
-          <span className="badge badge-outline">Outline</span>
+      <div className="example border p-4 rounded-xl my-4 flex items-center gap-4 flex-wrap">
+        <button className="glow">Electric Gradient</button>
+        <button className="glow-blue">Blue Bird Glow</button>
+        <button className="glow-purple">Violet Glow</button>
+        <button className="glow-emerald">Emerald Glow</button>
+      </div>
+      <CodeBlock language="html">
+        {`<button class="glow">Electric Gradient</button>
+<button class="glow-blue">Blue Bird Glow</button>
+<button class="glow-purple">Violet Glow</button>
+<button class="glow-emerald">Emerald Glow</button>`}
+      </CodeBlock>
+
+      <h3 className="text-xl font-bold mt-6 mb-2">6. Badges &amp; Glow Badges</h3>
+      <p className="text-muted mb-3">
+        Pill badges, status chips, and neon glow pills:
+      </p>
+      <div className="example border p-4 rounded-xl my-4 flex flex-col gap-4">
+        <div>
+          <h4 className="text-xs font-semibold uppercase text-muted mb-2">Standard &amp; Semantic Badges</h4>
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="badge badge-primary" data-tooltip="Primary Black/White">Primary</span>
+            <span className="badge badge-secondary" data-tooltip="Secondary Soft Gray">Secondary</span>
+            <span className="badge badge-pink">Pink</span>
+            <span className="badge badge-success">Success</span>
+            <span className="badge badge-warning">Warning</span>
+            <span className="badge badge-destructive">Destructive</span>
+            <span className="badge badge-outline">Outline</span>
+          </div>
+        </div>
+        <div>
+          <h4 className="text-xs font-semibold uppercase text-muted mb-2">Glow Badges (<kbd>.badge-glow</kbd>)</h4>
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="badge badge-glow">New Feature</span>
+            <span className="badge badge-glow-blue">Blue Bird</span>
+            <span className="badge badge-glow-purple">AI Assistant</span>
+            <span className="badge badge-glow-green">99.9% Uptime</span>
+            <span className="badge badge-glow-amber">Pending</span>
+            <span className="badge badge-glow-red">High Priority</span>
+          </div>
         </div>
       </div>
       <CodeBlock language="html">
-        {`<span class="badge badge-primary">Primary (Black/White)</span>
-<span class="badge badge-secondary">Secondary (Soft Gray)</span>
-<span class="badge badge-pink">Pink</span>
-<span class="badge badge-success">Success</span>
-<span class="badge badge-warning">Warning</span>`}
+        {`<!-- Standard Badges -->
+<span class="badge badge-primary">Primary</span>
+<span class="badge badge-secondary">Secondary</span>
+<span class="badge badge-outline">Outline</span>
+
+<!-- Signature Glow Badges -->
+<span class="badge badge-glow">New Feature</span>
+<span class="badge badge-glow-blue">Blue Bird</span>
+<span class="badge badge-glow-purple">AI Assistant</span>
+<span class="badge badge-glow-green">Active</span>
+<span class="badge badge-glow-amber">Pending</span>
+<span class="badge badge-glow-red">High Priority</span>`}
       </CodeBlock>
 
       <h3 className="text-xl font-bold mt-6 mb-2">Ripple &amp; Interactive Toast Trigger</h3>

@@ -70,8 +70,8 @@ function Layout() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b bg-surface">
-        <nav className="flex items-center justify-between py-3">
+      <header className="glass">
+        <nav>
           <div className="flex items-center gap-2">
             <h2 className="font-bold text-xl tracking-tight">Blue Bird CSS</h2>
             <span className="badge badge-secondary badge-sm hidden-sm">v1.0</span>
