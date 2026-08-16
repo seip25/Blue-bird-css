@@ -39,7 +39,7 @@ export default function Buttons() {
           <button className="rounded-full">Rounded</button>
           <button className="rounded-full outline hover-lift" data-tooltip="Rounded full">Rounded</button>
           <button className="rounded-full secondary hover-lift" data-tooltip="Rounded full">Rounded</button>
-          <button className="rounded-full outline hover-lift" data-tooltip="Rounded full">Rounded</button>
+          <button className="rounded-full destructive hover-lift" data-tooltip="Rounded full">Rounded</button>
         </div>
 
         <div className="flex items-center gap-3 flex-wrap">
