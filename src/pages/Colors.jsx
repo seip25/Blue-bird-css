@@ -15,7 +15,7 @@ export default function Colors() {
     <article>
       <h2>Color Utilities</h2>
       <p>
-        Lila CSS provides three levels of color utilities: <strong>semantic</strong> (theme-aware),
+        Blue Bird CSS provides three levels of color utilities: <strong>semantic</strong> (theme-aware),
         <strong>shorthand</strong> (use -500 shade), and <strong>full palette</strong> (all shades).
       </p>
 

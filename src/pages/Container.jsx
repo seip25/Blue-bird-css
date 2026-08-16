@@ -6,7 +6,7 @@ export default function Container() {
       <h2>Container</h2>
       <p>
         The <code>.container</code> class centers content with a responsive max-width.
-        However, <strong>in Lila CSS, you rarely need it</strong> — <code>&lt;main&gt;</code>,
+        However, <strong>in Blue Bird CSS, you rarely need it</strong> — <code>&lt;main&gt;</code>,
         <code>&lt;header &gt; nav&gt;</code>, and <code>&lt;footer&gt;</code> automatically
         apply container behavior.
       </p>

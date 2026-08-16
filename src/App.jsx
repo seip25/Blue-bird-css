@@ -65,16 +65,16 @@ function Layout() {
             <span className="badge badge-secondary badge-sm hidden-sm">v1.0</span>
           </div>
           <div className="flex items-center gap-3">
-            <a 
-              href="https://github.com/seip25/Blue-bird-css" 
-              target="_blank" 
+            <a
+              href="https://github.com/seip25/Blue-bird-css"
+              target="_blank"
               rel="noreferrer"
               role='button'
-              className="secondary flex items-center gap-1"
+              className="outline flex items-center gap-1"
             >
               <span>GitHub</span>
             </a>
-            <button className="secondary py-3 px-4" onClick={toggleMode}>
+            <button className="outline " onClick={toggleMode}>
               {isDark ? 'Light Mode' : 'Dark Mode'}
             </button>
           </div>

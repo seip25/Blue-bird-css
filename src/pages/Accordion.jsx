@@ -26,7 +26,7 @@ export default function Accordion() {
       </div>
       <CodeBlock language="html">
 {`<details>
-  <summary>What is Lila CSS?</summary>
+  <summary>What is Blue Bird CSS?</summary>
   <p>Answer goes here...</p>
 </details>
 

@@ -72,7 +72,7 @@ export default function Sidebar() {
               key={link.to}
               to={link.to}
               end={link.to === '/'}
-              className={({ isActive }) => isActive ? 'active badge-glow' : 'hover-lift'}
+              className={({ isActive }) => isActive ? 'active' : ''}
             >
               {link.label}
             </NavLink>
