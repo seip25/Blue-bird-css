@@ -166,6 +166,152 @@ export default function Forms() {
 </fieldset>`}
       </CodeBlock>
 
+      <h3>Specialized Inputs (File, Slider &amp; Color)</h3>
+      <div className="example flex flex-col gap-4">
+        <div>
+          <label className="text-xs font-semibold uppercase text-muted">File Upload (Custom File Selector)</label>
+          <input type="file" />
+        </div>
+        <div>
+          <label className="text-xs font-semibold uppercase text-muted">Range Slider</label>
+          <input type="range" min="0" max="100" defaultValue="45" />
+        </div>
+        <div>
+          <label className="text-xs font-semibold uppercase text-muted">Color Picker</label>
+          <input type="color" defaultValue="#09090b" style={{ width: '5rem' }} />
+        </div>
+      </div>
+      <CodeBlock language="html">
+{`<!-- Styled File Input -->
+<input type="file">
+
+<!-- Custom Range Slider -->
+<input type="range" min="0" max="100" value="45">
+
+<!-- Color Picker -->
+<input type="color" value="#09090b">`}
+      </CodeBlock>
+
+      <h3>Declarative Data Attributes (Zero JS Required)</h3>
+      <p className="text-secondary mb-3">
+        BlueBird.js adds powerful data attributes for common UI interactions without writing a single line of JavaScript:
+      </p>
+      
+      {/* 1. Quick Action Triggers */}
+      <div className="example flex flex-wrap items-center gap-3">
+        <button className="secondary" data-copy="npm install bluebird-css">
+          Copy Text (<kbd>data-copy</kbd>)
+        </button>
+        <button className="secondary" data-toast="Preferences updated successfully!" data-toast-title="Success" data-toast-type="success">
+          Trigger Toast (<kbd>data-toast</kbd>)
+        </button>
+        <button className="secondary" data-snackbar="Profile saved in cloud" data-snackbar-type="success">
+          Trigger Snackbar (<kbd>data-snackbar</kbd>)
+        </button>
+        <button className="outline" data-toggle="theme">
+          Toggle Theme (<kbd>data-toggle="theme"</kbd>)
+        </button>
+        <button className="destructive" data-confirm="Are you sure you want to delete this item?">
+          Delete (<kbd>data-confirm</kbd>)
+        </button>
+      </div>
+
+      {/* 2. Password Toggle & Number Stepper */}
+      <h4 className="text-sm font-semibold mt-4 mb-2">Password Unmask &amp; Number Stepper</h4>
+      <div className="example flex flex-col md:flex-row gap-6">
+        <div className="flex-1">
+          <label className="text-xs font-semibold uppercase text-muted">Password with Toggle</label>
+          <div className="input-group">
+            <input type="password" id="demo-pwd" defaultValue="supersecret123" placeholder="Enter password" />
+            <button className="secondary" data-password-toggle="#demo-pwd" aria-label="Toggle password visibility">
+              👁️
+            </button>
+          </div>
+        </div>
+        <div>
+          <label className="text-xs font-semibold uppercase text-muted">Number Stepper</label>
+          <div className="stepper">
+            <button data-step-down="#qty-input">−</button>
+            <input type="number" id="qty-input" defaultValue="1" min="1" max="100" />
+            <button data-step-up="#qty-input">+</button>
+          </div>
+        </div>
+      </div>
+
+      {/* 3. Auto-Resize Textarea */}
+      <h4 className="text-sm font-semibold mt-4 mb-2">Auto-Expanding Textarea (<kbd>data-auto-resize</kbd>)</h4>
+      <div className="example">
+        <label className="text-xs font-semibold uppercase text-muted">Type multiple lines to expand smoothly:</label>
+        <textarea data-auto-resize placeholder="Type something here, press enter multiple times..."></textarea>
+      </div>
+
+      {/* 4. Real-Time Search Filter (ComboBox / Live List Filter) */}
+      <h4 className="text-sm font-semibold mt-4 mb-2">Real-Time Search Filter (<kbd>data-filter-target</kbd>)</h4>
+      <p className="text-muted text-sm mb-3">
+        Type in the input to filter list items or table rows instantly in real time (works like a live filter, Datalist, or Select2 dropdown):
+      </p>
+      <div className="example flex flex-col gap-3">
+        <input 
+          type="text" 
+          data-filter-target="#filterable-list" 
+          placeholder="Filter frameworks (e.g. React, Vue, Svelte, Tailwind)..." 
+        />
+        <ul id="filterable-list" className="border rounded-xl p-2 flex flex-col gap-1 bg-surface">
+          <li className="p-2 rounded-lg hover:bg-secondary cursor-pointer flex justify-between">
+            <span>React.js</span> <span className="badge badge-secondary">Library</span>
+          </li>
+          <li className="p-2 rounded-lg hover:bg-secondary cursor-pointer flex justify-between">
+            <span>Vue.js</span> <span className="badge badge-secondary">Framework</span>
+          </li>
+          <li className="p-2 rounded-lg hover:bg-secondary cursor-pointer flex justify-between">
+            <span>Svelte &amp; SvelteKit</span> <span className="badge badge-secondary">Compiler</span>
+          </li>
+          <li className="p-2 rounded-lg hover:bg-secondary cursor-pointer flex justify-between">
+            <span>Tailwind CSS</span> <span className="badge badge-secondary">Utility CSS</span>
+          </li>
+          <li className="p-2 rounded-lg hover:bg-secondary cursor-pointer flex justify-between">
+            <span>Next.js App Router</span> <span className="badge badge-secondary">Fullstack</span>
+          </li>
+          <li className="p-2 rounded-lg hover:bg-secondary cursor-pointer flex justify-between">
+            <span>Astro</span> <span className="badge badge-secondary">Static Site</span>
+          </li>
+          <li className="no-filter-results">No matching results found</li>
+        </ul>
+      </div>
+
+      <CodeBlock language="html">
+{`<!-- 1. Real-time Live Filter / Searchable Dropdown -->
+<input type="text" data-filter-target="#my-list" placeholder="Search...">
+<ul id="my-list">
+  <li>React.js</li>
+  <li>Vue.js</li>
+  <li>Next.js</li>
+  <li class="no-filter-results">No results found</li>
+</ul>
+
+<!-- 2. Password show/hide toggle -->
+<div class="input-group">
+  <input type="password" id="pwd">
+  <button data-password-toggle="#pwd">👁️</button>
+</div>
+
+<!-- 3. Auto-expanding textarea -->
+<textarea data-auto-resize placeholder="Auto expands..."></textarea>
+
+<!-- 4. Number Stepper -->
+<div class="stepper">
+  <button data-step-down="#qty">−</button>
+  <input type="number" id="qty" value="1" min="1" max="10">
+  <button data-step-up="#qty">+</button>
+</div>
+
+<!-- 5. Prompt Confirmation before Action -->
+<button class="destructive" data-confirm="Are you sure you want to delete?">Delete</button>
+
+<!-- 6. Smooth Scroll to Element -->
+<button data-scroll-to="#section-id">Scroll to Top</button>`}
+      </CodeBlock>
+
       <h3>Validation States</h3>
       <CodeBlock language="html">
 {`<!-- Invalid select -->

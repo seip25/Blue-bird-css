@@ -613,12 +613,280 @@ function initSingleCarousel(carousel, opts = {}) {
   }
 }
 
+// --- DECLARATIVE DATA ATTRIBUTES & GLOBAL EVENT DELEGATION ---
+(function setupDeclarativeListeners() {
+  // Click Delegations
+  document.addEventListener('click', (e) => {
+    // 1. Data-Copy
+    const copyTrigger = e.target.closest('[data-copy]');
+    if (copyTrigger) {
+      e.preventDefault();
+      const targetAttr = copyTrigger.getAttribute('data-copy');
+      let textToCopy = targetAttr;
+
+      if (targetAttr && (targetAttr.startsWith('#') || targetAttr.startsWith('.'))) {
+        const targetEl = document.querySelector(targetAttr);
+        if (targetEl) {
+          textToCopy = targetEl.value !== undefined ? targetEl.value : (targetEl.innerText || targetEl.textContent);
+        }
+      }
+
+      if (textToCopy) {
+        navigator.clipboard.writeText(textToCopy.trim()).then(() => {
+          copyTrigger.classList.add('copied');
+          if (typeof bluebird === 'function') {
+            bluebird('toast', {
+              title: 'Copied to clipboard',
+              description: textToCopy.length > 50 ? textToCopy.substring(0, 50) + '...' : textToCopy,
+              type: 'success',
+              duration: 2500
+            });
+          }
+          setTimeout(() => copyTrigger.classList.remove('copied'), 2000);
+        });
+      }
+      return;
+    }
+
+    // 2. Data-Confirm (Prompt verification before action)
+    const confirmTrigger = e.target.closest('[data-confirm]');
+    if (confirmTrigger) {
+      const msg = confirmTrigger.getAttribute('data-confirm') || 'Are you sure?';
+      if (!window.confirm(msg)) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        return;
+      }
+    }
+
+    // 3. Data-Scroll-To (Smooth scroll with header compensation)
+    const scrollTrigger = e.target.closest('[data-scroll-to]');
+    if (scrollTrigger) {
+      e.preventDefault();
+      const targetId = scrollTrigger.getAttribute('data-scroll-to');
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      return;
+    }
+
+    // 4. Data-Password-Toggle (Toggle password unmask)
+    const passToggle = e.target.closest('[data-password-toggle]');
+    if (passToggle) {
+      e.preventDefault();
+      const targetSelector = passToggle.getAttribute('data-password-toggle');
+      const input = targetSelector 
+        ? document.querySelector(targetSelector)
+        : (passToggle.closest('.input-group, .form-input-group, div')?.querySelector('input') || passToggle.previousElementSibling);
+
+      if (input && (input.type === 'password' || input.type === 'text')) {
+        const isPassword = input.type === 'password';
+        input.type = isPassword ? 'text' : 'password';
+        passToggle.classList.toggle('showing', isPassword);
+        passToggle.setAttribute('aria-pressed', isPassword ? 'true' : 'false');
+      }
+      return;
+    }
+
+    // 5. Data-Step-Up / Data-Step-Down (Number Steppers)
+    const stepUp = e.target.closest('[data-step-up]');
+    if (stepUp) {
+      e.preventDefault();
+      const targetInput = document.querySelector(stepUp.getAttribute('data-step-up')) || 
+                          stepUp.closest('.stepper')?.querySelector('input[type="number"]');
+      if (targetInput && typeof targetInput.stepUp === 'function') {
+        targetInput.stepUp();
+        targetInput.dispatchEvent(new Event('input', { bubbles: true }));
+        targetInput.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+      return;
+    }
+
+    const stepDown = e.target.closest('[data-step-down]');
+    if (stepDown) {
+      e.preventDefault();
+      const targetInput = document.querySelector(stepDown.getAttribute('data-step-down')) || 
+                          stepDown.closest('.stepper')?.querySelector('input[type="number"]');
+      if (targetInput && typeof targetInput.stepDown === 'function') {
+        targetInput.stepDown();
+        targetInput.dispatchEvent(new Event('input', { bubbles: true }));
+        targetInput.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+      return;
+    }
+
+    // 6. Data-Select-Value (ComboBox / Select2 item selection)
+    const selectItem = e.target.closest('[data-select-value]');
+    if (selectItem) {
+      const val = selectItem.getAttribute('data-select-value');
+      const targetSelector = selectItem.getAttribute('data-select-target') || 
+                             selectItem.closest('[data-select-container]')?.getAttribute('data-select-target');
+      if (targetSelector) {
+        const targetEl = document.querySelector(targetSelector);
+        if (targetEl) {
+          if (targetEl.tagName === 'INPUT' || targetEl.tagName === 'SELECT') {
+            targetEl.value = val;
+            targetEl.dispatchEvent(new Event('input', { bubbles: true }));
+            targetEl.dispatchEvent(new Event('change', { bubbles: true }));
+          } else {
+            targetEl.textContent = selectItem.textContent.trim();
+          }
+        }
+      }
+      // Close dropdown if inside one
+      const parentDropdown = selectItem.closest('.dropdown-content, .popover-content');
+      if (parentDropdown) {
+        parentDropdown.classList.remove('open');
+      }
+    }
+
+    // 7. Data-Toggle / Modal Trigger
+    const modalTrigger = e.target.closest('[data-toggle="modal"], [data-modal-target], [data-dialog-target]');
+    if (modalTrigger) {
+      e.preventDefault();
+      const targetSelector = modalTrigger.getAttribute('data-modal-target') || 
+                             modalTrigger.getAttribute('data-dialog-target') || 
+                             modalTrigger.getAttribute('data-target') || 
+                             modalTrigger.getAttribute('href');
+      if (targetSelector) {
+        const dialog = document.querySelector(targetSelector);
+        if (dialog && typeof dialog.showModal === 'function') {
+          dialog.showModal();
+        }
+      }
+      return;
+    }
+
+    // 8. Data-Dismiss / Modal Close
+    const dismissTrigger = e.target.closest('[data-dismiss="modal"], [data-close-dialog], [data-close-modal]');
+    if (dismissTrigger) {
+      e.preventDefault();
+      const dialog = dismissTrigger.closest('dialog') || 
+                     document.querySelector(dismissTrigger.getAttribute('data-target') || '');
+      if (dialog && typeof dialog.close === 'function') {
+        dialog.close();
+      }
+      return;
+    }
+
+    // 9. Data-Toggle Theme
+    const themeTrigger = e.target.closest('[data-toggle="theme"]');
+    if (themeTrigger) {
+      e.preventDefault();
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      try {
+        localStorage.setItem('bluebird-theme', next);
+      } catch (err) {}
+      return;
+    }
+
+    // 10. Data-Toast Trigger
+    const toastTrigger = e.target.closest('[data-toast]');
+    if (toastTrigger) {
+      e.preventDefault();
+      const desc = toastTrigger.getAttribute('data-toast') || '';
+      const title = toastTrigger.getAttribute('data-toast-title') || '';
+      const type = toastTrigger.getAttribute('data-toast-type') || 'info';
+      if (typeof bluebird === 'function') {
+        bluebird('toast', { title, description: desc, type });
+      }
+      return;
+    }
+
+    // 11. Data-Snackbar Trigger
+    const snackbarTrigger = e.target.closest('[data-snackbar]');
+    if (snackbarTrigger) {
+      e.preventDefault();
+      const message = snackbarTrigger.getAttribute('data-snackbar') || '';
+      const type = snackbarTrigger.getAttribute('data-snackbar-type') || 'info';
+      if (typeof bluebird === 'function') {
+        bluebird('snackbar', { message, type });
+      }
+      return;
+    }
+
+    // 12. Click outside dropdown / popover auto-close
+    if (!e.target.closest('.dropdown') && !e.target.closest('.popover')) {
+      document.querySelectorAll('.dropdown-content.open, .popover-content.open').forEach(el => {
+        el.classList.remove('open');
+      });
+    }
+  });
+
+  // Live Input Event Delegations (Filter Target & Auto-Resize Textarea)
+  document.addEventListener('input', (e) => {
+    // A. Real-time List/Table/ComboBox Filtering (data-filter-target="#lista")
+    const filterInput = e.target.closest('[data-filter-target]');
+    if (filterInput) {
+      const targetSelector = filterInput.getAttribute('data-filter-target');
+      const targetContainer = document.querySelector(targetSelector);
+      if (targetContainer) {
+        const query = filterInput.value.toLowerCase().trim();
+        const items = targetContainer.querySelectorAll('[data-filter-item], li, tr, .card, .dropdown-item, .item');
+        let visibleCount = 0;
+
+        items.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          const matches = text.includes(query);
+          item.style.display = matches ? '' : 'none';
+          if (matches) visibleCount++;
+        });
+
+        const emptyMsg = targetContainer.querySelector('.no-filter-results');
+        if (emptyMsg) {
+          emptyMsg.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+      }
+    }
+
+    // B. Auto-Resize Textarea (data-auto-resize)
+    if (e.target.matches('textarea[data-auto-resize]')) {
+      const textarea = e.target;
+      textarea.style.height = 'auto';
+      textarea.style.height = (textarea.scrollHeight + 2) + 'px';
+    }
+  });
+
+  // Global Ctrl+K / Cmd+K listener
+  document.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      if (typeof bluebird === 'function') {
+        bluebird('command', { action: 'toggle' });
+      }
+    } else if (e.key === 'Escape') {
+      const openCommand = document.querySelector('.command-backdrop.open');
+      if (openCommand && typeof bluebird === 'function') {
+        bluebird('command', { action: 'close' });
+      }
+    }
+  });
+})();
+
 // Auto Setup Helper Elements on DOMReady
 (function () {
   function init() {
     cleanupOrphanedBackdrops();
     initMobileDrawer();
     document.querySelectorAll('.carousel').forEach(c => initSingleCarousel(c));
+
+    // Auto resize textareas on init
+    document.querySelectorAll('textarea[data-auto-resize]').forEach(t => {
+      t.style.height = 'auto';
+      t.style.height = (t.scrollHeight + 2) + 'px';
+    });
+
+    // Restore saved theme if available
+    try {
+      const savedTheme = localStorage.getItem('bluebird-theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+    } catch (e) {}
   }
 
   if (document.readyState === 'loading') {

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route, Outlet, useLocation } from 'react-router-dom';
+import { Routes, Route, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import 'highlight.js/styles/atom-one-dark.css';
 import './App.css';
 
@@ -44,10 +44,22 @@ import ProgressDoc from './pages/ProgressDoc';
 function Layout() {
   const [isDark, setIsDark] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash.startsWith('#/')) {
+        const path = window.location.hash.slice(1);
+        navigate(path);
+      }
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, [navigate]);
 
   const toggleMode = () => {
     const html = document.documentElement;
@@ -64,18 +76,26 @@ function Layout() {
             <h2 className="font-bold text-xl tracking-tight">Blue Bird CSS</h2>
             <span className="badge badge-secondary badge-sm hidden-sm">v1.0</span>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 flex-wrap">
+            <button 
+              className="secondary flex items-center gap-2 text-sm text-muted"
+              onClick={() => window.bluebird && window.bluebird('command', { action: 'open' })}
+              style={{ padding: '0.35rem 0.75rem' }}
+            >
+              <span>Search docs...</span>
+              <kbd>Ctrl+K</kbd>
+            </button>
             <a
               href="https://github.com/seip25/Blue-bird-css"
               target="_blank"
               rel="noreferrer"
               role='button'
-              className="outline flex items-center gap-1 rounded-full"
+              className="outline flex items-center gap-1 rounded-full text-sm"
             >
               <span>GitHub</span>
             </a>
-            <button className="outline rounded-full" onClick={toggleMode}>
-              {isDark ? 'Light Mode' : 'Dark Mode'}
+            <button className="outline rounded-full text-sm" onClick={toggleMode}>
+              {isDark ? 'Light' : 'Dark'}
             </button>
           </div>
         </nav>

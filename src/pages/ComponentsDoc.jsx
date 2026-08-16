@@ -184,6 +184,68 @@ export default function ComponentsDoc() {
         </CodeBlock>
       </section>
 
+      {/* Avatar Group Section */}
+      <section className="mb-8">
+        <h3 className="text-xl font-bold mb-2">Avatar Group &amp; Stacked Avatars</h3>
+        <p className="text-muted mb-4">
+          Overlapping avatar lists for user teams and assignees using <code>.avatar-group</code>:
+        </p>
+        <div className="border p-4 rounded-xl my-4 flex items-center gap-6 flex-wrap">
+          <div className="avatar-group">
+            <div className="avatar bg-blue">JD</div>
+            <div className="avatar bg-purple">AS</div>
+            <div className="avatar bg-emerald">MK</div>
+            <div className="avatar bg-amber">PL</div>
+            <div className="avatar-count">+4</div>
+          </div>
+        </div>
+        <CodeBlock language="html">
+{`<div class="avatar-group">
+  <div class="avatar bg-blue">JD</div>
+  <div class="avatar bg-purple">AS</div>
+  <div class="avatar bg-emerald">MK</div>
+  <div class="avatar-count">+4</div>
+</div>`}
+        </CodeBlock>
+      </section>
+
+      {/* Status Dots & LED Badges Section */}
+      <section className="mb-8">
+        <h3 className="text-xl font-bold mb-2">Status Dots &amp; Live Indicators</h3>
+        <p className="text-muted mb-4">
+          Real-time status indicators using <code>.dot</code>, <code>.dot-pulse</code>, and <code>.badge-dot</code>:
+        </p>
+        <div className="border p-4 rounded-xl my-4 flex items-center gap-4 flex-wrap">
+          <span className="badge badge-secondary badge-dot">
+            <span className="dot dot-success dot-pulse"></span>
+            <span>Online</span>
+          </span>
+          <span className="badge badge-secondary badge-dot">
+            <span className="dot dot-warning"></span>
+            <span>Away</span>
+          </span>
+          <span className="badge badge-secondary badge-dot">
+            <span className="dot dot-destructive"></span>
+            <span>Offline</span>
+          </span>
+          <span className="badge badge-secondary badge-dot">
+            <span className="dot dot-primary"></span>
+            <span>Deploying</span>
+          </span>
+        </div>
+        <CodeBlock language="html">
+{`<!-- Live Pulsing Status Badge -->
+<span class="badge badge-secondary badge-dot">
+  <span class="dot dot-success dot-pulse"></span>
+  <span>Online</span>
+</span>
+
+<!-- Standard Status Dots -->
+<span class="dot dot-warning"></span> Away
+<span class="dot dot-destructive"></span> Offline`}
+        </CodeBlock>
+      </section>
+
       {/* Separators & Aspect Ratio Section */}
       <section className="mb-8">
         <h3 className="text-xl font-bold mb-2">Separators &amp; Aspect Ratio</h3>
