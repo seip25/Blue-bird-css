@@ -16,13 +16,20 @@ export default function Forms() {
           <input type="text" placeholder="Text Input" />
         </div>
         <input type="email" placeholder="Email Input" />
-        <input type="password" placeholder="Password" />
+        <div class="input-group">
+          <input type="password" placeholder="Password" id="pwdPassword" />
+          <button data-password-toggle="#pwdPassword" aria-pressed="true" class="outline showing">👁️</button>
+        </div>
         <input type="number" placeholder="Number" />
+        
       </div>
       <CodeBlock language="html">
 {`<div><label>Label</label><input type="text" placeholder="Text Input" /></div>
 <input type="email" placeholder="Email Input">
-<input type="password" placeholder="Password">
+<div class="input-group">
+  <input type="password" placeholder="Password" id="pwdPassword" />
+  <button data-password-toggle="#pwdPassword" aria-pressed="true" class="outline showing">👁️</button>
+</div>
 <input type="number" placeholder="Number">`}
       </CodeBlock>
 
