@@ -11,13 +11,16 @@ export default function Forms() {
 
       <h3>Standard Inputs</h3>
       <div className="example">
-        <input type="text" placeholder="Text Input" />
+        <div>
+          <label>Label</label>
+          <input type="text" placeholder="Text Input" />
+        </div>
         <input type="email" placeholder="Email Input" />
         <input type="password" placeholder="Password" />
         <input type="number" placeholder="Number" />
       </div>
       <CodeBlock language="html">
-{`<input type="text" placeholder="Text Input">
+{`<div><label>Label</label><input type="text" placeholder="Text Input" /></div>
 <input type="email" placeholder="Email Input">
 <input type="password" placeholder="Password">
 <input type="number" placeholder="Number">`}
