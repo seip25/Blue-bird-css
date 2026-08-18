@@ -1130,6 +1130,7 @@ input[type="radio"] {
   transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-block;
   flex-shrink: 0;
+  margin-top: 0.55rem;
 }
 
 [data-theme="dark"] input[type="checkbox"]:not([role="switch"]):not(.switch):not(.switch-android),
