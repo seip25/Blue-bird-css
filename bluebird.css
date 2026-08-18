@@ -761,7 +761,7 @@ textarea.form-control {
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--text-muted);
+  color: var(--text-primary);
   opacity: 1;
 }
 
