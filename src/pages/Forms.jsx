@@ -141,15 +141,15 @@ export default function Forms() {
       <fieldset>
         <legend>Personal Information</legend>
         <div className="floating">
-          <input type="text" placeholder=" " />
+          <input type="text" placeholder=" " class="outline" />
           <label>First Name</label>
         </div>
         <div className="floating">
-          <input type="text" placeholder=" " />
+          <input type="text" placeholder=" " class="outline" />
           <label>Last Name</label>
         </div>
         <div className="floating">
-          <input type="email" placeholder=" " />
+          <input type="email" placeholder=" " class="outline" />
           <label>Email</label>
         </div>
         <button>Submit</button>
