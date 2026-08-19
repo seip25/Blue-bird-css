@@ -94,7 +94,7 @@
   --primary: #09090b;
   --secondary: #f4f4f5;
   --outline: #e4e4e7;
-  --destructive: #ef4444;
+  --destructive: var(--red-500);
   --on-primary: #fafafa;
   --on-secondary: #18181b;
   --on-background: #09090b;
@@ -127,7 +127,7 @@
   --primary: #fafafa;
   --outline: #27272a;
   --secondary: #27272a;
-  --destructive: #7f1d1d;
+  --destructive: var(--red-600);
   --on-primary: #09090b;
   --on-secondary: #fafafa;
   --on-background: #fafafa;
@@ -5883,7 +5883,7 @@ button.bg-blue,
 a[role="button"].bg-blue,
 .btn.bg-blue,
 .btn-blue {
-  background-color: #3b82f6 !important;
+  background-color: var(--blue-500) !important;
   color: white !important;
   border-color: transparent !important;
 }
@@ -5892,7 +5892,7 @@ button.bg-green,
 a[role="button"].bg-green,
 .btn.bg-green,
 .btn-green {
-  background-color: #22c55e !important;
+  background-color: var(--green-500) !important;
   color: white !important;
   border-color: transparent !important;
 }
@@ -5901,8 +5901,8 @@ button.bg-yellow,
 a[role="button"].bg-yellow,
 .btn.bg-yellow,
 .btn-yellow {
-  background-color: #eab308 !important;
-  color: #713f12 !important;
+  background-color: var(--yellow-500) !important;
+  color: var(--yellow-800) !important;
   border-color: transparent !important;
 }
 
@@ -5910,7 +5910,7 @@ button.bg-indigo,
 a[role="button"].bg-indigo,
 .btn.bg-indigo,
 .btn-indigo {
-  background-color: #6366f1 !important;
+  background-color: var(--indigo-500) !important;
   color: white !important;
   border-color: transparent !important;
 }
@@ -5919,7 +5919,7 @@ button.bg-violet,
 a[role="button"].bg-violet,
 .btn.bg-violet,
 .btn-violet {
-  background-color: #8b5cf6 !important;
+  background-color: var(--violet-500) !important;
   color: white !important;
   border-color: transparent !important;
 }
@@ -5937,7 +5937,7 @@ button.bg-pink,
 a[role="button"].bg-pink,
 .btn.bg-pink,
 .btn-pink {
-  background-color: var(--pink) !important;
+  background-color: var(--pink-500) !important;
   color: white !important;
   border-color: transparent !important;
 }
