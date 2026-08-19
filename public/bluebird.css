@@ -5597,29 +5597,50 @@ article>footer {
 .text-red {
   color: var(--red-500);
 }
+[data-theme="dark"] .text-red {
+  color: var(--red-400);
+}
 
 .text-blue {
   color: var(--blue-500);
+}
+[data-theme="dark"] .text-blue {
+  color: var(--blue-400);
 }
 
 .text-green {
   color: var(--green-500);
 }
+[data-theme="dark"] .text-green {
+  color: var(--green-400);
+}
 
 .text-yellow {
   color: var(--yellow-500);
+}
+[data-theme="dark"] .text-yellow {
+  color: var(--yellow-400);
 }
 
 .text-indigo {
   color: var(--indigo-500);
 }
+[data-theme="dark"] .text-indigo {
+  color: var(--indigo-400);
+}
 
 .text-violet {
   color: var(--violet-500);
 }
+[data-theme="dark"] .text-violet {
+  color: var(--violet-400);
+}
 
 .text-gray {
   color: var(--gray-500);
+}
+[data-theme="dark"] .text-gray-100 {
+  color: var(--gray-400);
 }
 
 .text-white {
