@@ -520,6 +520,12 @@ section,
   box-shadow: var(--shadow);
 }
 
+[data-theme="dark"] article,
+[data-theme="dark"] section,
+[data-theme="dark"] .card {
+  background-color: var(--glass-bg) !important;
+}
+
 small {
   font-size: 0.875rem;
   color: var(--text-muted);
@@ -1545,6 +1551,11 @@ details {
   margin-bottom: 1rem;
 }
 
+[data-theme="dark"] details {
+  background-color: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+}
+
 details>summary {
   cursor: pointer;
   font-weight: 500;
@@ -1626,22 +1637,22 @@ aside h6 {
 
 /* --- Color Utility Classes --- */
 .bg-primary {
-  background-color: var(--primary);
-  color: var(--on-primary);
+  background-color: var(--primary) !important;
+  color: var(--on-primary) !important;
 }
 
 .bg-secondary {
-  background-color: var(--secondary);
-  color: var(--on-secondary);
+  background-color: var(--secondary) !important;
+  color: var(--on-secondary) !important;
 }
 
 .bg-surface {
-  background-color: var(--surface);
-  color: var(--on-surface);
+  background-color: var(--surface) !important;
+  color: var(--on-surface) !important;
 }
 
 .bg-background {
-  background-color: var(--background);
+  background-color: var(--background) !important;
 }
 
 .bg-gray-50 {
