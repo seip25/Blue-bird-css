@@ -14,7 +14,7 @@ const sections = [
       { to: '/buttons', label: 'Buttons' },
       { to: '/forms', label: 'Forms' },
       { to: '/typography', label: 'Typography' },
-      { to: '/table', label: 'Table' },
+      { to: '/table', label: 'Table & Datatable' },
     ],
   },
   {

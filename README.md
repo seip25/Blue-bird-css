@@ -12,6 +12,7 @@ A lightweight, semantic, modern design framework inspired by modern aesthetics a
 - [🚀 Quick Start (CDN)](#-quick-start-cdn)
 - [🧠 JavaScript Engine (`bluebird.js`) & API](#-javascript-engine-bluebirdjs--api)
   - [Core `bluebird()` Function](#core-bluebird-function)
+  - [Responsive Data Table (`ResponsiveDataTable`)](#responsive-data-table-responsivedatatable)
   - [Toast Notifications (`toast()`)](#toast-notifications-toast)
   - [Snackbar (`snackbar()`)](#snackbar-snackbar)
   - [Command Palette (`Ctrl+K`)](#command-palette-ctrlk)
@@ -19,6 +20,9 @@ A lightweight, semantic, modern design framework inspired by modern aesthetics a
   - [Interactive Tabs](#interactive-tabs)
   - [Touch & Drag Carousel](#touch--drag-carousel)
   - [Automatic Mobile Navigation](#automatic-mobile-navigation)
+  - [HTTP Fetch Client (`Http()`)](#http-fetch-client-http)
+  - [URL Parameter Helper (`getUrlParameter()`)](#url-parameter-helper-geturlparameter)
+  - [Declarative HTML `data-*` Attributes](#declarative-html-data--attributes)
 - [🎨 CSS Components & Utilities](#-css-components--utilities)
   - [Buttons, Soft Tint & Cyberpunk Glow](#buttons-soft-tint--cyberpunk-glow)
   - [Badges & Tooltips](#badges--tooltips)
@@ -134,6 +138,103 @@ Simply include `bluebird.css` and `bluebird.js` in your HTML `<head>` or templat
 ```javascript
 // Main entry point signature:
 bluebird(component, options);
+```
+
+---
+
+### Responsive Data Table (`ResponsiveDataTable`)
+
+`ResponsiveDataTable` is a reactive, dependency-free JavaScript data table component that automatically adapts its layout:
+- **Desktop (`>=768px`)**: Renders a standard tabular `<table>` with formatted cells, sortable-ready layout, and actionable buttons.
+- **Mobile (`<768px`)**: Seamlessly collapses into a stack of structured, accessible `<article>` cards with header summaries and key-value detail rows.
+- **Real-Time Live Search**: Instantly filters across all visible column values as you type.
+- **Dynamic Pagination**: Auto-calculates pages with smart ellipsis navigation and configurable page sizes.
+- **HTML String Rendering**: Seamlessly parses HTML strings in cell data (such as `<span class="badge">...</span>` or status indicators).
+- **Edit & Delete Action Callbacks**: Built-in action triggers with row data payload.
+
+#### Basic Example (HTML & JavaScript)
+
+```html
+<!-- 1. HTML Target Container -->
+<div id="users-datatable"></div>
+
+<!-- 2. Include Blue Bird CSS & JS -->
+<link rel="stylesheet" href="https://seip25.github.io/Blue-bird-css/bluebird.css" />
+<script src="https://seip25.github.io/Blue-bird-css/bluebird.js"></script>
+
+<script>
+  // 3. Instantiate ResponsiveDataTable
+  const datatable = new ResponsiveDataTable('users-datatable', {
+    data: [
+      { id: 1, name: 'Ana López', email: 'ana@example.com', role: '<span class="badge badge-primary">Admin</span>', status: 'Active' },
+      { id: 2, name: 'Luis García', email: 'luis@example.com', role: '<span class="badge badge-secondary">Editor</span>', status: 'Active' },
+      { id: 3, name: 'Marta Ruiz', email: 'marta@example.com', role: '<span class="badge badge-outline">Viewer</span>', status: 'Inactive' },
+      { id: 4, name: 'Carlos Díaz', email: 'carlos@example.com', role: '<span class="badge badge-secondary">Editor</span>', status: 'Pending' }
+    ],
+    columns: [
+      { key: 'id', title: 'ID' },
+      { key: 'name', title: 'Full Name' },
+      { key: 'email', title: 'Email Address' },
+      { key: 'role', title: 'Role' },
+      { key: 'status', title: 'Status' }
+    ],
+    rowsPerPage: 5,
+    search: true,            // Live real-time search filter
+    pagination: true,        // Page number controls
+    summaryFields: ['name'], // Field displayed as card header in mobile view
+    edit: (event, id) => toast({ title: 'Edit', description: `Edit user #${id}`, type: 'info' }),
+    delete: (event, id) => toast({ title: 'Delete', description: `Deleted user #${id}`, type: 'error' }),
+    breakpoint: 768          // Viewport width (px) to switch to mobile cards
+  });
+</script>
+```
+
+#### Initialization via `bluebird('datatable', options)`
+
+```javascript
+// Alternatively initialize via the unified bluebird dispatcher:
+const table = bluebird('datatable', {
+  container: 'users-datatable', // Container ID or DOM element
+  data: usersList,
+  columns: [
+    { key: 'id', title: 'ID' },
+    { key: 'name', title: 'Name' },
+    { key: 'email', title: 'Email' }
+  ],
+  rowsPerPage: 10
+});
+```
+
+#### Configuration Options
+
+| Option | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `data` | `Array<Object>` | `[]` | Array of row objects to display in the table. |
+| `columns` | `Array<Object>` | `[]` | Column definitions: `{ key: string, title: string }`. |
+| `rowsPerPage` | `number` | `10` | Number of items per page. |
+| `search` | `boolean` | `true` | Enables the live instant search input bar above table. |
+| `pagination` | `boolean` | `true` | Enables pagination controls below the table. |
+| `summaryFields` | `Array<string>` | `['id']` | Column keys displayed in the mobile card title header. |
+| `edit` | `boolean \| Function` | `false` | Callback `(event, item) => ...` executed when Edit button is clicked. |
+| `delete` | `boolean \| Function` | `false` | Callback `(event, item) => ...` executed when Delete button is clicked. |
+| `breakpoint` | `number` | `768` | Screen width in pixels below which table converts to mobile cards. |
+| `headerTitles` | `Object` | `{}` | Optional key-to-title dictionary override mapping. |
+
+#### Instance Methods
+
+```javascript
+// Update dataset dynamically (resets pagination to page 1):
+table.updateData(newUsersArray);
+
+// Update table column structure dynamically:
+table.updateColumns([
+  { key: 'id', title: 'ID' },
+  { key: 'title', title: 'Title' },
+  { key: 'category', title: 'Category' }
+]);
+
+// Navigate to a specific page programmatically:
+table.changePage(2);
 ```
 
 ---
@@ -292,6 +393,60 @@ When your page uses standard semantic HTML structure:
 ```
 
 On small viewports (`<768px`), `bluebird.js` automatically hides the desktop `<aside>` sidebar and injects a mobile drawer toggle button (`☰`) into your top `<header><nav>`, providing a slide-over mobile drawer navigation.
+
+---
+
+### HTTP Fetch Client (`Http()`)
+
+A modern `fetch` wrapper with automatic CSRF token detection, JSON payload handling, and structured error throwing.
+
+```javascript
+// 1. Basic GET Request
+const users = await Http('/api/users');
+
+// 2. POST JSON Request (Automatically attaches X-CSRF-Token if #csrf input exists)
+const newUser = await Http('/api/users/create', 'POST', {
+  name: 'Alex Johnson',
+  email: 'alex@example.com'
+});
+
+// 3. Multipart FormData Upload
+const form = new FormData();
+form.append('avatar', fileInput.files[0]);
+const result = await Http('/api/profile/upload', 'POST', false, form);
+```
+
+---
+
+### URL Parameter Helper (`getUrlParameter()`)
+
+Easily inspect query parameters from `window.location.search`:
+
+```javascript
+// Current URL: https://example.com/dashboard?tab=analytics&user=42
+const tab = getUrlParameter('tab');   // "analytics"
+const user = getUrlParameter('user'); // "42"
+```
+
+---
+
+### Declarative HTML `data-*` Attributes
+
+`bluebird.js` includes built-in declarative event listeners that work directly on HTML markup without writing JavaScript:
+
+| Attribute | Target / Example | Description |
+| :--- | :--- | :--- |
+| `data-copy` | `<button data-copy="https://myurl.com">Copy Link</button>` | Copies text to clipboard and displays an instant success toast. |
+| `data-confirm` | `<button data-confirm="Are you sure you want to delete this record?">Delete</button>` | Prompts user confirmation before action executes. |
+| `data-scroll-to` | `<a data-scroll-to="#pricing">View Pricing</a>` | Performs a smooth animated scroll to the target selector. |
+| `data-password-toggle` | `<button data-password-toggle="#pass-input">👁️</button>` | Toggles input mask between `password` and `text`. |
+| `data-step-up` / `data-step-down` | `<button data-step-up="#qty">+</button>` | Increments or decrements a numeric input. |
+| `data-filter-target` | `<input data-filter-target="#users-table" />` | Real-time live filtering on list items, table rows, or cards. |
+| `data-auto-resize` | `<textarea data-auto-resize></textarea>` | Auto-expands textarea height to fit content without scrollbars. |
+| `data-modal-target` / `data-close-dialog` | `<button data-modal-target="#my-modal">Open</button>` | Opens or closes HTML5 native `<dialog>` modals. |
+| `data-toggle="theme"` | `<button data-toggle="theme">Toggle Theme</button>` | Toggles Light/Dark theme and persists preference in `localStorage`. |
+| `data-toast` / `data-toast-title` | `<button data-toast="Saved!" data-toast-title="Success">Save</button>` | Triggers a toast notification purely via HTML. |
+| `data-snackbar` | `<button data-snackbar="Profile updated">Update</button>` | Triggers a snackbar message on click. |
 
 ---
 
