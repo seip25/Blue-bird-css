@@ -224,9 +224,8 @@ https://github.com/highlightjs/highlight.js/issues/2277`),i=e,r=t),n===void 0&&(
 <!-- Include Blue Bird CSS & JS -->
 <link rel="stylesheet" href="https://seip25.github.io/Blue-bird-css/bluebird.css" />
 <script src="https://seip25.github.io/Blue-bird-css/bluebird.js"><\/script>
-
-<script>
-  // Initialize ResponsiveDataTable
+              `}),(0,R.jsx)(V,{language:`javascript`,children:`
+    // Initialize ResponsiveDataTable
   const table = new ResponsiveDataTable('my-datatable', {
     data: [
       { id: 1, name: 'Ana López', role: 'Admin', status: 'Active' },
@@ -248,7 +247,7 @@ https://github.com/highlightjs/highlight.js/issues/2277`),i=e,r=t),n===void 0&&(
     delete: (event, id) => console.log('Delete clicked for ID:', id),
     breakpoint: 768      // Screen width (px) to switch between table and card view
   });
-<\/script>`})]}),(0,R.jsxs)(`section`,{className:`mb-8`,children:[(0,R.jsx)(`h3`,{className:`text-xl font-bold mb-2`,children:"Using `bluebird('datatable', options)` Helper"}),(0,R.jsxs)(`p`,{className:`text-muted mb-4`,children:[`You can also use the unified `,(0,R.jsx)(`code`,{children:`bluebird()`}),` dispatcher function:`]}),(0,R.jsx)(V,{language:`javascript`,children:`// Initialize via global bluebird() function:
+  `})]}),(0,R.jsxs)(`section`,{className:`mb-8`,children:[(0,R.jsx)(`h3`,{className:`text-xl font-bold mb-2`,children:"Using `bluebird('datatable', options)` Helper"}),(0,R.jsxs)(`p`,{className:`text-muted mb-4`,children:[`You can also use the unified `,(0,R.jsx)(`code`,{children:`bluebird()`}),` dispatcher function:`]}),(0,R.jsx)(V,{language:`javascript`,children:`// Initialize via global bluebird() function:
 const table = bluebird('datatable', {
   container: 'my-datatable', // Container ID or DOM Element
   data: usersList,
