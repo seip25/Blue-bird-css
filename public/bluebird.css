@@ -130,7 +130,7 @@
   --destructive: var(--red-600);
   --on-primary: #09090b;
   --on-secondary: #fafafa;
-  --on-background: #fafafa;
+  --on-background: var(--gray-400);
   --on-surface: #fafafa;
   --text-primary: #fafafa;
   --text-secondary: #a1a1aa;
@@ -510,7 +510,7 @@ main>aside+* {
 article,
 section,
 .card {
-  background-color: var(--glass-bg);
+  background-color: var(--surface);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
@@ -523,7 +523,7 @@ section,
 [data-theme="dark"] article,
 [data-theme="dark"] section,
 [data-theme="dark"] .card {
-  background-color: var(--glass-bg) !important;
+  background-color: var(--surface);
 }
 
 small {
@@ -1544,17 +1544,14 @@ tbody tr:hover {
 
 /* --- Accordion (Details/Summary) & Progress --- */
 details {
-  background-color: var(--background);
+  background-color: var(--surface);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 1rem;
   margin-bottom: 1rem;
 }
 
-[data-theme="dark"] details {
-  background-color: var(--glass-bg) !important;
-  border: 1px solid var(--glass-border) !important;
-}
+
 
 details>summary {
   cursor: pointer;
