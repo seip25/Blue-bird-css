@@ -1018,16 +1018,16 @@ class ResponsiveDataTable {
     this.container.innerHTML = `
       <section class="w-full">
         ${this.options.search
-        ? `<div class="mb-6 flex items-center justify-between"><input type="search" class="datatable-search-input w-full max-w-xs px-4 py-2 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm transition-all text-slate-800 dark:text-slate-100" placeholder="${lang() ? "Buscar..." : "Search..."}" aria-label="Search"/></div>`
+        ? `<div class="mb-4 flex items-center justify-between"><input type="search" class="datatable-search-input outline" placeholder="${lang() ? "Buscar..." : "Search..."}" aria-label="Search"/></div>`
         : ""
       }
 
-        <div class="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800/80">
-          <table class="datatable-table min-w-full divide-y divide-slate-100 dark:divide-slate-800 text-sm hidden"></table>
+        <div class="overflow-x-auto">
+          <table class="datatable-table hidden"></table>
           <div class="datatable-mobile"></div>
         </div>
 
-        ${this.options.pagination ? `<nav class="datatable-pagination mt-6 flex items-center justify-center gap-1.5" aria-label="Pagination"></nav>` : ""}
+        ${this.options.pagination ? `<nav class="datatable-pagination mt-4 flex items-center justify-center gap-1" aria-label="Pagination"></nav>` : ""}
       </section>`;
   }
 
@@ -1052,13 +1052,11 @@ class ResponsiveDataTable {
       <thead>
         <tr class="datatable-header"></tr>
       </thead>
-      <tbody class="datatable-body divide-y divide-slate-100 dark:divide-slate-800"></tbody>`;
+      <tbody class="datatable-body"></tbody>`;
     const headerRow = table.querySelector("thead tr");
     this.options.columns.forEach((column) => {
       const th = document.createElement("th");
       th.scope = "col";
-      th.className =
-        "px-6 py-3.5 text-left text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800";
       th.textContent =
         this.options.headerTitles[column.key] || column.title || column.key;
       headerRow.appendChild(th);
@@ -1066,8 +1064,6 @@ class ResponsiveDataTable {
     if (this.options.edit || this.options.delete) {
       const th = document.createElement("th");
       th.scope = "col";
-      th.className =
-        "px-6 py-3.5 text-left text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800";
       th.textContent = lang() ? "Acciones" : "Actions";
       headerRow.appendChild(th);
     }
@@ -1077,12 +1073,8 @@ class ResponsiveDataTable {
     const tbody = table.querySelector("tbody");
     paginatedData.forEach((item) => {
       const row = document.createElement("tr");
-      row.className =
-        "hover:bg-slate-50/50 dark:hover:bg-slate-900/50 transition-colors";
       this.options.columns.forEach((column) => {
         const td = document.createElement("td");
-        td.className =
-          "px-6 py-4 text-slate-700 dark:text-slate-300 whitespace-nowrap align-middle font-medium";
         const value = item[column.key];
         if (
           value &&
@@ -1097,21 +1089,18 @@ class ResponsiveDataTable {
       });
       if (this.options.edit || this.options.delete) {
         const td = document.createElement("td");
-        td.className = "px-6 py-4 whitespace-nowrap align-middle";
         const actionsDiv = document.createElement("div");
         actionsDiv.className = "flex items-center gap-2";
         if (this.options.edit) {
           const btn = document.createElement("button");
-          btn.className =
-            "px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-brand-600 hover:text-white rounded-lg text-xs font-bold border border-slate-200 dark:border-slate-700 transition-all cursor-pointer";
+          btn.className = "outline";
           btn.textContent = lang() ? "Editar" : "Edit";
           btn.onclick = (e) => this.handleAction("edit", e, item);
           actionsDiv.appendChild(btn);
         }
         if (this.options.delete) {
           const btn = document.createElement("button");
-          btn.className =
-            "px-3 py-1.5 bg-red-50 dark:bg-red-950/20 text-red-600 hover:bg-red-500 hover:text-white rounded-lg text-xs font-bold border border-transparent transition-all cursor-pointer";
+          btn.className = "destructive";
           btn.textContent = lang() ? "Eliminar" : "Delete";
           btn.onclick = (e) => this.handleAction("delete", e, item);
           actionsDiv.appendChild(btn);
@@ -1131,11 +1120,10 @@ class ResponsiveDataTable {
     const paginatedData = this.filteredData.slice(startIndex, endIndex);
     paginatedData.forEach((item) => {
       const card = document.createElement("article");
-      card.className =
-        "mb-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col gap-4";
+      card.className = "card mb-4";
       const summary = document.createElement("h3");
       summary.className =
-        "text-base font-black text-slate-800 dark:text-slate-100 border-b border-slate-200 dark:border-slate-800 pb-2 mb-2 flex items-center justify-between";
+        "flex items-center justify-between font-bold mb-2 pb-2";
       this.options.summaryFields.forEach((fieldKey) => {
         const value = item[fieldKey];
         summary.innerHTML += `<span>${value !== undefined && value !== null ? value : "-"}</span>`;
@@ -1143,17 +1131,17 @@ class ResponsiveDataTable {
       card.appendChild(summary);
       const details = document.createElement("dl");
       details.className =
-        "grid grid-cols-1 gap-x-4 gap-y-2.5 text-xs pb-2 border-b border-slate-200 dark:border-slate-800 mb-2";
+        "grid cols-1 gap-2 mb-2 pb-2";
       this.options.columns.forEach((column) => {
         if (this.options.summaryFields.includes(column.key)) return;
         const dt = document.createElement("dt");
         dt.className =
-          "font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider";
+          "font-bold text-muted";
         dt.textContent =
           this.options.headerTitles[column.key] || column.title || column.key;
         const dd = document.createElement("dd");
         dd.className =
-          "text-slate-700 dark:text-slate-300 font-semibold text-left break-all";
+          "text-left";
         const cellValue = item[column.key];
         if (
           cellValue &&
@@ -1173,16 +1161,14 @@ class ResponsiveDataTable {
         actions.className = "flex items-center gap-2 justify-end";
         if (this.options.edit) {
           const btn = document.createElement("button");
-          btn.className =
-            "px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-brand-600 hover:text-white rounded-lg text-xs font-bold border border-slate-200 dark:border-slate-700 transition-all cursor-pointer";
+          btn.className = "outline";
           btn.textContent = lang() ? "Editar" : "Edit";
           btn.onclick = (e) => this.handleAction("edit", e, item);
           actions.appendChild(btn);
         }
         if (this.options.delete) {
           const btn = document.createElement("button");
-          btn.className =
-            "px-3 py-1.5 bg-red-50 dark:bg-red-950/20 text-red-600 hover:bg-red-500 hover:text-white rounded-lg text-xs font-bold border border-transparent transition-all cursor-pointer";
+          btn.className = "destructive";
           btn.textContent = lang() ? "Eliminar" : "Delete";
           btn.onclick = (e) => this.handleAction("delete", e, item);
           actions.appendChild(btn);
@@ -1201,25 +1187,17 @@ class ResponsiveDataTable {
       this.filteredData.length / this.options.rowsPerPage,
     );
     if (pageCount <= 1) return;
-    const btnClass =
-      "px-3 py-1.5 rounded-lg text-xs font-black border transition-all cursor-pointer ";
-    const activeBtnClass =
-      btnClass +
-      "bg-brand-600 border-brand-600 text-white shadow-sm";
-    const inactiveBtnClass =
-      btnClass +
-      "border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800";
-    const disabledBtnClass =
-      btnClass +
-      "border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-400 dark:text-slate-600 opacity-50 cursor-not-allowed";
+
+    const baseClass = "px-3 py-2 outline";
+    const activeClass = "px-3 py-2";
 
     const prevButton = document.createElement("button");
     prevButton.textContent = "«";
-    prevButton.className =
-      this.currentPage === 1 ? disabledBtnClass : inactiveBtnClass;
+    prevButton.className = baseClass;
     prevButton.disabled = this.currentPage === 1;
     prevButton.onclick = () => this.changePage(this.currentPage - 1);
     pagination.appendChild(prevButton);
+
     const maxVisible = 5;
     let start = Math.max(1, this.currentPage - Math.floor(maxVisible / 2));
     let end = start + maxVisible - 1;
@@ -1229,7 +1207,7 @@ class ResponsiveDataTable {
     }
     if (start > 1) {
       const firstButton = document.createElement("button");
-      firstButton.className = inactiveBtnClass;
+      firstButton.className = baseClass;
       firstButton.textContent = "1";
       firstButton.onclick = () => this.changePage(1);
       pagination.appendChild(firstButton);
@@ -1238,7 +1216,7 @@ class ResponsiveDataTable {
     for (let i = start; i <= end; i++) {
       const button = document.createElement("button");
       button.className =
-        i === this.currentPage ? activeBtnClass : inactiveBtnClass;
+        i === this.currentPage ? activeClass : baseClass;
       button.textContent = i;
       button.onclick = () => this.changePage(i);
       pagination.appendChild(button);
@@ -1246,14 +1224,13 @@ class ResponsiveDataTable {
     if (end < pageCount) {
       if (end < pageCount - 1) pagination.appendChild(this.createEllipsis());
       const lastButton = document.createElement("button");
-      lastButton.className = inactiveBtnClass;
+      lastButton.className = baseClass;
       lastButton.textContent = pageCount;
       lastButton.onclick = () => this.changePage(pageCount);
       pagination.appendChild(lastButton);
     }
     const nextButton = document.createElement("button");
-    nextButton.className =
-      this.currentPage === pageCount ? disabledBtnClass : inactiveBtnClass;
+    nextButton.className = baseClass;
     nextButton.textContent = "»";
     nextButton.disabled = this.currentPage === pageCount;
     nextButton.onclick = () => this.changePage(this.currentPage + 1);
@@ -1262,7 +1239,7 @@ class ResponsiveDataTable {
 
   createEllipsis() {
     const span = document.createElement("span");
-    span.className = "text-slate-400 px-1";
+    span.className = "px-2 text-muted";
     span.textContent = "...";
     return span;
   }
