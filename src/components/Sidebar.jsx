@@ -5,7 +5,6 @@ const sections = [
     title: 'Getting Started',
     links: [
       { to: '/', label: 'Introduction' },
-      { to: '/nextjs', label: 'Next.js Guide' },
     ],
   },
   {

@@ -25,7 +25,6 @@ import Borders from './pages/Borders';
 import BottomNav from './pages/BottomNav';
 import AsideDrawer from './pages/AsideDrawer';
 import ComponentsDoc from './pages/ComponentsDoc';
-import NextjsGuide from './pages/NextjsGuide';
 import CarouselDoc from './pages/CarouselDoc';
 import Animations from './pages/Animations';
 import TabsDoc from './pages/TabsDoc';
@@ -120,7 +119,6 @@ function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Introduction />} />
-        <Route path="/nextjs" element={<NextjsGuide />} />
         <Route path="/buttons" element={<Buttons />} />
         <Route path="/forms" element={<Forms />} />
         <Route path="/typography" element={<Typography />} />

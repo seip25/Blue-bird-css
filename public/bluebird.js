@@ -246,7 +246,6 @@ function createCommandPaletteModal() {
         <div class="command-group">
           <div class="command-group-title">Navigation</div>
           <div class="command-item" data-navigate="#/"><span>Documentation Home</span><kbd>↵</kbd></div>
-          <div class="command-item" data-navigate="#/nextjs"><span>Next.js Integration Guide</span><kbd>↵</kbd></div>
           <div class="command-item" data-navigate="#/buttons"><span>Buttons & Badges</span><kbd>↵</kbd></div>
           <div class="command-item" data-navigate="#/forms"><span>Forms & Inputs</span><kbd>↵</kbd></div>
         </div>

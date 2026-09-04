@@ -129,11 +129,6 @@ export default function Introduction() {
 
         <div className="grid cols-2 gap-4 my-4">
           <div className="border p-4 rounded-lg bg-background">
-            <h3 className="font-bold text-lg mb-1">Next.js Integration</h3>
-            <p className="text-sm text-secondary mb-3">Complete guide for zero-config Next.js (App Router &amp; Pages Router) integration.</p>
-            <a href="#/nextjs" className="btn-subtle-blue px-3 py-1 text-sm font-medium inline-block">Read Next.js Guide &rarr;</a>
-          </div>
-          <div className="border p-4 rounded-lg bg-background">
             <h3 className="font-bold text-lg mb-1">Touch Carousel</h3>
             <p className="text-sm text-secondary mb-3">Mobile-first touch swipe &amp; autoplay card carousels for modern web apps.</p>
             <a href="#/carousel" className="btn-subtle-purple px-3 py-1 text-sm font-medium inline-block">Explore Carousel &rarr;</a>

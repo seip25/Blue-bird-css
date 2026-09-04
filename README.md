@@ -41,7 +41,6 @@ A lightweight, semantic, modern design framework inspired by modern aesthetics a
   - [Responsiveness & Breakpoints](#responsiveness--breakpoints)
 - [✨ CSS Animations & Motion Effects](#-css-animations--motion-effects)
 - [🎨 Theming & Light / Dark Mode](#-theming--light--dark-mode)
-- [⚡ Next.js & React Integration](#-nextjs--react-integration)
 - [📄 License](#-license)
 
 ---
@@ -59,7 +58,6 @@ A lightweight, semantic, modern design framework inspired by modern aesthetics a
 - **Mobile Touch & Swipe Carousel**: Touch swipe physics, desktop mouse drag, arrow controls, indicator dots, and automatic cycling via `data-autoplay="true"`.
 - **Expressive Color Palette**: Solid and subtle color utility classes for Blue, Red, Green, Yellow, Purple, Indigo, Pink, Teal, Orange, Cyan, Lime, Rose, Fuchsia, Emerald, Sky, and Amber.
 - **Micro-Interaction Micro-FX**: Material Ripple effect on button clicks, plus CSS keyframe animations (`.animate-spin`, `.animate-pulse`, `.animate-bounce`, `.animate-fade-in`, `.animate-slide-up`, `.animate-float`, `.animate-wiggle`, `.animate-shimmer`).
-- **Next.js Ready**: Full step-by-step integration guide for Next.js App Router (`app/layout.jsx`) and Pages Router (`pages/_app.jsx`).
 
 ---
 
@@ -867,48 +865,6 @@ function toggleTheme() {
 ### Color Palette Shorthands
 
 Apply any solid color (`.bg-blue`, `.bg-red`, `.bg-green`, `.bg-purple`, `.bg-pink`, `.bg-emerald`, `.bg-orange`, `.bg-amber`, etc.) or subtle tint (`.bg-blue-subtle`, `.bg-red-subtle`, `.bg-green-subtle`, etc.) to elements.
-
----
-
-## ⚡ Next.js & React Integration
-
-Blue Bird CSS is 100% compatible with Server-Side Rendering (SSR), React, and Next.js.
-
-### Next.js App Router Setup (`app/layout.jsx`)
-
-Place `bluebird.css` and `bluebird.js` in your `public/` directory or import the stylesheet directly in `layout.jsx`:
-
-```jsx
-// app/layout.jsx
-import Script from 'next/script';
-import '@/public/bluebird.css';
-
-export const metadata = {
-  title: 'My Next.js + Blue Bird App',
-};
-
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en" data-theme="dark">
-      <body>
-        <header className="sticky top-0 z-50 bg-surface border-b">
-          <nav className="flex items-center justify-between py-3 px-4">
-            <h2 className="font-bold text-xl">My App</h2>
-            <button className="primary btn-sm">Sign In</button>
-          </nav>
-        </header>
-
-        <main>
-          {children}
-        </main>
-
-        {/* Load Blue Bird JS Helper for Toasts, Drawers & Carousels */}
-        <Script src="/bluebird.js" strategy="lazyOnload" />
-      </body>
-    </html>
-  );
-}
-```
 
 ---
 
