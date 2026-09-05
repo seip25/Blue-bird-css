@@ -9,7 +9,7 @@ ensureDir('dist');
 ensureDir('public');
 ensureDir('.vscode');
 
-console.log('🚀 Building @seip/blue-bird framework...');
+console.log('🚀 Building @seip/blue-bird-cssframework...');
 
 // ==========================================
 // 1. BUILD CSS
@@ -68,7 +68,7 @@ function minifyCss(css) {
     .trim();
 }
 
-const minCss = `/* Blue Bird CSS v0.1.0 | MIT License | @seip/blue-bird */\n` + minifyCss(fullCss);
+const minCss = `/* Blue Bird CSS v0.1.0 | MIT License | @seip/blue-bird-css*/\n` + minifyCss(fullCss);
 fs.writeFileSync('dist/bluebird.min.css', minCss);
 
 console.log(`✅ CSS Compiled:`);
@@ -123,7 +123,7 @@ function simpleMinifyJs(js) {
     .trim();
 }
 
-const minJs = `/* Blue Bird JS v0.1.0 | MIT License | @seip/blue-bird */\n` + simpleMinifyJs(browserJs);
+const minJs = `/* Blue Bird JS v0.1.0 | MIT License | @seip/blue-bird-css*/\n` + simpleMinifyJs(browserJs);
 fs.writeFileSync('dist/bluebird.min.js', minJs);
 
 console.log(`✅ JavaScript Compiled:`);

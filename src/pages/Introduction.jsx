@@ -58,22 +58,22 @@ export default function Introduction() {
 
         <h3 className="font-bold text-base mt-3 mb-2">Option A: NPM Package</h3>
         <CodeBlock language="bash">
-          {`npm install @seip/blue-bird`}
+          {`npm install @seip/blue-bird-css`}
         </CodeBlock>
         <p className="text-sm text-muted my-2">Import stylesheet and JS helpers into your JavaScript / React / Vite entry point:</p>
         <CodeBlock language="javascript">
-          {`import '@seip/blue-bird/css';
-import { toast, snackbar, ResponsiveDataTable } from '@seip/blue-bird';`}
+          {`import '@seip/blue-bird-css/css';
+import { toast, snackbar, ResponsiveDataTable } from '@seip/blue-bird-css';`}
         </CodeBlock>
 
         <h3 className="font-bold text-base mt-6 mb-2">Option B: Vanilla HTML / CDN</h3>
         <p className="text-sm text-muted mb-2">Include Blue Bird directly via jsDelivr CDN (zero setup required):</p>
         <CodeBlock language="html">
           {`<!-- Blue Bird CSS (Minified with @layer & Eye-Care Dark Mode) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@seip/blue-bird@latest/dist/bluebird.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@seip/blue-bird-css@latest/dist/bluebird.min.css" />
 
 <!-- Blue Bird JS Helper -->
-<script src="https://cdn.jsdelivr.net/npm/@seip/blue-bird@latest/dist/bluebird.min.js" defer></script>`}
+<script src="https://cdn.jsdelivr.net/npm/@seip/blue-bird-css@latest/dist/bluebird.min.js" defer></script>`}
         </CodeBlock>
 
         <h3 className="font-bold text-base mt-6 mb-2">Option C: Local Download</h3>
