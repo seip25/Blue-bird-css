@@ -1,0 +1,4465 @@
+{
+  "version": 1.1,
+  "globalAttributes": [
+    {
+      "name": "class",
+      "description": "Blue Bird CSS utility and component classes",
+      "valueSet": "bluebird-classes"
+    },
+    {
+      "name": "data-theme",
+      "description": "Active color scheme theme for Blue Bird CSS",
+      "values": [
+        {
+          "name": "light",
+          "description": "Clean modern light theme"
+        },
+        {
+          "name": "dark",
+          "description": "Eye-Care charcoal slate dark theme"
+        }
+      ]
+    },
+    {
+      "name": "data-autoplay",
+      "description": "Enable automatic slide transitions for Blue Bird Touch Carousel",
+      "values": [
+        {
+          "name": "true"
+        },
+        {
+          "name": "false"
+        }
+      ]
+    },
+    {
+      "name": "data-interval",
+      "description": "Slide cycle duration in milliseconds for carousel"
+    },
+    {
+      "name": "data-drawer",
+      "description": "Open standalone slide-out drawer panel",
+      "values": [
+        {
+          "name": "left",
+          "description": "Slide in from left edge"
+        },
+        {
+          "name": "right",
+          "description": "Slide in from right edge"
+        },
+        {
+          "name": "top",
+          "description": "Slide down from top edge"
+        },
+        {
+          "name": "bottom",
+          "description": "Slide up as bottom sheet"
+        }
+      ]
+    },
+    {
+      "name": "data-tooltip",
+      "description": "Show an animated directional tooltip on hover"
+    }
+  ],
+  "valueSets": [
+    {
+      "name": "bluebird-classes",
+      "values": [
+        {
+          "name": "absolute",
+          "description": "Blue Bird CSS class: .absolute"
+        },
+        {
+          "name": "active",
+          "description": "Blue Bird CSS class: .active"
+        },
+        {
+          "name": "alert",
+          "description": "Blue Bird CSS class: .alert"
+        },
+        {
+          "name": "alert-description",
+          "description": "Blue Bird CSS class: .alert-description"
+        },
+        {
+          "name": "alert-destructive",
+          "description": "Blue Bird CSS class: .alert-destructive"
+        },
+        {
+          "name": "alert-info",
+          "description": "Blue Bird CSS class: .alert-info"
+        },
+        {
+          "name": "alert-success",
+          "description": "Blue Bird CSS class: .alert-success"
+        },
+        {
+          "name": "alert-title",
+          "description": "Blue Bird CSS class: .alert-title"
+        },
+        {
+          "name": "alert-warning",
+          "description": "Blue Bird CSS class: .alert-warning"
+        },
+        {
+          "name": "animate-bounce",
+          "description": "Blue Bird CSS class: .animate-bounce"
+        },
+        {
+          "name": "animate-fade-in",
+          "description": "Blue Bird CSS class: .animate-fade-in"
+        },
+        {
+          "name": "animate-float",
+          "description": "Blue Bird CSS class: .animate-float"
+        },
+        {
+          "name": "animate-glow",
+          "description": "Blue Bird CSS class: .animate-glow"
+        },
+        {
+          "name": "animate-ping",
+          "description": "Blue Bird CSS class: .animate-ping"
+        },
+        {
+          "name": "animate-pulse",
+          "description": "Blue Bird CSS class: .animate-pulse"
+        },
+        {
+          "name": "animate-shimmer",
+          "description": "Blue Bird CSS class: .animate-shimmer"
+        },
+        {
+          "name": "animate-slide-down",
+          "description": "Blue Bird CSS class: .animate-slide-down"
+        },
+        {
+          "name": "animate-slide-up",
+          "description": "Blue Bird CSS class: .animate-slide-up"
+        },
+        {
+          "name": "animate-spin",
+          "description": "Blue Bird CSS class: .animate-spin"
+        },
+        {
+          "name": "animate-wiggle",
+          "description": "Blue Bird CSS class: .animate-wiggle"
+        },
+        {
+          "name": "aspect-square",
+          "description": "Blue Bird CSS class: .aspect-square"
+        },
+        {
+          "name": "aspect-video",
+          "description": "Blue Bird CSS class: .aspect-video"
+        },
+        {
+          "name": "avatar",
+          "description": "Blue Bird CSS class: .avatar"
+        },
+        {
+          "name": "avatar-count",
+          "description": "Blue Bird CSS class: .avatar-count"
+        },
+        {
+          "name": "avatar-group",
+          "description": "Blue Bird CSS class: .avatar-group"
+        },
+        {
+          "name": "avatar-lg",
+          "description": "Blue Bird CSS class: .avatar-lg"
+        },
+        {
+          "name": "avatar-more",
+          "description": "Blue Bird CSS class: .avatar-more"
+        },
+        {
+          "name": "avatar-sm",
+          "description": "Blue Bird CSS class: .avatar-sm"
+        },
+        {
+          "name": "badge",
+          "description": "Blue Bird CSS class: .badge"
+        },
+        {
+          "name": "badge-destructive",
+          "description": "Blue Bird CSS class: .badge-destructive"
+        },
+        {
+          "name": "badge-dot",
+          "description": "Blue Bird CSS class: .badge-dot"
+        },
+        {
+          "name": "badge-glow",
+          "description": "Blue Bird CSS class: .badge-glow"
+        },
+        {
+          "name": "badge-glow-amber",
+          "description": "Blue Bird CSS class: .badge-glow-amber"
+        },
+        {
+          "name": "badge-glow-blue",
+          "description": "Blue Bird CSS class: .badge-glow-blue"
+        },
+        {
+          "name": "badge-glow-destructive",
+          "description": "Blue Bird CSS class: .badge-glow-destructive"
+        },
+        {
+          "name": "badge-glow-emerald",
+          "description": "Blue Bird CSS class: .badge-glow-emerald"
+        },
+        {
+          "name": "badge-glow-green",
+          "description": "Blue Bird CSS class: .badge-glow-green"
+        },
+        {
+          "name": "badge-glow-purple",
+          "description": "Blue Bird CSS class: .badge-glow-purple"
+        },
+        {
+          "name": "badge-glow-red",
+          "description": "Blue Bird CSS class: .badge-glow-red"
+        },
+        {
+          "name": "badge-glow-warning",
+          "description": "Blue Bird CSS class: .badge-glow-warning"
+        },
+        {
+          "name": "badge-lg",
+          "description": "Blue Bird CSS class: .badge-lg"
+        },
+        {
+          "name": "badge-outline",
+          "description": "Blue Bird CSS class: .badge-outline"
+        },
+        {
+          "name": "badge-pink",
+          "description": "Blue Bird CSS class: .badge-pink"
+        },
+        {
+          "name": "badge-primary",
+          "description": "Blue Bird CSS class: .badge-primary"
+        },
+        {
+          "name": "badge-secondary",
+          "description": "Blue Bird CSS class: .badge-secondary"
+        },
+        {
+          "name": "badge-sm",
+          "description": "Blue Bird CSS class: .badge-sm"
+        },
+        {
+          "name": "badge-success",
+          "description": "Blue Bird CSS class: .badge-success"
+        },
+        {
+          "name": "badge-warning",
+          "description": "Blue Bird CSS class: .badge-warning"
+        },
+        {
+          "name": "between",
+          "description": "Blue Bird CSS class: .between"
+        },
+        {
+          "name": "bg-amber",
+          "description": "Blue Bird CSS class: .bg-amber"
+        },
+        {
+          "name": "bg-amber-100",
+          "description": "Blue Bird CSS class: .bg-amber-100"
+        },
+        {
+          "name": "bg-amber-subtle",
+          "description": "Blue Bird CSS class: .bg-amber-subtle"
+        },
+        {
+          "name": "bg-background",
+          "description": "Blue Bird CSS class: .bg-background"
+        },
+        {
+          "name": "bg-blue",
+          "description": "Blue Bird CSS class: .bg-blue"
+        },
+        {
+          "name": "bg-blue-100",
+          "description": "Blue Bird CSS class: .bg-blue-100"
+        },
+        {
+          "name": "bg-blue-200",
+          "description": "Blue Bird CSS class: .bg-blue-200"
+        },
+        {
+          "name": "bg-blue-300",
+          "description": "Blue Bird CSS class: .bg-blue-300"
+        },
+        {
+          "name": "bg-blue-400",
+          "description": "Blue Bird CSS class: .bg-blue-400"
+        },
+        {
+          "name": "bg-blue-50",
+          "description": "Blue Bird CSS class: .bg-blue-50"
+        },
+        {
+          "name": "bg-blue-500",
+          "description": "Blue Bird CSS class: .bg-blue-500"
+        },
+        {
+          "name": "bg-blue-600",
+          "description": "Blue Bird CSS class: .bg-blue-600"
+        },
+        {
+          "name": "bg-blue-700",
+          "description": "Blue Bird CSS class: .bg-blue-700"
+        },
+        {
+          "name": "bg-blue-800",
+          "description": "Blue Bird CSS class: .bg-blue-800"
+        },
+        {
+          "name": "bg-blue-900",
+          "description": "Blue Bird CSS class: .bg-blue-900"
+        },
+        {
+          "name": "bg-blue-subtle",
+          "description": "Blue Bird CSS class: .bg-blue-subtle"
+        },
+        {
+          "name": "bg-cyan",
+          "description": "Blue Bird CSS class: .bg-cyan"
+        },
+        {
+          "name": "bg-cyan-100",
+          "description": "Blue Bird CSS class: .bg-cyan-100"
+        },
+        {
+          "name": "bg-cyan-subtle",
+          "description": "Blue Bird CSS class: .bg-cyan-subtle"
+        },
+        {
+          "name": "bg-destructive-subtle",
+          "description": "Blue Bird CSS class: .bg-destructive-subtle"
+        },
+        {
+          "name": "bg-emerald",
+          "description": "Blue Bird CSS class: .bg-emerald"
+        },
+        {
+          "name": "bg-emerald-100",
+          "description": "Blue Bird CSS class: .bg-emerald-100"
+        },
+        {
+          "name": "bg-emerald-subtle",
+          "description": "Blue Bird CSS class: .bg-emerald-subtle"
+        },
+        {
+          "name": "bg-fuchsia",
+          "description": "Blue Bird CSS class: .bg-fuchsia"
+        },
+        {
+          "name": "bg-fuchsia-100",
+          "description": "Blue Bird CSS class: .bg-fuchsia-100"
+        },
+        {
+          "name": "bg-fuchsia-subtle",
+          "description": "Blue Bird CSS class: .bg-fuchsia-subtle"
+        },
+        {
+          "name": "bg-gradient-blue",
+          "description": "Blue Bird CSS class: .bg-gradient-blue"
+        },
+        {
+          "name": "bg-gradient-dark",
+          "description": "Blue Bird CSS class: .bg-gradient-dark"
+        },
+        {
+          "name": "bg-gradient-purple",
+          "description": "Blue Bird CSS class: .bg-gradient-purple"
+        },
+        {
+          "name": "bg-gray",
+          "description": "Blue Bird CSS class: .bg-gray"
+        },
+        {
+          "name": "bg-gray-100",
+          "description": "Blue Bird CSS class: .bg-gray-100"
+        },
+        {
+          "name": "bg-gray-200",
+          "description": "Blue Bird CSS class: .bg-gray-200"
+        },
+        {
+          "name": "bg-gray-300",
+          "description": "Blue Bird CSS class: .bg-gray-300"
+        },
+        {
+          "name": "bg-gray-400",
+          "description": "Blue Bird CSS class: .bg-gray-400"
+        },
+        {
+          "name": "bg-gray-50",
+          "description": "Blue Bird CSS class: .bg-gray-50"
+        },
+        {
+          "name": "bg-gray-500",
+          "description": "Blue Bird CSS class: .bg-gray-500"
+        },
+        {
+          "name": "bg-gray-600",
+          "description": "Blue Bird CSS class: .bg-gray-600"
+        },
+        {
+          "name": "bg-gray-700",
+          "description": "Blue Bird CSS class: .bg-gray-700"
+        },
+        {
+          "name": "bg-gray-800",
+          "description": "Blue Bird CSS class: .bg-gray-800"
+        },
+        {
+          "name": "bg-gray-900",
+          "description": "Blue Bird CSS class: .bg-gray-900"
+        },
+        {
+          "name": "bg-green",
+          "description": "Blue Bird CSS class: .bg-green"
+        },
+        {
+          "name": "bg-green-100",
+          "description": "Blue Bird CSS class: .bg-green-100"
+        },
+        {
+          "name": "bg-green-200",
+          "description": "Blue Bird CSS class: .bg-green-200"
+        },
+        {
+          "name": "bg-green-300",
+          "description": "Blue Bird CSS class: .bg-green-300"
+        },
+        {
+          "name": "bg-green-400",
+          "description": "Blue Bird CSS class: .bg-green-400"
+        },
+        {
+          "name": "bg-green-50",
+          "description": "Blue Bird CSS class: .bg-green-50"
+        },
+        {
+          "name": "bg-green-500",
+          "description": "Blue Bird CSS class: .bg-green-500"
+        },
+        {
+          "name": "bg-green-600",
+          "description": "Blue Bird CSS class: .bg-green-600"
+        },
+        {
+          "name": "bg-green-700",
+          "description": "Blue Bird CSS class: .bg-green-700"
+        },
+        {
+          "name": "bg-green-800",
+          "description": "Blue Bird CSS class: .bg-green-800"
+        },
+        {
+          "name": "bg-green-900",
+          "description": "Blue Bird CSS class: .bg-green-900"
+        },
+        {
+          "name": "bg-green-subtle",
+          "description": "Blue Bird CSS class: .bg-green-subtle"
+        },
+        {
+          "name": "bg-indigo",
+          "description": "Blue Bird CSS class: .bg-indigo"
+        },
+        {
+          "name": "bg-indigo-100",
+          "description": "Blue Bird CSS class: .bg-indigo-100"
+        },
+        {
+          "name": "bg-indigo-200",
+          "description": "Blue Bird CSS class: .bg-indigo-200"
+        },
+        {
+          "name": "bg-indigo-300",
+          "description": "Blue Bird CSS class: .bg-indigo-300"
+        },
+        {
+          "name": "bg-indigo-400",
+          "description": "Blue Bird CSS class: .bg-indigo-400"
+        },
+        {
+          "name": "bg-indigo-50",
+          "description": "Blue Bird CSS class: .bg-indigo-50"
+        },
+        {
+          "name": "bg-indigo-500",
+          "description": "Blue Bird CSS class: .bg-indigo-500"
+        },
+        {
+          "name": "bg-indigo-600",
+          "description": "Blue Bird CSS class: .bg-indigo-600"
+        },
+        {
+          "name": "bg-indigo-700",
+          "description": "Blue Bird CSS class: .bg-indigo-700"
+        },
+        {
+          "name": "bg-indigo-800",
+          "description": "Blue Bird CSS class: .bg-indigo-800"
+        },
+        {
+          "name": "bg-indigo-900",
+          "description": "Blue Bird CSS class: .bg-indigo-900"
+        },
+        {
+          "name": "bg-indigo-subtle",
+          "description": "Blue Bird CSS class: .bg-indigo-subtle"
+        },
+        {
+          "name": "bg-lime",
+          "description": "Blue Bird CSS class: .bg-lime"
+        },
+        {
+          "name": "bg-lime-100",
+          "description": "Blue Bird CSS class: .bg-lime-100"
+        },
+        {
+          "name": "bg-lime-subtle",
+          "description": "Blue Bird CSS class: .bg-lime-subtle"
+        },
+        {
+          "name": "bg-orange",
+          "description": "Blue Bird CSS class: .bg-orange"
+        },
+        {
+          "name": "bg-orange-100",
+          "description": "Blue Bird CSS class: .bg-orange-100"
+        },
+        {
+          "name": "bg-orange-subtle",
+          "description": "Blue Bird CSS class: .bg-orange-subtle"
+        },
+        {
+          "name": "bg-pink",
+          "description": "Blue Bird CSS class: .bg-pink"
+        },
+        {
+          "name": "bg-pink-100",
+          "description": "Blue Bird CSS class: .bg-pink-100"
+        },
+        {
+          "name": "bg-pink-200",
+          "description": "Blue Bird CSS class: .bg-pink-200"
+        },
+        {
+          "name": "bg-pink-300",
+          "description": "Blue Bird CSS class: .bg-pink-300"
+        },
+        {
+          "name": "bg-pink-400",
+          "description": "Blue Bird CSS class: .bg-pink-400"
+        },
+        {
+          "name": "bg-pink-600",
+          "description": "Blue Bird CSS class: .bg-pink-600"
+        },
+        {
+          "name": "bg-pink-700",
+          "description": "Blue Bird CSS class: .bg-pink-700"
+        },
+        {
+          "name": "bg-pink-800",
+          "description": "Blue Bird CSS class: .bg-pink-800"
+        },
+        {
+          "name": "bg-pink-900",
+          "description": "Blue Bird CSS class: .bg-pink-900"
+        },
+        {
+          "name": "bg-pink-subtle",
+          "description": "Blue Bird CSS class: .bg-pink-subtle"
+        },
+        {
+          "name": "bg-primary",
+          "description": "Blue Bird CSS class: .bg-primary"
+        },
+        {
+          "name": "bg-primary-subtle",
+          "description": "Blue Bird CSS class: .bg-primary-subtle"
+        },
+        {
+          "name": "bg-purple",
+          "description": "Blue Bird CSS class: .bg-purple"
+        },
+        {
+          "name": "bg-purple-100",
+          "description": "Blue Bird CSS class: .bg-purple-100"
+        },
+        {
+          "name": "bg-purple-subtle",
+          "description": "Blue Bird CSS class: .bg-purple-subtle"
+        },
+        {
+          "name": "bg-red",
+          "description": "Blue Bird CSS class: .bg-red"
+        },
+        {
+          "name": "bg-red-100",
+          "description": "Blue Bird CSS class: .bg-red-100"
+        },
+        {
+          "name": "bg-red-200",
+          "description": "Blue Bird CSS class: .bg-red-200"
+        },
+        {
+          "name": "bg-red-300",
+          "description": "Blue Bird CSS class: .bg-red-300"
+        },
+        {
+          "name": "bg-red-400",
+          "description": "Blue Bird CSS class: .bg-red-400"
+        },
+        {
+          "name": "bg-red-50",
+          "description": "Blue Bird CSS class: .bg-red-50"
+        },
+        {
+          "name": "bg-red-500",
+          "description": "Blue Bird CSS class: .bg-red-500"
+        },
+        {
+          "name": "bg-red-600",
+          "description": "Blue Bird CSS class: .bg-red-600"
+        },
+        {
+          "name": "bg-red-700",
+          "description": "Blue Bird CSS class: .bg-red-700"
+        },
+        {
+          "name": "bg-red-800",
+          "description": "Blue Bird CSS class: .bg-red-800"
+        },
+        {
+          "name": "bg-red-900",
+          "description": "Blue Bird CSS class: .bg-red-900"
+        },
+        {
+          "name": "bg-red-subtle",
+          "description": "Blue Bird CSS class: .bg-red-subtle"
+        },
+        {
+          "name": "bg-rose",
+          "description": "Blue Bird CSS class: .bg-rose"
+        },
+        {
+          "name": "bg-rose-100",
+          "description": "Blue Bird CSS class: .bg-rose-100"
+        },
+        {
+          "name": "bg-rose-subtle",
+          "description": "Blue Bird CSS class: .bg-rose-subtle"
+        },
+        {
+          "name": "bg-secondary",
+          "description": "Blue Bird CSS class: .bg-secondary"
+        },
+        {
+          "name": "bg-secondary-subtle",
+          "description": "Blue Bird CSS class: .bg-secondary-subtle"
+        },
+        {
+          "name": "bg-sky",
+          "description": "Blue Bird CSS class: .bg-sky"
+        },
+        {
+          "name": "bg-sky-100",
+          "description": "Blue Bird CSS class: .bg-sky-100"
+        },
+        {
+          "name": "bg-sky-subtle",
+          "description": "Blue Bird CSS class: .bg-sky-subtle"
+        },
+        {
+          "name": "bg-success-subtle",
+          "description": "Blue Bird CSS class: .bg-success-subtle"
+        },
+        {
+          "name": "bg-surface",
+          "description": "Blue Bird CSS class: .bg-surface"
+        },
+        {
+          "name": "bg-teal",
+          "description": "Blue Bird CSS class: .bg-teal"
+        },
+        {
+          "name": "bg-teal-100",
+          "description": "Blue Bird CSS class: .bg-teal-100"
+        },
+        {
+          "name": "bg-teal-subtle",
+          "description": "Blue Bird CSS class: .bg-teal-subtle"
+        },
+        {
+          "name": "bg-violet",
+          "description": "Blue Bird CSS class: .bg-violet"
+        },
+        {
+          "name": "bg-violet-100",
+          "description": "Blue Bird CSS class: .bg-violet-100"
+        },
+        {
+          "name": "bg-violet-200",
+          "description": "Blue Bird CSS class: .bg-violet-200"
+        },
+        {
+          "name": "bg-violet-300",
+          "description": "Blue Bird CSS class: .bg-violet-300"
+        },
+        {
+          "name": "bg-violet-400",
+          "description": "Blue Bird CSS class: .bg-violet-400"
+        },
+        {
+          "name": "bg-violet-50",
+          "description": "Blue Bird CSS class: .bg-violet-50"
+        },
+        {
+          "name": "bg-violet-500",
+          "description": "Blue Bird CSS class: .bg-violet-500"
+        },
+        {
+          "name": "bg-violet-600",
+          "description": "Blue Bird CSS class: .bg-violet-600"
+        },
+        {
+          "name": "bg-violet-700",
+          "description": "Blue Bird CSS class: .bg-violet-700"
+        },
+        {
+          "name": "bg-violet-800",
+          "description": "Blue Bird CSS class: .bg-violet-800"
+        },
+        {
+          "name": "bg-violet-900",
+          "description": "Blue Bird CSS class: .bg-violet-900"
+        },
+        {
+          "name": "bg-violet-subtle",
+          "description": "Blue Bird CSS class: .bg-violet-subtle"
+        },
+        {
+          "name": "bg-warning-subtle",
+          "description": "Blue Bird CSS class: .bg-warning-subtle"
+        },
+        {
+          "name": "bg-yellow",
+          "description": "Blue Bird CSS class: .bg-yellow"
+        },
+        {
+          "name": "bg-yellow-100",
+          "description": "Blue Bird CSS class: .bg-yellow-100"
+        },
+        {
+          "name": "bg-yellow-200",
+          "description": "Blue Bird CSS class: .bg-yellow-200"
+        },
+        {
+          "name": "bg-yellow-300",
+          "description": "Blue Bird CSS class: .bg-yellow-300"
+        },
+        {
+          "name": "bg-yellow-400",
+          "description": "Blue Bird CSS class: .bg-yellow-400"
+        },
+        {
+          "name": "bg-yellow-50",
+          "description": "Blue Bird CSS class: .bg-yellow-50"
+        },
+        {
+          "name": "bg-yellow-500",
+          "description": "Blue Bird CSS class: .bg-yellow-500"
+        },
+        {
+          "name": "bg-yellow-600",
+          "description": "Blue Bird CSS class: .bg-yellow-600"
+        },
+        {
+          "name": "bg-yellow-700",
+          "description": "Blue Bird CSS class: .bg-yellow-700"
+        },
+        {
+          "name": "bg-yellow-800",
+          "description": "Blue Bird CSS class: .bg-yellow-800"
+        },
+        {
+          "name": "bg-yellow-900",
+          "description": "Blue Bird CSS class: .bg-yellow-900"
+        },
+        {
+          "name": "bg-yellow-subtle",
+          "description": "Blue Bird CSS class: .bg-yellow-subtle"
+        },
+        {
+          "name": "block",
+          "description": "Blue Bird CSS class: .block"
+        },
+        {
+          "name": "bluebird-drawer",
+          "description": "Blue Bird CSS class: .bluebird-drawer"
+        },
+        {
+          "name": "bluebird-drawer-overlay",
+          "description": "Blue Bird CSS class: .bluebird-drawer-overlay"
+        },
+        {
+          "name": "bluebird-drawer-toggle",
+          "description": "Blue Bird CSS class: .bluebird-drawer-toggle"
+        },
+        {
+          "name": "border",
+          "description": "Blue Bird CSS class: .border"
+        },
+        {
+          "name": "border-blue",
+          "description": "Blue Bird CSS class: .border-blue"
+        },
+        {
+          "name": "border-blue-100",
+          "description": "Blue Bird CSS class: .border-blue-100"
+        },
+        {
+          "name": "border-blue-200",
+          "description": "Blue Bird CSS class: .border-blue-200"
+        },
+        {
+          "name": "border-blue-300",
+          "description": "Blue Bird CSS class: .border-blue-300"
+        },
+        {
+          "name": "border-blue-400",
+          "description": "Blue Bird CSS class: .border-blue-400"
+        },
+        {
+          "name": "border-blue-50",
+          "description": "Blue Bird CSS class: .border-blue-50"
+        },
+        {
+          "name": "border-blue-500",
+          "description": "Blue Bird CSS class: .border-blue-500"
+        },
+        {
+          "name": "border-blue-600",
+          "description": "Blue Bird CSS class: .border-blue-600"
+        },
+        {
+          "name": "border-blue-700",
+          "description": "Blue Bird CSS class: .border-blue-700"
+        },
+        {
+          "name": "border-blue-800",
+          "description": "Blue Bird CSS class: .border-blue-800"
+        },
+        {
+          "name": "border-blue-900",
+          "description": "Blue Bird CSS class: .border-blue-900"
+        },
+        {
+          "name": "border-glow",
+          "description": "Blue Bird CSS class: .border-glow"
+        },
+        {
+          "name": "border-gray",
+          "description": "Blue Bird CSS class: .border-gray"
+        },
+        {
+          "name": "border-gray-100",
+          "description": "Blue Bird CSS class: .border-gray-100"
+        },
+        {
+          "name": "border-gray-200",
+          "description": "Blue Bird CSS class: .border-gray-200"
+        },
+        {
+          "name": "border-gray-300",
+          "description": "Blue Bird CSS class: .border-gray-300"
+        },
+        {
+          "name": "border-gray-400",
+          "description": "Blue Bird CSS class: .border-gray-400"
+        },
+        {
+          "name": "border-gray-50",
+          "description": "Blue Bird CSS class: .border-gray-50"
+        },
+        {
+          "name": "border-gray-500",
+          "description": "Blue Bird CSS class: .border-gray-500"
+        },
+        {
+          "name": "border-gray-600",
+          "description": "Blue Bird CSS class: .border-gray-600"
+        },
+        {
+          "name": "border-gray-700",
+          "description": "Blue Bird CSS class: .border-gray-700"
+        },
+        {
+          "name": "border-gray-800",
+          "description": "Blue Bird CSS class: .border-gray-800"
+        },
+        {
+          "name": "border-gray-900",
+          "description": "Blue Bird CSS class: .border-gray-900"
+        },
+        {
+          "name": "border-green",
+          "description": "Blue Bird CSS class: .border-green"
+        },
+        {
+          "name": "border-green-100",
+          "description": "Blue Bird CSS class: .border-green-100"
+        },
+        {
+          "name": "border-green-200",
+          "description": "Blue Bird CSS class: .border-green-200"
+        },
+        {
+          "name": "border-green-300",
+          "description": "Blue Bird CSS class: .border-green-300"
+        },
+        {
+          "name": "border-green-400",
+          "description": "Blue Bird CSS class: .border-green-400"
+        },
+        {
+          "name": "border-green-50",
+          "description": "Blue Bird CSS class: .border-green-50"
+        },
+        {
+          "name": "border-green-500",
+          "description": "Blue Bird CSS class: .border-green-500"
+        },
+        {
+          "name": "border-green-600",
+          "description": "Blue Bird CSS class: .border-green-600"
+        },
+        {
+          "name": "border-green-700",
+          "description": "Blue Bird CSS class: .border-green-700"
+        },
+        {
+          "name": "border-green-800",
+          "description": "Blue Bird CSS class: .border-green-800"
+        },
+        {
+          "name": "border-green-900",
+          "description": "Blue Bird CSS class: .border-green-900"
+        },
+        {
+          "name": "border-indigo",
+          "description": "Blue Bird CSS class: .border-indigo"
+        },
+        {
+          "name": "border-indigo-100",
+          "description": "Blue Bird CSS class: .border-indigo-100"
+        },
+        {
+          "name": "border-indigo-200",
+          "description": "Blue Bird CSS class: .border-indigo-200"
+        },
+        {
+          "name": "border-indigo-300",
+          "description": "Blue Bird CSS class: .border-indigo-300"
+        },
+        {
+          "name": "border-indigo-400",
+          "description": "Blue Bird CSS class: .border-indigo-400"
+        },
+        {
+          "name": "border-indigo-50",
+          "description": "Blue Bird CSS class: .border-indigo-50"
+        },
+        {
+          "name": "border-indigo-500",
+          "description": "Blue Bird CSS class: .border-indigo-500"
+        },
+        {
+          "name": "border-indigo-600",
+          "description": "Blue Bird CSS class: .border-indigo-600"
+        },
+        {
+          "name": "border-indigo-700",
+          "description": "Blue Bird CSS class: .border-indigo-700"
+        },
+        {
+          "name": "border-indigo-800",
+          "description": "Blue Bird CSS class: .border-indigo-800"
+        },
+        {
+          "name": "border-indigo-900",
+          "description": "Blue Bird CSS class: .border-indigo-900"
+        },
+        {
+          "name": "border-none",
+          "description": "Blue Bird CSS class: .border-none"
+        },
+        {
+          "name": "border-orange",
+          "description": "Blue Bird CSS class: .border-orange"
+        },
+        {
+          "name": "border-orange-100",
+          "description": "Blue Bird CSS class: .border-orange-100"
+        },
+        {
+          "name": "border-orange-200",
+          "description": "Blue Bird CSS class: .border-orange-200"
+        },
+        {
+          "name": "border-orange-300",
+          "description": "Blue Bird CSS class: .border-orange-300"
+        },
+        {
+          "name": "border-orange-400",
+          "description": "Blue Bird CSS class: .border-orange-400"
+        },
+        {
+          "name": "border-orange-50",
+          "description": "Blue Bird CSS class: .border-orange-50"
+        },
+        {
+          "name": "border-orange-500",
+          "description": "Blue Bird CSS class: .border-orange-500"
+        },
+        {
+          "name": "border-orange-600",
+          "description": "Blue Bird CSS class: .border-orange-600"
+        },
+        {
+          "name": "border-orange-700",
+          "description": "Blue Bird CSS class: .border-orange-700"
+        },
+        {
+          "name": "border-orange-800",
+          "description": "Blue Bird CSS class: .border-orange-800"
+        },
+        {
+          "name": "border-orange-900",
+          "description": "Blue Bird CSS class: .border-orange-900"
+        },
+        {
+          "name": "border-pink",
+          "description": "Blue Bird CSS class: .border-pink"
+        },
+        {
+          "name": "border-pink-100",
+          "description": "Blue Bird CSS class: .border-pink-100"
+        },
+        {
+          "name": "border-pink-200",
+          "description": "Blue Bird CSS class: .border-pink-200"
+        },
+        {
+          "name": "border-pink-300",
+          "description": "Blue Bird CSS class: .border-pink-300"
+        },
+        {
+          "name": "border-pink-400",
+          "description": "Blue Bird CSS class: .border-pink-400"
+        },
+        {
+          "name": "border-pink-50",
+          "description": "Blue Bird CSS class: .border-pink-50"
+        },
+        {
+          "name": "border-pink-500",
+          "description": "Blue Bird CSS class: .border-pink-500"
+        },
+        {
+          "name": "border-pink-600",
+          "description": "Blue Bird CSS class: .border-pink-600"
+        },
+        {
+          "name": "border-pink-700",
+          "description": "Blue Bird CSS class: .border-pink-700"
+        },
+        {
+          "name": "border-pink-800",
+          "description": "Blue Bird CSS class: .border-pink-800"
+        },
+        {
+          "name": "border-pink-900",
+          "description": "Blue Bird CSS class: .border-pink-900"
+        },
+        {
+          "name": "border-purple",
+          "description": "Blue Bird CSS class: .border-purple"
+        },
+        {
+          "name": "border-purple-100",
+          "description": "Blue Bird CSS class: .border-purple-100"
+        },
+        {
+          "name": "border-purple-200",
+          "description": "Blue Bird CSS class: .border-purple-200"
+        },
+        {
+          "name": "border-purple-300",
+          "description": "Blue Bird CSS class: .border-purple-300"
+        },
+        {
+          "name": "border-purple-400",
+          "description": "Blue Bird CSS class: .border-purple-400"
+        },
+        {
+          "name": "border-purple-50",
+          "description": "Blue Bird CSS class: .border-purple-50"
+        },
+        {
+          "name": "border-purple-500",
+          "description": "Blue Bird CSS class: .border-purple-500"
+        },
+        {
+          "name": "border-purple-600",
+          "description": "Blue Bird CSS class: .border-purple-600"
+        },
+        {
+          "name": "border-purple-700",
+          "description": "Blue Bird CSS class: .border-purple-700"
+        },
+        {
+          "name": "border-purple-800",
+          "description": "Blue Bird CSS class: .border-purple-800"
+        },
+        {
+          "name": "border-purple-900",
+          "description": "Blue Bird CSS class: .border-purple-900"
+        },
+        {
+          "name": "border-red",
+          "description": "Blue Bird CSS class: .border-red"
+        },
+        {
+          "name": "border-red-100",
+          "description": "Blue Bird CSS class: .border-red-100"
+        },
+        {
+          "name": "border-red-200",
+          "description": "Blue Bird CSS class: .border-red-200"
+        },
+        {
+          "name": "border-red-300",
+          "description": "Blue Bird CSS class: .border-red-300"
+        },
+        {
+          "name": "border-red-400",
+          "description": "Blue Bird CSS class: .border-red-400"
+        },
+        {
+          "name": "border-red-50",
+          "description": "Blue Bird CSS class: .border-red-50"
+        },
+        {
+          "name": "border-red-500",
+          "description": "Blue Bird CSS class: .border-red-500"
+        },
+        {
+          "name": "border-red-600",
+          "description": "Blue Bird CSS class: .border-red-600"
+        },
+        {
+          "name": "border-red-700",
+          "description": "Blue Bird CSS class: .border-red-700"
+        },
+        {
+          "name": "border-red-800",
+          "description": "Blue Bird CSS class: .border-red-800"
+        },
+        {
+          "name": "border-red-900",
+          "description": "Blue Bird CSS class: .border-red-900"
+        },
+        {
+          "name": "border-violet",
+          "description": "Blue Bird CSS class: .border-violet"
+        },
+        {
+          "name": "border-violet-100",
+          "description": "Blue Bird CSS class: .border-violet-100"
+        },
+        {
+          "name": "border-violet-200",
+          "description": "Blue Bird CSS class: .border-violet-200"
+        },
+        {
+          "name": "border-violet-300",
+          "description": "Blue Bird CSS class: .border-violet-300"
+        },
+        {
+          "name": "border-violet-400",
+          "description": "Blue Bird CSS class: .border-violet-400"
+        },
+        {
+          "name": "border-violet-50",
+          "description": "Blue Bird CSS class: .border-violet-50"
+        },
+        {
+          "name": "border-violet-500",
+          "description": "Blue Bird CSS class: .border-violet-500"
+        },
+        {
+          "name": "border-violet-600",
+          "description": "Blue Bird CSS class: .border-violet-600"
+        },
+        {
+          "name": "border-violet-700",
+          "description": "Blue Bird CSS class: .border-violet-700"
+        },
+        {
+          "name": "border-violet-800",
+          "description": "Blue Bird CSS class: .border-violet-800"
+        },
+        {
+          "name": "border-violet-900",
+          "description": "Blue Bird CSS class: .border-violet-900"
+        },
+        {
+          "name": "border-yellow",
+          "description": "Blue Bird CSS class: .border-yellow"
+        },
+        {
+          "name": "border-yellow-100",
+          "description": "Blue Bird CSS class: .border-yellow-100"
+        },
+        {
+          "name": "border-yellow-200",
+          "description": "Blue Bird CSS class: .border-yellow-200"
+        },
+        {
+          "name": "border-yellow-300",
+          "description": "Blue Bird CSS class: .border-yellow-300"
+        },
+        {
+          "name": "border-yellow-400",
+          "description": "Blue Bird CSS class: .border-yellow-400"
+        },
+        {
+          "name": "border-yellow-50",
+          "description": "Blue Bird CSS class: .border-yellow-50"
+        },
+        {
+          "name": "border-yellow-500",
+          "description": "Blue Bird CSS class: .border-yellow-500"
+        },
+        {
+          "name": "border-yellow-600",
+          "description": "Blue Bird CSS class: .border-yellow-600"
+        },
+        {
+          "name": "border-yellow-700",
+          "description": "Blue Bird CSS class: .border-yellow-700"
+        },
+        {
+          "name": "border-yellow-800",
+          "description": "Blue Bird CSS class: .border-yellow-800"
+        },
+        {
+          "name": "border-yellow-900",
+          "description": "Blue Bird CSS class: .border-yellow-900"
+        },
+        {
+          "name": "bottom",
+          "description": "Blue Bird CSS class: .bottom"
+        },
+        {
+          "name": "bottom-0",
+          "description": "Blue Bird CSS class: .bottom-0"
+        },
+        {
+          "name": "bottom-10",
+          "description": "Blue Bird CSS class: .bottom-10"
+        },
+        {
+          "name": "bottom-100",
+          "description": "Blue Bird CSS class: .bottom-100"
+        },
+        {
+          "name": "bottom-25",
+          "description": "Blue Bird CSS class: .bottom-25"
+        },
+        {
+          "name": "bottom-50",
+          "description": "Blue Bird CSS class: .bottom-50"
+        },
+        {
+          "name": "bottom-75",
+          "description": "Blue Bird CSS class: .bottom-75"
+        },
+        {
+          "name": "bottom-center",
+          "description": "Blue Bird CSS class: .bottom-center"
+        },
+        {
+          "name": "bottom-left",
+          "description": "Blue Bird CSS class: .bottom-left"
+        },
+        {
+          "name": "bottom-nav",
+          "description": "Blue Bird CSS class: .bottom-nav"
+        },
+        {
+          "name": "bottom-right",
+          "description": "Blue Bird CSS class: .bottom-right"
+        },
+        {
+          "name": "breadcrumb",
+          "description": "Blue Bird CSS class: .breadcrumb"
+        },
+        {
+          "name": "breadcrumb-item",
+          "description": "Blue Bird CSS class: .breadcrumb-item"
+        },
+        {
+          "name": "breadcrumb-separator",
+          "description": "Blue Bird CSS class: .breadcrumb-separator"
+        },
+        {
+          "name": "btn",
+          "description": "Blue Bird CSS class: .btn"
+        },
+        {
+          "name": "btn-amber",
+          "description": "Blue Bird CSS class: .btn-amber"
+        },
+        {
+          "name": "btn-blue",
+          "description": "Blue Bird CSS class: .btn-blue"
+        },
+        {
+          "name": "btn-cyan",
+          "description": "Blue Bird CSS class: .btn-cyan"
+        },
+        {
+          "name": "btn-cyberpunk",
+          "description": "Blue Bird CSS class: .btn-cyberpunk"
+        },
+        {
+          "name": "btn-cyberpunk-blue",
+          "description": "Blue Bird CSS class: .btn-cyberpunk-blue"
+        },
+        {
+          "name": "btn-cyberpunk-cut",
+          "description": "Blue Bird CSS class: .btn-cyberpunk-cut"
+        },
+        {
+          "name": "btn-cyberpunk-cyan",
+          "description": "Blue Bird CSS class: .btn-cyberpunk-cyan"
+        },
+        {
+          "name": "btn-cyberpunk-glitch",
+          "description": "Blue Bird CSS class: .btn-cyberpunk-glitch"
+        },
+        {
+          "name": "btn-cyberpunk-green",
+          "description": "Blue Bird CSS class: .btn-cyberpunk-green"
+        },
+        {
+          "name": "btn-cyberpunk-indigo",
+          "description": "Blue Bird CSS class: .btn-cyberpunk-indigo"
+        },
+        {
+          "name": "btn-cyberpunk-orange",
+          "description": "Blue Bird CSS class: .btn-cyberpunk-orange"
+        },
+        {
+          "name": "btn-cyberpunk-pink",
+          "description": "Blue Bird CSS class: .btn-cyberpunk-pink"
+        },
+        {
+          "name": "btn-cyberpunk-purple",
+          "description": "Blue Bird CSS class: .btn-cyberpunk-purple"
+        },
+        {
+          "name": "btn-cyberpunk-red",
+          "description": "Blue Bird CSS class: .btn-cyberpunk-red"
+        },
+        {
+          "name": "btn-cyberpunk-white",
+          "description": "Blue Bird CSS class: .btn-cyberpunk-white"
+        },
+        {
+          "name": "btn-cyberpunk-yellow",
+          "description": "Blue Bird CSS class: .btn-cyberpunk-yellow"
+        },
+        {
+          "name": "btn-destructive",
+          "description": "Blue Bird CSS class: .btn-destructive"
+        },
+        {
+          "name": "btn-emerald",
+          "description": "Blue Bird CSS class: .btn-emerald"
+        },
+        {
+          "name": "btn-fuchsia",
+          "description": "Blue Bird CSS class: .btn-fuchsia"
+        },
+        {
+          "name": "btn-ghost",
+          "description": "Blue Bird CSS class: .btn-ghost"
+        },
+        {
+          "name": "btn-glow",
+          "description": "Blue Bird CSS class: .btn-glow"
+        },
+        {
+          "name": "btn-glow-blue",
+          "description": "Blue Bird CSS class: .btn-glow-blue"
+        },
+        {
+          "name": "btn-glow-emerald",
+          "description": "Blue Bird CSS class: .btn-glow-emerald"
+        },
+        {
+          "name": "btn-glow-purple",
+          "description": "Blue Bird CSS class: .btn-glow-purple"
+        },
+        {
+          "name": "btn-green",
+          "description": "Blue Bird CSS class: .btn-green"
+        },
+        {
+          "name": "btn-icon",
+          "description": "Blue Bird CSS class: .btn-icon"
+        },
+        {
+          "name": "btn-indigo",
+          "description": "Blue Bird CSS class: .btn-indigo"
+        },
+        {
+          "name": "btn-lg",
+          "description": "Blue Bird CSS class: .btn-lg"
+        },
+        {
+          "name": "btn-lime",
+          "description": "Blue Bird CSS class: .btn-lime"
+        },
+        {
+          "name": "btn-link",
+          "description": "Blue Bird CSS class: .btn-link"
+        },
+        {
+          "name": "btn-md",
+          "description": "Blue Bird CSS class: .btn-md"
+        },
+        {
+          "name": "btn-orange",
+          "description": "Blue Bird CSS class: .btn-orange"
+        },
+        {
+          "name": "btn-outline",
+          "description": "Blue Bird CSS class: .btn-outline"
+        },
+        {
+          "name": "btn-pink",
+          "description": "Blue Bird CSS class: .btn-pink"
+        },
+        {
+          "name": "btn-primary",
+          "description": "Blue Bird CSS class: .btn-primary"
+        },
+        {
+          "name": "btn-purple",
+          "description": "Blue Bird CSS class: .btn-purple"
+        },
+        {
+          "name": "btn-red",
+          "description": "Blue Bird CSS class: .btn-red"
+        },
+        {
+          "name": "btn-rose",
+          "description": "Blue Bird CSS class: .btn-rose"
+        },
+        {
+          "name": "btn-secondary",
+          "description": "Blue Bird CSS class: .btn-secondary"
+        },
+        {
+          "name": "btn-sky",
+          "description": "Blue Bird CSS class: .btn-sky"
+        },
+        {
+          "name": "btn-sm",
+          "description": "Blue Bird CSS class: .btn-sm"
+        },
+        {
+          "name": "btn-subtle-amber",
+          "description": "Blue Bird CSS class: .btn-subtle-amber"
+        },
+        {
+          "name": "btn-subtle-blue",
+          "description": "Blue Bird CSS class: .btn-subtle-blue"
+        },
+        {
+          "name": "btn-subtle-cyan",
+          "description": "Blue Bird CSS class: .btn-subtle-cyan"
+        },
+        {
+          "name": "btn-subtle-destructive",
+          "description": "Blue Bird CSS class: .btn-subtle-destructive"
+        },
+        {
+          "name": "btn-subtle-emerald",
+          "description": "Blue Bird CSS class: .btn-subtle-emerald"
+        },
+        {
+          "name": "btn-subtle-fuchsia",
+          "description": "Blue Bird CSS class: .btn-subtle-fuchsia"
+        },
+        {
+          "name": "btn-subtle-green",
+          "description": "Blue Bird CSS class: .btn-subtle-green"
+        },
+        {
+          "name": "btn-subtle-indigo",
+          "description": "Blue Bird CSS class: .btn-subtle-indigo"
+        },
+        {
+          "name": "btn-subtle-lime",
+          "description": "Blue Bird CSS class: .btn-subtle-lime"
+        },
+        {
+          "name": "btn-subtle-orange",
+          "description": "Blue Bird CSS class: .btn-subtle-orange"
+        },
+        {
+          "name": "btn-subtle-pink",
+          "description": "Blue Bird CSS class: .btn-subtle-pink"
+        },
+        {
+          "name": "btn-subtle-primary",
+          "description": "Blue Bird CSS class: .btn-subtle-primary"
+        },
+        {
+          "name": "btn-subtle-purple",
+          "description": "Blue Bird CSS class: .btn-subtle-purple"
+        },
+        {
+          "name": "btn-subtle-red",
+          "description": "Blue Bird CSS class: .btn-subtle-red"
+        },
+        {
+          "name": "btn-subtle-rose",
+          "description": "Blue Bird CSS class: .btn-subtle-rose"
+        },
+        {
+          "name": "btn-subtle-secondary",
+          "description": "Blue Bird CSS class: .btn-subtle-secondary"
+        },
+        {
+          "name": "btn-subtle-sky",
+          "description": "Blue Bird CSS class: .btn-subtle-sky"
+        },
+        {
+          "name": "btn-subtle-success",
+          "description": "Blue Bird CSS class: .btn-subtle-success"
+        },
+        {
+          "name": "btn-subtle-teal",
+          "description": "Blue Bird CSS class: .btn-subtle-teal"
+        },
+        {
+          "name": "btn-subtle-violet",
+          "description": "Blue Bird CSS class: .btn-subtle-violet"
+        },
+        {
+          "name": "btn-subtle-warning",
+          "description": "Blue Bird CSS class: .btn-subtle-warning"
+        },
+        {
+          "name": "btn-subtle-yellow",
+          "description": "Blue Bird CSS class: .btn-subtle-yellow"
+        },
+        {
+          "name": "btn-teal",
+          "description": "Blue Bird CSS class: .btn-teal"
+        },
+        {
+          "name": "btn-violet",
+          "description": "Blue Bird CSS class: .btn-violet"
+        },
+        {
+          "name": "btn-xl",
+          "description": "Blue Bird CSS class: .btn-xl"
+        },
+        {
+          "name": "btn-xs",
+          "description": "Blue Bird CSS class: .btn-xs"
+        },
+        {
+          "name": "btn-yellow",
+          "description": "Blue Bird CSS class: .btn-yellow"
+        },
+        {
+          "name": "card",
+          "description": "Blue Bird CSS class: .card"
+        },
+        {
+          "name": "card-body",
+          "description": "Blue Bird CSS class: .card-body"
+        },
+        {
+          "name": "card-description",
+          "description": "Blue Bird CSS class: .card-description"
+        },
+        {
+          "name": "card-footer",
+          "description": "Blue Bird CSS class: .card-footer"
+        },
+        {
+          "name": "card-glow",
+          "description": "Blue Bird CSS class: .card-glow"
+        },
+        {
+          "name": "card-header",
+          "description": "Blue Bird CSS class: .card-header"
+        },
+        {
+          "name": "card-title",
+          "description": "Blue Bird CSS class: .card-title"
+        },
+        {
+          "name": "carousel",
+          "description": "Blue Bird CSS class: .carousel"
+        },
+        {
+          "name": "carousel-card",
+          "description": "Blue Bird CSS class: .carousel-card"
+        },
+        {
+          "name": "carousel-dot",
+          "description": "Blue Bird CSS class: .carousel-dot"
+        },
+        {
+          "name": "carousel-indicators",
+          "description": "Blue Bird CSS class: .carousel-indicators"
+        },
+        {
+          "name": "carousel-item",
+          "description": "Blue Bird CSS class: .carousel-item"
+        },
+        {
+          "name": "carousel-nav",
+          "description": "Blue Bird CSS class: .carousel-nav"
+        },
+        {
+          "name": "carousel-next",
+          "description": "Blue Bird CSS class: .carousel-next"
+        },
+        {
+          "name": "carousel-prev",
+          "description": "Blue Bird CSS class: .carousel-prev"
+        },
+        {
+          "name": "carousel-track",
+          "description": "Blue Bird CSS class: .carousel-track"
+        },
+        {
+          "name": "cols-1",
+          "description": "Blue Bird CSS class: .cols-1"
+        },
+        {
+          "name": "cols-2",
+          "description": "Blue Bird CSS class: .cols-2"
+        },
+        {
+          "name": "cols-3",
+          "description": "Blue Bird CSS class: .cols-3"
+        },
+        {
+          "name": "cols-4",
+          "description": "Blue Bird CSS class: .cols-4"
+        },
+        {
+          "name": "command-backdrop",
+          "description": "Blue Bird CSS class: .command-backdrop"
+        },
+        {
+          "name": "command-dialog",
+          "description": "Blue Bird CSS class: .command-dialog"
+        },
+        {
+          "name": "command-group-title",
+          "description": "Blue Bird CSS class: .command-group-title"
+        },
+        {
+          "name": "command-input",
+          "description": "Blue Bird CSS class: .command-input"
+        },
+        {
+          "name": "command-input-wrapper",
+          "description": "Blue Bird CSS class: .command-input-wrapper"
+        },
+        {
+          "name": "command-item",
+          "description": "Blue Bird CSS class: .command-item"
+        },
+        {
+          "name": "command-list",
+          "description": "Blue Bird CSS class: .command-list"
+        },
+        {
+          "name": "completed",
+          "description": "Blue Bird CSS class: .completed"
+        },
+        {
+          "name": "container",
+          "description": "Blue Bird CSS class: .container"
+        },
+        {
+          "name": "css",
+          "description": "Blue Bird CSS class: .css"
+        },
+        {
+          "name": "cursor-default",
+          "description": "Blue Bird CSS class: .cursor-default"
+        },
+        {
+          "name": "cursor-not-allowed",
+          "description": "Blue Bird CSS class: .cursor-not-allowed"
+        },
+        {
+          "name": "cursor-pointer",
+          "description": "Blue Bird CSS class: .cursor-pointer"
+        },
+        {
+          "name": "cyberpunk-blue",
+          "description": "Blue Bird CSS class: .cyberpunk-blue"
+        },
+        {
+          "name": "cyberpunk-cut",
+          "description": "Blue Bird CSS class: .cyberpunk-cut"
+        },
+        {
+          "name": "cyberpunk-cyan",
+          "description": "Blue Bird CSS class: .cyberpunk-cyan"
+        },
+        {
+          "name": "cyberpunk-glitch",
+          "description": "Blue Bird CSS class: .cyberpunk-glitch"
+        },
+        {
+          "name": "cyberpunk-green",
+          "description": "Blue Bird CSS class: .cyberpunk-green"
+        },
+        {
+          "name": "cyberpunk-indigo",
+          "description": "Blue Bird CSS class: .cyberpunk-indigo"
+        },
+        {
+          "name": "cyberpunk-orange",
+          "description": "Blue Bird CSS class: .cyberpunk-orange"
+        },
+        {
+          "name": "cyberpunk-pink",
+          "description": "Blue Bird CSS class: .cyberpunk-pink"
+        },
+        {
+          "name": "cyberpunk-purple",
+          "description": "Blue Bird CSS class: .cyberpunk-purple"
+        },
+        {
+          "name": "cyberpunk-red",
+          "description": "Blue Bird CSS class: .cyberpunk-red"
+        },
+        {
+          "name": "cyberpunk-white",
+          "description": "Blue Bird CSS class: .cyberpunk-white"
+        },
+        {
+          "name": "cyberpunk-yellow",
+          "description": "Blue Bird CSS class: .cyberpunk-yellow"
+        },
+        {
+          "name": "destructive",
+          "description": "Blue Bird CSS class: .destructive"
+        },
+        {
+          "name": "dialog-full",
+          "description": "Blue Bird CSS class: .dialog-full"
+        },
+        {
+          "name": "display-1",
+          "description": "Blue Bird CSS class: .display-1"
+        },
+        {
+          "name": "display-2",
+          "description": "Blue Bird CSS class: .display-2"
+        },
+        {
+          "name": "display-3",
+          "description": "Blue Bird CSS class: .display-3"
+        },
+        {
+          "name": "display-4",
+          "description": "Blue Bird CSS class: .display-4"
+        },
+        {
+          "name": "display-5",
+          "description": "Blue Bird CSS class: .display-5"
+        },
+        {
+          "name": "display-6",
+          "description": "Blue Bird CSS class: .display-6"
+        },
+        {
+          "name": "docs-grid",
+          "description": "Blue Bird CSS class: .docs-grid"
+        },
+        {
+          "name": "docs-link",
+          "description": "Blue Bird CSS class: .docs-link"
+        },
+        {
+          "name": "docs-list",
+          "description": "Blue Bird CSS class: .docs-list"
+        },
+        {
+          "name": "docs-section",
+          "description": "Blue Bird CSS class: .docs-section"
+        },
+        {
+          "name": "docs-section-title",
+          "description": "Blue Bird CSS class: .docs-section-title"
+        },
+        {
+          "name": "dot",
+          "description": "Blue Bird CSS class: .dot"
+        },
+        {
+          "name": "dot-destructive",
+          "description": "Blue Bird CSS class: .dot-destructive"
+        },
+        {
+          "name": "dot-error",
+          "description": "Blue Bird CSS class: .dot-error"
+        },
+        {
+          "name": "dot-primary",
+          "description": "Blue Bird CSS class: .dot-primary"
+        },
+        {
+          "name": "dot-pulse",
+          "description": "Blue Bird CSS class: .dot-pulse"
+        },
+        {
+          "name": "dot-success",
+          "description": "Blue Bird CSS class: .dot-success"
+        },
+        {
+          "name": "dot-warning",
+          "description": "Blue Bird CSS class: .dot-warning"
+        },
+        {
+          "name": "drawer",
+          "description": "Blue Bird CSS class: .drawer"
+        },
+        {
+          "name": "drawer-backdrop",
+          "description": "Blue Bird CSS class: .drawer-backdrop"
+        },
+        {
+          "name": "drawer-body",
+          "description": "Blue Bird CSS class: .drawer-body"
+        },
+        {
+          "name": "drawer-bottom",
+          "description": "Blue Bird CSS class: .drawer-bottom"
+        },
+        {
+          "name": "drawer-footer",
+          "description": "Blue Bird CSS class: .drawer-footer"
+        },
+        {
+          "name": "drawer-header",
+          "description": "Blue Bird CSS class: .drawer-header"
+        },
+        {
+          "name": "drawer-left",
+          "description": "Blue Bird CSS class: .drawer-left"
+        },
+        {
+          "name": "drawer-overlay",
+          "description": "Blue Bird CSS class: .drawer-overlay"
+        },
+        {
+          "name": "drawer-right",
+          "description": "Blue Bird CSS class: .drawer-right"
+        },
+        {
+          "name": "drawer-top",
+          "description": "Blue Bird CSS class: .drawer-top"
+        },
+        {
+          "name": "dropdown",
+          "description": "Blue Bird CSS class: .dropdown"
+        },
+        {
+          "name": "dropdown-content",
+          "description": "Blue Bird CSS class: .dropdown-content"
+        },
+        {
+          "name": "dropdown-item",
+          "description": "Blue Bird CSS class: .dropdown-item"
+        },
+        {
+          "name": "dropdown-toggle",
+          "description": "Blue Bird CSS class: .dropdown-toggle"
+        },
+        {
+          "name": "duration-200",
+          "description": "Blue Bird CSS class: .duration-200"
+        },
+        {
+          "name": "duration-300",
+          "description": "Blue Bird CSS class: .duration-300"
+        },
+        {
+          "name": "error",
+          "description": "Blue Bird CSS class: .error"
+        },
+        {
+          "name": "fab",
+          "description": "Blue Bird CSS class: .fab"
+        },
+        {
+          "name": "fill",
+          "description": "Blue Bird CSS class: .fill"
+        },
+        {
+          "name": "fixed",
+          "description": "Blue Bird CSS class: .fixed"
+        },
+        {
+          "name": "flex",
+          "description": "Blue Bird CSS class: .flex"
+        },
+        {
+          "name": "flex-1",
+          "description": "Blue Bird CSS class: .flex-1"
+        },
+        {
+          "name": "flex-auto",
+          "description": "Blue Bird CSS class: .flex-auto"
+        },
+        {
+          "name": "flex-col",
+          "description": "Blue Bird CSS class: .flex-col"
+        },
+        {
+          "name": "flex-col-reverse",
+          "description": "Blue Bird CSS class: .flex-col-reverse"
+        },
+        {
+          "name": "flex-initial",
+          "description": "Blue Bird CSS class: .flex-initial"
+        },
+        {
+          "name": "flex-none",
+          "description": "Blue Bird CSS class: .flex-none"
+        },
+        {
+          "name": "flex-nowrap",
+          "description": "Blue Bird CSS class: .flex-nowrap"
+        },
+        {
+          "name": "flex-row",
+          "description": "Blue Bird CSS class: .flex-row"
+        },
+        {
+          "name": "flex-row-reverse",
+          "description": "Blue Bird CSS class: .flex-row-reverse"
+        },
+        {
+          "name": "flex-wrap",
+          "description": "Blue Bird CSS class: .flex-wrap"
+        },
+        {
+          "name": "flex-wrap-reverse",
+          "description": "Blue Bird CSS class: .flex-wrap-reverse"
+        },
+        {
+          "name": "floating",
+          "description": "Blue Bird CSS class: .floating"
+        },
+        {
+          "name": "font-bold",
+          "description": "Blue Bird CSS class: .font-bold"
+        },
+        {
+          "name": "font-mono",
+          "description": "Blue Bird CSS class: .font-mono"
+        },
+        {
+          "name": "font-sans",
+          "description": "Blue Bird CSS class: .font-sans"
+        },
+        {
+          "name": "font-semibold",
+          "description": "Blue Bird CSS class: .font-semibold"
+        },
+        {
+          "name": "footer-content",
+          "description": "Blue Bird CSS class: .footer-content"
+        },
+        {
+          "name": "form-control",
+          "description": "Blue Bird CSS class: .form-control"
+        },
+        {
+          "name": "form-floating",
+          "description": "Blue Bird CSS class: .form-floating"
+        },
+        {
+          "name": "form-input-group",
+          "description": "Blue Bird CSS class: .form-input-group"
+        },
+        {
+          "name": "gap-0",
+          "description": "Blue Bird CSS class: .gap-0"
+        },
+        {
+          "name": "gap-1",
+          "description": "Blue Bird CSS class: .gap-1"
+        },
+        {
+          "name": "gap-10",
+          "description": "Blue Bird CSS class: .gap-10"
+        },
+        {
+          "name": "gap-12",
+          "description": "Blue Bird CSS class: .gap-12"
+        },
+        {
+          "name": "gap-16",
+          "description": "Blue Bird CSS class: .gap-16"
+        },
+        {
+          "name": "gap-2",
+          "description": "Blue Bird CSS class: .gap-2"
+        },
+        {
+          "name": "gap-3",
+          "description": "Blue Bird CSS class: .gap-3"
+        },
+        {
+          "name": "gap-4",
+          "description": "Blue Bird CSS class: .gap-4"
+        },
+        {
+          "name": "gap-5",
+          "description": "Blue Bird CSS class: .gap-5"
+        },
+        {
+          "name": "gap-6",
+          "description": "Blue Bird CSS class: .gap-6"
+        },
+        {
+          "name": "gap-8",
+          "description": "Blue Bird CSS class: .gap-8"
+        },
+        {
+          "name": "gap-x-0",
+          "description": "Blue Bird CSS class: .gap-x-0"
+        },
+        {
+          "name": "gap-x-1",
+          "description": "Blue Bird CSS class: .gap-x-1"
+        },
+        {
+          "name": "gap-x-10",
+          "description": "Blue Bird CSS class: .gap-x-10"
+        },
+        {
+          "name": "gap-x-2",
+          "description": "Blue Bird CSS class: .gap-x-2"
+        },
+        {
+          "name": "gap-x-3",
+          "description": "Blue Bird CSS class: .gap-x-3"
+        },
+        {
+          "name": "gap-x-4",
+          "description": "Blue Bird CSS class: .gap-x-4"
+        },
+        {
+          "name": "gap-x-5",
+          "description": "Blue Bird CSS class: .gap-x-5"
+        },
+        {
+          "name": "gap-x-6",
+          "description": "Blue Bird CSS class: .gap-x-6"
+        },
+        {
+          "name": "gap-x-8",
+          "description": "Blue Bird CSS class: .gap-x-8"
+        },
+        {
+          "name": "gap-y-0",
+          "description": "Blue Bird CSS class: .gap-y-0"
+        },
+        {
+          "name": "gap-y-1",
+          "description": "Blue Bird CSS class: .gap-y-1"
+        },
+        {
+          "name": "gap-y-10",
+          "description": "Blue Bird CSS class: .gap-y-10"
+        },
+        {
+          "name": "gap-y-2",
+          "description": "Blue Bird CSS class: .gap-y-2"
+        },
+        {
+          "name": "gap-y-3",
+          "description": "Blue Bird CSS class: .gap-y-3"
+        },
+        {
+          "name": "gap-y-4",
+          "description": "Blue Bird CSS class: .gap-y-4"
+        },
+        {
+          "name": "gap-y-5",
+          "description": "Blue Bird CSS class: .gap-y-5"
+        },
+        {
+          "name": "gap-y-6",
+          "description": "Blue Bird CSS class: .gap-y-6"
+        },
+        {
+          "name": "gap-y-8",
+          "description": "Blue Bird CSS class: .gap-y-8"
+        },
+        {
+          "name": "ghost",
+          "description": "Blue Bird CSS class: .ghost"
+        },
+        {
+          "name": "github-star",
+          "description": "Blue Bird CSS class: .github-star"
+        },
+        {
+          "name": "glass",
+          "description": "Blue Bird CSS class: .glass"
+        },
+        {
+          "name": "glass-card",
+          "description": "Blue Bird CSS class: .glass-card"
+        },
+        {
+          "name": "glow",
+          "description": "Blue Bird CSS class: .glow"
+        },
+        {
+          "name": "glow-blue",
+          "description": "Blue Bird CSS class: .glow-blue"
+        },
+        {
+          "name": "glow-cut",
+          "description": "Blue Bird CSS class: .glow-cut"
+        },
+        {
+          "name": "glow-cyan",
+          "description": "Blue Bird CSS class: .glow-cyan"
+        },
+        {
+          "name": "glow-cyberpunk",
+          "description": "Blue Bird CSS class: .glow-cyberpunk"
+        },
+        {
+          "name": "glow-emerald",
+          "description": "Blue Bird CSS class: .glow-emerald"
+        },
+        {
+          "name": "glow-glitch",
+          "description": "Blue Bird CSS class: .glow-glitch"
+        },
+        {
+          "name": "glow-green",
+          "description": "Blue Bird CSS class: .glow-green"
+        },
+        {
+          "name": "glow-indigo",
+          "description": "Blue Bird CSS class: .glow-indigo"
+        },
+        {
+          "name": "glow-orange",
+          "description": "Blue Bird CSS class: .glow-orange"
+        },
+        {
+          "name": "glow-pink",
+          "description": "Blue Bird CSS class: .glow-pink"
+        },
+        {
+          "name": "glow-primary",
+          "description": "Blue Bird CSS class: .glow-primary"
+        },
+        {
+          "name": "glow-pulse",
+          "description": "Blue Bird CSS class: .glow-pulse"
+        },
+        {
+          "name": "glow-purple",
+          "description": "Blue Bird CSS class: .glow-purple"
+        },
+        {
+          "name": "glow-red",
+          "description": "Blue Bird CSS class: .glow-red"
+        },
+        {
+          "name": "glow-white",
+          "description": "Blue Bird CSS class: .glow-white"
+        },
+        {
+          "name": "glow-yellow",
+          "description": "Blue Bird CSS class: .glow-yellow"
+        },
+        {
+          "name": "grid",
+          "description": "Blue Bird CSS class: .grid"
+        },
+        {
+          "name": "grow",
+          "description": "Blue Bird CSS class: .grow"
+        },
+        {
+          "name": "h-10",
+          "description": "Blue Bird CSS class: .h-10"
+        },
+        {
+          "name": "h-100",
+          "description": "Blue Bird CSS class: .h-100"
+        },
+        {
+          "name": "h-15",
+          "description": "Blue Bird CSS class: .h-15"
+        },
+        {
+          "name": "h-20",
+          "description": "Blue Bird CSS class: .h-20"
+        },
+        {
+          "name": "h-25",
+          "description": "Blue Bird CSS class: .h-25"
+        },
+        {
+          "name": "h-30",
+          "description": "Blue Bird CSS class: .h-30"
+        },
+        {
+          "name": "h-35",
+          "description": "Blue Bird CSS class: .h-35"
+        },
+        {
+          "name": "h-40",
+          "description": "Blue Bird CSS class: .h-40"
+        },
+        {
+          "name": "h-45",
+          "description": "Blue Bird CSS class: .h-45"
+        },
+        {
+          "name": "h-5",
+          "description": "Blue Bird CSS class: .h-5"
+        },
+        {
+          "name": "h-50",
+          "description": "Blue Bird CSS class: .h-50"
+        },
+        {
+          "name": "h-55",
+          "description": "Blue Bird CSS class: .h-55"
+        },
+        {
+          "name": "h-60",
+          "description": "Blue Bird CSS class: .h-60"
+        },
+        {
+          "name": "h-65",
+          "description": "Blue Bird CSS class: .h-65"
+        },
+        {
+          "name": "h-70",
+          "description": "Blue Bird CSS class: .h-70"
+        },
+        {
+          "name": "h-75",
+          "description": "Blue Bird CSS class: .h-75"
+        },
+        {
+          "name": "h-80",
+          "description": "Blue Bird CSS class: .h-80"
+        },
+        {
+          "name": "h-85",
+          "description": "Blue Bird CSS class: .h-85"
+        },
+        {
+          "name": "h-90",
+          "description": "Blue Bird CSS class: .h-90"
+        },
+        {
+          "name": "h-95",
+          "description": "Blue Bird CSS class: .h-95"
+        },
+        {
+          "name": "h-auto",
+          "description": "Blue Bird CSS class: .h-auto"
+        },
+        {
+          "name": "h-full",
+          "description": "Blue Bird CSS class: .h-full"
+        },
+        {
+          "name": "h-mx-100-px",
+          "description": "Blue Bird CSS class: .h-mx-100-px"
+        },
+        {
+          "name": "h-mx-1000-px",
+          "description": "Blue Bird CSS class: .h-mx-1000-px"
+        },
+        {
+          "name": "h-mx-150-px",
+          "description": "Blue Bird CSS class: .h-mx-150-px"
+        },
+        {
+          "name": "h-mx-200-px",
+          "description": "Blue Bird CSS class: .h-mx-200-px"
+        },
+        {
+          "name": "h-mx-250-px",
+          "description": "Blue Bird CSS class: .h-mx-250-px"
+        },
+        {
+          "name": "h-mx-300-px",
+          "description": "Blue Bird CSS class: .h-mx-300-px"
+        },
+        {
+          "name": "h-mx-350-px",
+          "description": "Blue Bird CSS class: .h-mx-350-px"
+        },
+        {
+          "name": "h-mx-400-px",
+          "description": "Blue Bird CSS class: .h-mx-400-px"
+        },
+        {
+          "name": "h-mx-450-px",
+          "description": "Blue Bird CSS class: .h-mx-450-px"
+        },
+        {
+          "name": "h-mx-50-px",
+          "description": "Blue Bird CSS class: .h-mx-50-px"
+        },
+        {
+          "name": "h-mx-500-px",
+          "description": "Blue Bird CSS class: .h-mx-500-px"
+        },
+        {
+          "name": "h-mx-550-px",
+          "description": "Blue Bird CSS class: .h-mx-550-px"
+        },
+        {
+          "name": "h-mx-600-px",
+          "description": "Blue Bird CSS class: .h-mx-600-px"
+        },
+        {
+          "name": "h-mx-650-px",
+          "description": "Blue Bird CSS class: .h-mx-650-px"
+        },
+        {
+          "name": "h-mx-700-px",
+          "description": "Blue Bird CSS class: .h-mx-700-px"
+        },
+        {
+          "name": "h-mx-750-px",
+          "description": "Blue Bird CSS class: .h-mx-750-px"
+        },
+        {
+          "name": "h-mx-800-px",
+          "description": "Blue Bird CSS class: .h-mx-800-px"
+        },
+        {
+          "name": "h-mx-850-px",
+          "description": "Blue Bird CSS class: .h-mx-850-px"
+        },
+        {
+          "name": "h-mx-900-px",
+          "description": "Blue Bird CSS class: .h-mx-900-px"
+        },
+        {
+          "name": "h-mx-950-px",
+          "description": "Blue Bird CSS class: .h-mx-950-px"
+        },
+        {
+          "name": "h-screen",
+          "description": "Blue Bird CSS class: .h-screen"
+        },
+        {
+          "name": "header",
+          "description": "Blue Bird CSS class: .header"
+        },
+        {
+          "name": "hero",
+          "description": "Blue Bird CSS class: .hero"
+        },
+        {
+          "name": "hero-actions",
+          "description": "Blue Bird CSS class: .hero-actions"
+        },
+        {
+          "name": "hero-logo",
+          "description": "Blue Bird CSS class: .hero-logo"
+        },
+        {
+          "name": "hero-subtitle",
+          "description": "Blue Bird CSS class: .hero-subtitle"
+        },
+        {
+          "name": "hero-title",
+          "description": "Blue Bird CSS class: .hero-title"
+        },
+        {
+          "name": "hidden",
+          "description": "Blue Bird CSS class: .hidden"
+        },
+        {
+          "name": "hidden-lg",
+          "description": "Blue Bird CSS class: .hidden-lg"
+        },
+        {
+          "name": "hidden-md",
+          "description": "Blue Bird CSS class: .hidden-md"
+        },
+        {
+          "name": "hidden-sm",
+          "description": "Blue Bird CSS class: .hidden-sm"
+        },
+        {
+          "name": "hover-bg-blue-50",
+          "description": "Blue Bird CSS class: .hover-bg-blue-50"
+        },
+        {
+          "name": "hover-bg-gray-100",
+          "description": "Blue Bird CSS class: .hover-bg-gray-100"
+        },
+        {
+          "name": "hover-bg-gray-200",
+          "description": "Blue Bird CSS class: .hover-bg-gray-200"
+        },
+        {
+          "name": "hover-bg-gray-300",
+          "description": "Blue Bird CSS class: .hover-bg-gray-300"
+        },
+        {
+          "name": "hover-bg-gray-400",
+          "description": "Blue Bird CSS class: .hover-bg-gray-400"
+        },
+        {
+          "name": "hover-bg-gray-50",
+          "description": "Blue Bird CSS class: .hover-bg-gray-50"
+        },
+        {
+          "name": "hover-bg-gray-500",
+          "description": "Blue Bird CSS class: .hover-bg-gray-500"
+        },
+        {
+          "name": "hover-bg-gray-600",
+          "description": "Blue Bird CSS class: .hover-bg-gray-600"
+        },
+        {
+          "name": "hover-bg-gray-700",
+          "description": "Blue Bird CSS class: .hover-bg-gray-700"
+        },
+        {
+          "name": "hover-bg-gray-800",
+          "description": "Blue Bird CSS class: .hover-bg-gray-800"
+        },
+        {
+          "name": "hover-bg-gray-900",
+          "description": "Blue Bird CSS class: .hover-bg-gray-900"
+        },
+        {
+          "name": "hover-bg-green-50",
+          "description": "Blue Bird CSS class: .hover-bg-green-50"
+        },
+        {
+          "name": "hover-bg-indigo-50",
+          "description": "Blue Bird CSS class: .hover-bg-indigo-50"
+        },
+        {
+          "name": "hover-bg-primary",
+          "description": "Blue Bird CSS class: .hover-bg-primary"
+        },
+        {
+          "name": "hover-bg-red-100",
+          "description": "Blue Bird CSS class: .hover-bg-red-100"
+        },
+        {
+          "name": "hover-bg-red-200",
+          "description": "Blue Bird CSS class: .hover-bg-red-200"
+        },
+        {
+          "name": "hover-bg-red-300",
+          "description": "Blue Bird CSS class: .hover-bg-red-300"
+        },
+        {
+          "name": "hover-bg-red-400",
+          "description": "Blue Bird CSS class: .hover-bg-red-400"
+        },
+        {
+          "name": "hover-bg-red-50",
+          "description": "Blue Bird CSS class: .hover-bg-red-50"
+        },
+        {
+          "name": "hover-bg-red-500",
+          "description": "Blue Bird CSS class: .hover-bg-red-500"
+        },
+        {
+          "name": "hover-bg-red-600",
+          "description": "Blue Bird CSS class: .hover-bg-red-600"
+        },
+        {
+          "name": "hover-bg-red-700",
+          "description": "Blue Bird CSS class: .hover-bg-red-700"
+        },
+        {
+          "name": "hover-bg-red-800",
+          "description": "Blue Bird CSS class: .hover-bg-red-800"
+        },
+        {
+          "name": "hover-bg-red-900",
+          "description": "Blue Bird CSS class: .hover-bg-red-900"
+        },
+        {
+          "name": "hover-bg-secondary",
+          "description": "Blue Bird CSS class: .hover-bg-secondary"
+        },
+        {
+          "name": "hover-bg-surface",
+          "description": "Blue Bird CSS class: .hover-bg-surface"
+        },
+        {
+          "name": "hover-bg-violet-50",
+          "description": "Blue Bird CSS class: .hover-bg-violet-50"
+        },
+        {
+          "name": "hover-bg-yellow-50",
+          "description": "Blue Bird CSS class: .hover-bg-yellow-50"
+        },
+        {
+          "name": "hover-glow",
+          "description": "Blue Bird CSS class: .hover-glow"
+        },
+        {
+          "name": "hover-lift",
+          "description": "Blue Bird CSS class: .hover-lift"
+        },
+        {
+          "name": "hover-text-blue-50",
+          "description": "Blue Bird CSS class: .hover-text-blue-50"
+        },
+        {
+          "name": "hover-text-gray-100",
+          "description": "Blue Bird CSS class: .hover-text-gray-100"
+        },
+        {
+          "name": "hover-text-gray-50",
+          "description": "Blue Bird CSS class: .hover-text-gray-50"
+        },
+        {
+          "name": "hover-text-green-50",
+          "description": "Blue Bird CSS class: .hover-text-green-50"
+        },
+        {
+          "name": "hover-text-indigo-50",
+          "description": "Blue Bird CSS class: .hover-text-indigo-50"
+        },
+        {
+          "name": "hover-text-red-50",
+          "description": "Blue Bird CSS class: .hover-text-red-50"
+        },
+        {
+          "name": "hover-text-violet-50",
+          "description": "Blue Bird CSS class: .hover-text-violet-50"
+        },
+        {
+          "name": "hover-text-yellow-50",
+          "description": "Blue Bird CSS class: .hover-text-yellow-50"
+        },
+        {
+          "name": "icon-btn",
+          "description": "Blue Bird CSS class: .icon-btn"
+        },
+        {
+          "name": "info",
+          "description": "Blue Bird CSS class: .info"
+        },
+        {
+          "name": "info-box",
+          "description": "Blue Bird CSS class: .info-box"
+        },
+        {
+          "name": "inline-block",
+          "description": "Blue Bird CSS class: .inline-block"
+        },
+        {
+          "name": "inline-flex",
+          "description": "Blue Bird CSS class: .inline-flex"
+        },
+        {
+          "name": "input-group",
+          "description": "Blue Bird CSS class: .input-group"
+        },
+        {
+          "name": "items-baseline",
+          "description": "Blue Bird CSS class: .items-baseline"
+        },
+        {
+          "name": "items-center",
+          "description": "Blue Bird CSS class: .items-center"
+        },
+        {
+          "name": "items-end",
+          "description": "Blue Bird CSS class: .items-end"
+        },
+        {
+          "name": "items-start",
+          "description": "Blue Bird CSS class: .items-start"
+        },
+        {
+          "name": "items-stretch",
+          "description": "Blue Bird CSS class: .items-stretch"
+        },
+        {
+          "name": "justify-around",
+          "description": "Blue Bird CSS class: .justify-around"
+        },
+        {
+          "name": "justify-between",
+          "description": "Blue Bird CSS class: .justify-between"
+        },
+        {
+          "name": "justify-center",
+          "description": "Blue Bird CSS class: .justify-center"
+        },
+        {
+          "name": "justify-end",
+          "description": "Blue Bird CSS class: .justify-end"
+        },
+        {
+          "name": "justify-evenly",
+          "description": "Blue Bird CSS class: .justify-evenly"
+        },
+        {
+          "name": "justify-start",
+          "description": "Blue Bird CSS class: .justify-start"
+        },
+        {
+          "name": "kbd",
+          "description": "Blue Bird CSS class: .kbd"
+        },
+        {
+          "name": "lang-link",
+          "description": "Blue Bird CSS class: .lang-link"
+        },
+        {
+          "name": "lang-switcher",
+          "description": "Blue Bird CSS class: .lang-switcher"
+        },
+        {
+          "name": "lead",
+          "description": "Blue Bird CSS class: .lead"
+        },
+        {
+          "name": "leading-loose",
+          "description": "Blue Bird CSS class: .leading-loose"
+        },
+        {
+          "name": "leading-none",
+          "description": "Blue Bird CSS class: .leading-none"
+        },
+        {
+          "name": "leading-normal",
+          "description": "Blue Bird CSS class: .leading-normal"
+        },
+        {
+          "name": "leading-relaxed",
+          "description": "Blue Bird CSS class: .leading-relaxed"
+        },
+        {
+          "name": "leading-snug",
+          "description": "Blue Bird CSS class: .leading-snug"
+        },
+        {
+          "name": "leading-tight",
+          "description": "Blue Bird CSS class: .leading-tight"
+        },
+        {
+          "name": "left",
+          "description": "Blue Bird CSS class: .left"
+        },
+        {
+          "name": "left-0",
+          "description": "Blue Bird CSS class: .left-0"
+        },
+        {
+          "name": "left-10",
+          "description": "Blue Bird CSS class: .left-10"
+        },
+        {
+          "name": "left-100",
+          "description": "Blue Bird CSS class: .left-100"
+        },
+        {
+          "name": "left-25",
+          "description": "Blue Bird CSS class: .left-25"
+        },
+        {
+          "name": "left-50",
+          "description": "Blue Bird CSS class: .left-50"
+        },
+        {
+          "name": "left-75",
+          "description": "Blue Bird CSS class: .left-75"
+        },
+        {
+          "name": "line-clamp-1",
+          "description": "Blue Bird CSS class: .line-clamp-1"
+        },
+        {
+          "name": "line-clamp-2",
+          "description": "Blue Bird CSS class: .line-clamp-2"
+        },
+        {
+          "name": "line-clamp-3",
+          "description": "Blue Bird CSS class: .line-clamp-3"
+        },
+        {
+          "name": "line-through",
+          "description": "Blue Bird CSS class: .line-through"
+        },
+        {
+          "name": "link",
+          "description": "Blue Bird CSS class: .link"
+        },
+        {
+          "name": "m-0",
+          "description": "Blue Bird CSS class: .m-0"
+        },
+        {
+          "name": "m-1",
+          "description": "Blue Bird CSS class: .m-1"
+        },
+        {
+          "name": "m-2",
+          "description": "Blue Bird CSS class: .m-2"
+        },
+        {
+          "name": "m-3",
+          "description": "Blue Bird CSS class: .m-3"
+        },
+        {
+          "name": "m-4",
+          "description": "Blue Bird CSS class: .m-4"
+        },
+        {
+          "name": "m-6",
+          "description": "Blue Bird CSS class: .m-6"
+        },
+        {
+          "name": "m-8",
+          "description": "Blue Bird CSS class: .m-8"
+        },
+        {
+          "name": "m-auto",
+          "description": "Blue Bird CSS class: .m-auto"
+        },
+        {
+          "name": "max-w-10",
+          "description": "Blue Bird CSS class: .max-w-10"
+        },
+        {
+          "name": "max-w-100",
+          "description": "Blue Bird CSS class: .max-w-100"
+        },
+        {
+          "name": "max-w-25",
+          "description": "Blue Bird CSS class: .max-w-25"
+        },
+        {
+          "name": "max-w-50",
+          "description": "Blue Bird CSS class: .max-w-50"
+        },
+        {
+          "name": "max-w-75",
+          "description": "Blue Bird CSS class: .max-w-75"
+        },
+        {
+          "name": "mb-0",
+          "description": "Blue Bird CSS class: .mb-0"
+        },
+        {
+          "name": "mb-1",
+          "description": "Blue Bird CSS class: .mb-1"
+        },
+        {
+          "name": "mb-10",
+          "description": "Blue Bird CSS class: .mb-10"
+        },
+        {
+          "name": "mb-2",
+          "description": "Blue Bird CSS class: .mb-2"
+        },
+        {
+          "name": "mb-3",
+          "description": "Blue Bird CSS class: .mb-3"
+        },
+        {
+          "name": "mb-4",
+          "description": "Blue Bird CSS class: .mb-4"
+        },
+        {
+          "name": "mb-5",
+          "description": "Blue Bird CSS class: .mb-5"
+        },
+        {
+          "name": "mb-6",
+          "description": "Blue Bird CSS class: .mb-6"
+        },
+        {
+          "name": "mb-8",
+          "description": "Blue Bird CSS class: .mb-8"
+        },
+        {
+          "name": "mb-auto",
+          "description": "Blue Bird CSS class: .mb-auto"
+        },
+        {
+          "name": "min-h-screen",
+          "description": "Blue Bird CSS class: .min-h-screen"
+        },
+        {
+          "name": "mt-0",
+          "description": "Blue Bird CSS class: .mt-0"
+        },
+        {
+          "name": "mt-1",
+          "description": "Blue Bird CSS class: .mt-1"
+        },
+        {
+          "name": "mt-10",
+          "description": "Blue Bird CSS class: .mt-10"
+        },
+        {
+          "name": "mt-2",
+          "description": "Blue Bird CSS class: .mt-2"
+        },
+        {
+          "name": "mt-3",
+          "description": "Blue Bird CSS class: .mt-3"
+        },
+        {
+          "name": "mt-4",
+          "description": "Blue Bird CSS class: .mt-4"
+        },
+        {
+          "name": "mt-5",
+          "description": "Blue Bird CSS class: .mt-5"
+        },
+        {
+          "name": "mt-6",
+          "description": "Blue Bird CSS class: .mt-6"
+        },
+        {
+          "name": "mt-8",
+          "description": "Blue Bird CSS class: .mt-8"
+        },
+        {
+          "name": "mt-auto",
+          "description": "Blue Bird CSS class: .mt-auto"
+        },
+        {
+          "name": "mx-0",
+          "description": "Blue Bird CSS class: .mx-0"
+        },
+        {
+          "name": "mx-1",
+          "description": "Blue Bird CSS class: .mx-1"
+        },
+        {
+          "name": "mx-2",
+          "description": "Blue Bird CSS class: .mx-2"
+        },
+        {
+          "name": "mx-3",
+          "description": "Blue Bird CSS class: .mx-3"
+        },
+        {
+          "name": "mx-4",
+          "description": "Blue Bird CSS class: .mx-4"
+        },
+        {
+          "name": "mx-auto",
+          "description": "Blue Bird CSS class: .mx-auto"
+        },
+        {
+          "name": "my-0",
+          "description": "Blue Bird CSS class: .my-0"
+        },
+        {
+          "name": "my-1",
+          "description": "Blue Bird CSS class: .my-1"
+        },
+        {
+          "name": "my-2",
+          "description": "Blue Bird CSS class: .my-2"
+        },
+        {
+          "name": "my-3",
+          "description": "Blue Bird CSS class: .my-3"
+        },
+        {
+          "name": "my-4",
+          "description": "Blue Bird CSS class: .my-4"
+        },
+        {
+          "name": "my-6",
+          "description": "Blue Bird CSS class: .my-6"
+        },
+        {
+          "name": "my-8",
+          "description": "Blue Bird CSS class: .my-8"
+        },
+        {
+          "name": "no-auto-flex",
+          "description": "Blue Bird CSS class: .no-auto-flex"
+        },
+        {
+          "name": "no-auto-grid",
+          "description": "Blue Bird CSS class: .no-auto-grid"
+        },
+        {
+          "name": "no-filter-results",
+          "description": "Blue Bird CSS class: .no-filter-results"
+        },
+        {
+          "name": "no-gap",
+          "description": "Blue Bird CSS class: .no-gap"
+        },
+        {
+          "name": "no-margin",
+          "description": "Blue Bird CSS class: .no-margin"
+        },
+        {
+          "name": "no-padding",
+          "description": "Blue Bird CSS class: .no-padding"
+        },
+        {
+          "name": "no-width",
+          "description": "Blue Bird CSS class: .no-width"
+        },
+        {
+          "name": "object-bottom",
+          "description": "Blue Bird CSS class: .object-bottom"
+        },
+        {
+          "name": "object-center",
+          "description": "Blue Bird CSS class: .object-center"
+        },
+        {
+          "name": "object-contain",
+          "description": "Blue Bird CSS class: .object-contain"
+        },
+        {
+          "name": "object-cover",
+          "description": "Blue Bird CSS class: .object-cover"
+        },
+        {
+          "name": "object-fill",
+          "description": "Blue Bird CSS class: .object-fill"
+        },
+        {
+          "name": "object-left",
+          "description": "Blue Bird CSS class: .object-left"
+        },
+        {
+          "name": "object-none",
+          "description": "Blue Bird CSS class: .object-none"
+        },
+        {
+          "name": "object-right",
+          "description": "Blue Bird CSS class: .object-right"
+        },
+        {
+          "name": "object-scale-down",
+          "description": "Blue Bird CSS class: .object-scale-down"
+        },
+        {
+          "name": "object-top",
+          "description": "Blue Bird CSS class: .object-top"
+        },
+        {
+          "name": "open",
+          "description": "Blue Bird CSS class: .open"
+        },
+        {
+          "name": "outline",
+          "description": "Blue Bird CSS class: .outline"
+        },
+        {
+          "name": "outline-gray-100",
+          "description": "Blue Bird CSS class: .outline-gray-100"
+        },
+        {
+          "name": "outline-gray-200",
+          "description": "Blue Bird CSS class: .outline-gray-200"
+        },
+        {
+          "name": "outline-gray-300",
+          "description": "Blue Bird CSS class: .outline-gray-300"
+        },
+        {
+          "name": "outline-gray-400",
+          "description": "Blue Bird CSS class: .outline-gray-400"
+        },
+        {
+          "name": "outline-gray-50",
+          "description": "Blue Bird CSS class: .outline-gray-50"
+        },
+        {
+          "name": "outline-gray-500",
+          "description": "Blue Bird CSS class: .outline-gray-500"
+        },
+        {
+          "name": "outline-gray-600",
+          "description": "Blue Bird CSS class: .outline-gray-600"
+        },
+        {
+          "name": "outline-gray-700",
+          "description": "Blue Bird CSS class: .outline-gray-700"
+        },
+        {
+          "name": "outline-gray-800",
+          "description": "Blue Bird CSS class: .outline-gray-800"
+        },
+        {
+          "name": "outline-gray-900",
+          "description": "Blue Bird CSS class: .outline-gray-900"
+        },
+        {
+          "name": "outline-primary",
+          "description": "Blue Bird CSS class: .outline-primary"
+        },
+        {
+          "name": "outline-secondary",
+          "description": "Blue Bird CSS class: .outline-secondary"
+        },
+        {
+          "name": "outline-surface",
+          "description": "Blue Bird CSS class: .outline-surface"
+        },
+        {
+          "name": "overflow-auto",
+          "description": "Blue Bird CSS class: .overflow-auto"
+        },
+        {
+          "name": "overflow-hidden",
+          "description": "Blue Bird CSS class: .overflow-hidden"
+        },
+        {
+          "name": "overflow-scroll",
+          "description": "Blue Bird CSS class: .overflow-scroll"
+        },
+        {
+          "name": "overflow-x-auto",
+          "description": "Blue Bird CSS class: .overflow-x-auto"
+        },
+        {
+          "name": "overflow-y-auto",
+          "description": "Blue Bird CSS class: .overflow-y-auto"
+        },
+        {
+          "name": "p-0",
+          "description": "Blue Bird CSS class: .p-0"
+        },
+        {
+          "name": "p-1",
+          "description": "Blue Bird CSS class: .p-1"
+        },
+        {
+          "name": "p-2",
+          "description": "Blue Bird CSS class: .p-2"
+        },
+        {
+          "name": "p-3",
+          "description": "Blue Bird CSS class: .p-3"
+        },
+        {
+          "name": "p-4",
+          "description": "Blue Bird CSS class: .p-4"
+        },
+        {
+          "name": "p-5",
+          "description": "Blue Bird CSS class: .p-5"
+        },
+        {
+          "name": "p-6",
+          "description": "Blue Bird CSS class: .p-6"
+        },
+        {
+          "name": "p-8",
+          "description": "Blue Bird CSS class: .p-8"
+        },
+        {
+          "name": "p-auto",
+          "description": "Blue Bird CSS class: .p-auto"
+        },
+        {
+          "name": "pb-1",
+          "description": "Blue Bird CSS class: .pb-1"
+        },
+        {
+          "name": "pb-2",
+          "description": "Blue Bird CSS class: .pb-2"
+        },
+        {
+          "name": "pb-3",
+          "description": "Blue Bird CSS class: .pb-3"
+        },
+        {
+          "name": "pb-4",
+          "description": "Blue Bird CSS class: .pb-4"
+        },
+        {
+          "name": "pb-6",
+          "description": "Blue Bird CSS class: .pb-6"
+        },
+        {
+          "name": "popover",
+          "description": "Blue Bird CSS class: .popover"
+        },
+        {
+          "name": "popover-content",
+          "description": "Blue Bird CSS class: .popover-content"
+        },
+        {
+          "name": "position-absolute",
+          "description": "Blue Bird CSS class: .position-absolute"
+        },
+        {
+          "name": "position-fixed",
+          "description": "Blue Bird CSS class: .position-fixed"
+        },
+        {
+          "name": "position-relative",
+          "description": "Blue Bird CSS class: .position-relative"
+        },
+        {
+          "name": "position-sticky",
+          "description": "Blue Bird CSS class: .position-sticky"
+        },
+        {
+          "name": "primary",
+          "description": "Blue Bird CSS class: .primary"
+        },
+        {
+          "name": "progress",
+          "description": "Blue Bird CSS class: .progress"
+        },
+        {
+          "name": "progress-bar",
+          "description": "Blue Bird CSS class: .progress-bar"
+        },
+        {
+          "name": "pt-1",
+          "description": "Blue Bird CSS class: .pt-1"
+        },
+        {
+          "name": "pt-2",
+          "description": "Blue Bird CSS class: .pt-2"
+        },
+        {
+          "name": "pt-4",
+          "description": "Blue Bird CSS class: .pt-4"
+        },
+        {
+          "name": "pt-6",
+          "description": "Blue Bird CSS class: .pt-6"
+        },
+        {
+          "name": "px-1",
+          "description": "Blue Bird CSS class: .px-1"
+        },
+        {
+          "name": "px-2",
+          "description": "Blue Bird CSS class: .px-2"
+        },
+        {
+          "name": "px-3",
+          "description": "Blue Bird CSS class: .px-3"
+        },
+        {
+          "name": "px-4",
+          "description": "Blue Bird CSS class: .px-4"
+        },
+        {
+          "name": "px-6",
+          "description": "Blue Bird CSS class: .px-6"
+        },
+        {
+          "name": "py-1",
+          "description": "Blue Bird CSS class: .py-1"
+        },
+        {
+          "name": "py-2",
+          "description": "Blue Bird CSS class: .py-2"
+        },
+        {
+          "name": "py-3",
+          "description": "Blue Bird CSS class: .py-3"
+        },
+        {
+          "name": "py-4",
+          "description": "Blue Bird CSS class: .py-4"
+        },
+        {
+          "name": "py-6",
+          "description": "Blue Bird CSS class: .py-6"
+        },
+        {
+          "name": "relative",
+          "description": "Blue Bird CSS class: .relative"
+        },
+        {
+          "name": "responsive-card",
+          "description": "Blue Bird CSS class: .responsive-card"
+        },
+        {
+          "name": "right",
+          "description": "Blue Bird CSS class: .right"
+        },
+        {
+          "name": "right-0",
+          "description": "Blue Bird CSS class: .right-0"
+        },
+        {
+          "name": "right-10",
+          "description": "Blue Bird CSS class: .right-10"
+        },
+        {
+          "name": "right-100",
+          "description": "Blue Bird CSS class: .right-100"
+        },
+        {
+          "name": "right-25",
+          "description": "Blue Bird CSS class: .right-25"
+        },
+        {
+          "name": "right-3",
+          "description": "Blue Bird CSS class: .right-3"
+        },
+        {
+          "name": "right-50",
+          "description": "Blue Bird CSS class: .right-50"
+        },
+        {
+          "name": "right-75",
+          "description": "Blue Bird CSS class: .right-75"
+        },
+        {
+          "name": "ring",
+          "description": "Blue Bird CSS class: .ring"
+        },
+        {
+          "name": "ring-primary",
+          "description": "Blue Bird CSS class: .ring-primary"
+        },
+        {
+          "name": "ripple",
+          "description": "Blue Bird CSS class: .ripple"
+        },
+        {
+          "name": "rounded",
+          "description": "Blue Bird CSS class: .rounded"
+        },
+        {
+          "name": "rounded-2xl",
+          "description": "Blue Bird CSS class: .rounded-2xl"
+        },
+        {
+          "name": "rounded-full",
+          "description": "Blue Bird CSS class: .rounded-full"
+        },
+        {
+          "name": "rounded-lg",
+          "description": "Blue Bird CSS class: .rounded-lg"
+        },
+        {
+          "name": "rounded-md",
+          "description": "Blue Bird CSS class: .rounded-md"
+        },
+        {
+          "name": "rounded-none",
+          "description": "Blue Bird CSS class: .rounded-none"
+        },
+        {
+          "name": "rounded-sm",
+          "description": "Blue Bird CSS class: .rounded-sm"
+        },
+        {
+          "name": "rounded-xl",
+          "description": "Blue Bird CSS class: .rounded-xl"
+        },
+        {
+          "name": "secondary",
+          "description": "Blue Bird CSS class: .secondary"
+        },
+        {
+          "name": "select-all",
+          "description": "Blue Bird CSS class: .select-all"
+        },
+        {
+          "name": "select-auto",
+          "description": "Blue Bird CSS class: .select-auto"
+        },
+        {
+          "name": "select-none",
+          "description": "Blue Bird CSS class: .select-none"
+        },
+        {
+          "name": "select-text",
+          "description": "Blue Bird CSS class: .select-text"
+        },
+        {
+          "name": "self-auto",
+          "description": "Blue Bird CSS class: .self-auto"
+        },
+        {
+          "name": "self-center",
+          "description": "Blue Bird CSS class: .self-center"
+        },
+        {
+          "name": "self-end",
+          "description": "Blue Bird CSS class: .self-end"
+        },
+        {
+          "name": "self-start",
+          "description": "Blue Bird CSS class: .self-start"
+        },
+        {
+          "name": "self-stretch",
+          "description": "Blue Bird CSS class: .self-stretch"
+        },
+        {
+          "name": "separator",
+          "description": "Blue Bird CSS class: .separator"
+        },
+        {
+          "name": "separator-horizontal",
+          "description": "Blue Bird CSS class: .separator-horizontal"
+        },
+        {
+          "name": "separator-vertical",
+          "description": "Blue Bird CSS class: .separator-vertical"
+        },
+        {
+          "name": "shadow",
+          "description": "Blue Bird CSS class: .shadow"
+        },
+        {
+          "name": "shadow-lg",
+          "description": "Blue Bird CSS class: .shadow-lg"
+        },
+        {
+          "name": "shadow-md",
+          "description": "Blue Bird CSS class: .shadow-md"
+        },
+        {
+          "name": "shadow-none",
+          "description": "Blue Bird CSS class: .shadow-none"
+        },
+        {
+          "name": "shadow-sm",
+          "description": "Blue Bird CSS class: .shadow-sm"
+        },
+        {
+          "name": "show",
+          "description": "Blue Bird CSS class: .show"
+        },
+        {
+          "name": "shrink-0",
+          "description": "Blue Bird CSS class: .shrink-0"
+        },
+        {
+          "name": "skeleton",
+          "description": "Blue Bird CSS class: .skeleton"
+        },
+        {
+          "name": "skeleton-avatar",
+          "description": "Blue Bird CSS class: .skeleton-avatar"
+        },
+        {
+          "name": "skeleton-button",
+          "description": "Blue Bird CSS class: .skeleton-button"
+        },
+        {
+          "name": "skeleton-card",
+          "description": "Blue Bird CSS class: .skeleton-card"
+        },
+        {
+          "name": "skeleton-text",
+          "description": "Blue Bird CSS class: .skeleton-text"
+        },
+        {
+          "name": "skeleton-title",
+          "description": "Blue Bird CSS class: .skeleton-title"
+        },
+        {
+          "name": "spinner",
+          "description": "Blue Bird CSS class: .spinner"
+        },
+        {
+          "name": "spinner-lg",
+          "description": "Blue Bird CSS class: .spinner-lg"
+        },
+        {
+          "name": "spinner-sm",
+          "description": "Blue Bird CSS class: .spinner-sm"
+        },
+        {
+          "name": "step",
+          "description": "Blue Bird CSS class: .step"
+        },
+        {
+          "name": "step-circle",
+          "description": "Blue Bird CSS class: .step-circle"
+        },
+        {
+          "name": "step-label",
+          "description": "Blue Bird CSS class: .step-label"
+        },
+        {
+          "name": "stepper",
+          "description": "Blue Bird CSS class: .stepper"
+        },
+        {
+          "name": "steps",
+          "description": "Blue Bird CSS class: .steps"
+        },
+        {
+          "name": "sticky",
+          "description": "Blue Bird CSS class: .sticky"
+        },
+        {
+          "name": "success",
+          "description": "Blue Bird CSS class: .success"
+        },
+        {
+          "name": "surface",
+          "description": "Blue Bird CSS class: .surface"
+        },
+        {
+          "name": "switch",
+          "description": "Blue Bird CSS class: .switch"
+        },
+        {
+          "name": "switch-android",
+          "description": "Blue Bird CSS class: .switch-android"
+        },
+        {
+          "name": "switch-slider",
+          "description": "Blue Bird CSS class: .switch-slider"
+        },
+        {
+          "name": "tab-content",
+          "description": "Blue Bird CSS class: .tab-content"
+        },
+        {
+          "name": "tab-list",
+          "description": "Blue Bird CSS class: .tab-list"
+        },
+        {
+          "name": "tab-trigger",
+          "description": "Blue Bird CSS class: .tab-trigger"
+        },
+        {
+          "name": "table",
+          "description": "Blue Bird CSS class: .table"
+        },
+        {
+          "name": "table-hover",
+          "description": "Blue Bird CSS class: .table-hover"
+        },
+        {
+          "name": "tabs",
+          "description": "Blue Bird CSS class: .tabs"
+        },
+        {
+          "name": "tabs-line",
+          "description": "Blue Bird CSS class: .tabs-line"
+        },
+        {
+          "name": "text-2xl",
+          "description": "Blue Bird CSS class: .text-2xl"
+        },
+        {
+          "name": "text-3xl",
+          "description": "Blue Bird CSS class: .text-3xl"
+        },
+        {
+          "name": "text-4xl",
+          "description": "Blue Bird CSS class: .text-4xl"
+        },
+        {
+          "name": "text-5xl",
+          "description": "Blue Bird CSS class: .text-5xl"
+        },
+        {
+          "name": "text-6xl",
+          "description": "Blue Bird CSS class: .text-6xl"
+        },
+        {
+          "name": "text-background",
+          "description": "Blue Bird CSS class: .text-background"
+        },
+        {
+          "name": "text-balance",
+          "description": "Blue Bird CSS class: .text-balance"
+        },
+        {
+          "name": "text-base",
+          "description": "Blue Bird CSS class: .text-base"
+        },
+        {
+          "name": "text-blue",
+          "description": "Blue Bird CSS class: .text-blue"
+        },
+        {
+          "name": "text-blue-100",
+          "description": "Blue Bird CSS class: .text-blue-100"
+        },
+        {
+          "name": "text-blue-200",
+          "description": "Blue Bird CSS class: .text-blue-200"
+        },
+        {
+          "name": "text-blue-300",
+          "description": "Blue Bird CSS class: .text-blue-300"
+        },
+        {
+          "name": "text-blue-400",
+          "description": "Blue Bird CSS class: .text-blue-400"
+        },
+        {
+          "name": "text-blue-50",
+          "description": "Blue Bird CSS class: .text-blue-50"
+        },
+        {
+          "name": "text-blue-500",
+          "description": "Blue Bird CSS class: .text-blue-500"
+        },
+        {
+          "name": "text-blue-600",
+          "description": "Blue Bird CSS class: .text-blue-600"
+        },
+        {
+          "name": "text-blue-700",
+          "description": "Blue Bird CSS class: .text-blue-700"
+        },
+        {
+          "name": "text-blue-800",
+          "description": "Blue Bird CSS class: .text-blue-800"
+        },
+        {
+          "name": "text-blue-900",
+          "description": "Blue Bird CSS class: .text-blue-900"
+        },
+        {
+          "name": "text-center",
+          "description": "Blue Bird CSS class: .text-center"
+        },
+        {
+          "name": "text-destructive",
+          "description": "Blue Bird CSS class: .text-destructive"
+        },
+        {
+          "name": "text-error",
+          "description": "Blue Bird CSS class: .text-error"
+        },
+        {
+          "name": "text-gradient",
+          "description": "Blue Bird CSS class: .text-gradient"
+        },
+        {
+          "name": "text-gradient-amber",
+          "description": "Blue Bird CSS class: .text-gradient-amber"
+        },
+        {
+          "name": "text-gradient-blue",
+          "description": "Blue Bird CSS class: .text-gradient-blue"
+        },
+        {
+          "name": "text-gradient-dark",
+          "description": "Blue Bird CSS class: .text-gradient-dark"
+        },
+        {
+          "name": "text-gradient-emerald",
+          "description": "Blue Bird CSS class: .text-gradient-emerald"
+        },
+        {
+          "name": "text-gradient-gold",
+          "description": "Blue Bird CSS class: .text-gradient-gold"
+        },
+        {
+          "name": "text-gradient-green",
+          "description": "Blue Bird CSS class: .text-gradient-green"
+        },
+        {
+          "name": "text-gradient-purple",
+          "description": "Blue Bird CSS class: .text-gradient-purple"
+        },
+        {
+          "name": "text-gradient-sunset",
+          "description": "Blue Bird CSS class: .text-gradient-sunset"
+        },
+        {
+          "name": "text-gray",
+          "description": "Blue Bird CSS class: .text-gray"
+        },
+        {
+          "name": "text-gray-100",
+          "description": "Blue Bird CSS class: .text-gray-100"
+        },
+        {
+          "name": "text-gray-200",
+          "description": "Blue Bird CSS class: .text-gray-200"
+        },
+        {
+          "name": "text-gray-300",
+          "description": "Blue Bird CSS class: .text-gray-300"
+        },
+        {
+          "name": "text-gray-400",
+          "description": "Blue Bird CSS class: .text-gray-400"
+        },
+        {
+          "name": "text-gray-50",
+          "description": "Blue Bird CSS class: .text-gray-50"
+        },
+        {
+          "name": "text-gray-500",
+          "description": "Blue Bird CSS class: .text-gray-500"
+        },
+        {
+          "name": "text-gray-600",
+          "description": "Blue Bird CSS class: .text-gray-600"
+        },
+        {
+          "name": "text-gray-700",
+          "description": "Blue Bird CSS class: .text-gray-700"
+        },
+        {
+          "name": "text-gray-800",
+          "description": "Blue Bird CSS class: .text-gray-800"
+        },
+        {
+          "name": "text-gray-900",
+          "description": "Blue Bird CSS class: .text-gray-900"
+        },
+        {
+          "name": "text-green",
+          "description": "Blue Bird CSS class: .text-green"
+        },
+        {
+          "name": "text-green-100",
+          "description": "Blue Bird CSS class: .text-green-100"
+        },
+        {
+          "name": "text-green-200",
+          "description": "Blue Bird CSS class: .text-green-200"
+        },
+        {
+          "name": "text-green-300",
+          "description": "Blue Bird CSS class: .text-green-300"
+        },
+        {
+          "name": "text-green-400",
+          "description": "Blue Bird CSS class: .text-green-400"
+        },
+        {
+          "name": "text-green-50",
+          "description": "Blue Bird CSS class: .text-green-50"
+        },
+        {
+          "name": "text-green-500",
+          "description": "Blue Bird CSS class: .text-green-500"
+        },
+        {
+          "name": "text-green-600",
+          "description": "Blue Bird CSS class: .text-green-600"
+        },
+        {
+          "name": "text-green-700",
+          "description": "Blue Bird CSS class: .text-green-700"
+        },
+        {
+          "name": "text-green-800",
+          "description": "Blue Bird CSS class: .text-green-800"
+        },
+        {
+          "name": "text-green-900",
+          "description": "Blue Bird CSS class: .text-green-900"
+        },
+        {
+          "name": "text-indigo",
+          "description": "Blue Bird CSS class: .text-indigo"
+        },
+        {
+          "name": "text-indigo-100",
+          "description": "Blue Bird CSS class: .text-indigo-100"
+        },
+        {
+          "name": "text-indigo-200",
+          "description": "Blue Bird CSS class: .text-indigo-200"
+        },
+        {
+          "name": "text-indigo-300",
+          "description": "Blue Bird CSS class: .text-indigo-300"
+        },
+        {
+          "name": "text-indigo-400",
+          "description": "Blue Bird CSS class: .text-indigo-400"
+        },
+        {
+          "name": "text-indigo-50",
+          "description": "Blue Bird CSS class: .text-indigo-50"
+        },
+        {
+          "name": "text-indigo-500",
+          "description": "Blue Bird CSS class: .text-indigo-500"
+        },
+        {
+          "name": "text-indigo-600",
+          "description": "Blue Bird CSS class: .text-indigo-600"
+        },
+        {
+          "name": "text-indigo-700",
+          "description": "Blue Bird CSS class: .text-indigo-700"
+        },
+        {
+          "name": "text-indigo-800",
+          "description": "Blue Bird CSS class: .text-indigo-800"
+        },
+        {
+          "name": "text-indigo-900",
+          "description": "Blue Bird CSS class: .text-indigo-900"
+        },
+        {
+          "name": "text-justify",
+          "description": "Blue Bird CSS class: .text-justify"
+        },
+        {
+          "name": "text-left",
+          "description": "Blue Bird CSS class: .text-left"
+        },
+        {
+          "name": "text-lg",
+          "description": "Blue Bird CSS class: .text-lg"
+        },
+        {
+          "name": "text-muted",
+          "description": "Blue Bird CSS class: .text-muted"
+        },
+        {
+          "name": "text-pink",
+          "description": "Blue Bird CSS class: .text-pink"
+        },
+        {
+          "name": "text-pink-100",
+          "description": "Blue Bird CSS class: .text-pink-100"
+        },
+        {
+          "name": "text-pink-200",
+          "description": "Blue Bird CSS class: .text-pink-200"
+        },
+        {
+          "name": "text-pink-300",
+          "description": "Blue Bird CSS class: .text-pink-300"
+        },
+        {
+          "name": "text-pink-400",
+          "description": "Blue Bird CSS class: .text-pink-400"
+        },
+        {
+          "name": "text-pink-600",
+          "description": "Blue Bird CSS class: .text-pink-600"
+        },
+        {
+          "name": "text-pink-700",
+          "description": "Blue Bird CSS class: .text-pink-700"
+        },
+        {
+          "name": "text-pink-800",
+          "description": "Blue Bird CSS class: .text-pink-800"
+        },
+        {
+          "name": "text-pink-900",
+          "description": "Blue Bird CSS class: .text-pink-900"
+        },
+        {
+          "name": "text-pretty",
+          "description": "Blue Bird CSS class: .text-pretty"
+        },
+        {
+          "name": "text-primary",
+          "description": "Blue Bird CSS class: .text-primary"
+        },
+        {
+          "name": "text-purple-100",
+          "description": "Blue Bird CSS class: .text-purple-100"
+        },
+        {
+          "name": "text-red",
+          "description": "Blue Bird CSS class: .text-red"
+        },
+        {
+          "name": "text-red-100",
+          "description": "Blue Bird CSS class: .text-red-100"
+        },
+        {
+          "name": "text-red-200",
+          "description": "Blue Bird CSS class: .text-red-200"
+        },
+        {
+          "name": "text-red-300",
+          "description": "Blue Bird CSS class: .text-red-300"
+        },
+        {
+          "name": "text-red-400",
+          "description": "Blue Bird CSS class: .text-red-400"
+        },
+        {
+          "name": "text-red-50",
+          "description": "Blue Bird CSS class: .text-red-50"
+        },
+        {
+          "name": "text-red-500",
+          "description": "Blue Bird CSS class: .text-red-500"
+        },
+        {
+          "name": "text-red-600",
+          "description": "Blue Bird CSS class: .text-red-600"
+        },
+        {
+          "name": "text-red-700",
+          "description": "Blue Bird CSS class: .text-red-700"
+        },
+        {
+          "name": "text-red-800",
+          "description": "Blue Bird CSS class: .text-red-800"
+        },
+        {
+          "name": "text-red-900",
+          "description": "Blue Bird CSS class: .text-red-900"
+        },
+        {
+          "name": "text-right",
+          "description": "Blue Bird CSS class: .text-right"
+        },
+        {
+          "name": "text-secondary",
+          "description": "Blue Bird CSS class: .text-secondary"
+        },
+        {
+          "name": "text-sm",
+          "description": "Blue Bird CSS class: .text-sm"
+        },
+        {
+          "name": "text-success",
+          "description": "Blue Bird CSS class: .text-success"
+        },
+        {
+          "name": "text-surface",
+          "description": "Blue Bird CSS class: .text-surface"
+        },
+        {
+          "name": "text-violet",
+          "description": "Blue Bird CSS class: .text-violet"
+        },
+        {
+          "name": "text-violet-100",
+          "description": "Blue Bird CSS class: .text-violet-100"
+        },
+        {
+          "name": "text-violet-200",
+          "description": "Blue Bird CSS class: .text-violet-200"
+        },
+        {
+          "name": "text-violet-300",
+          "description": "Blue Bird CSS class: .text-violet-300"
+        },
+        {
+          "name": "text-violet-400",
+          "description": "Blue Bird CSS class: .text-violet-400"
+        },
+        {
+          "name": "text-violet-50",
+          "description": "Blue Bird CSS class: .text-violet-50"
+        },
+        {
+          "name": "text-violet-500",
+          "description": "Blue Bird CSS class: .text-violet-500"
+        },
+        {
+          "name": "text-violet-600",
+          "description": "Blue Bird CSS class: .text-violet-600"
+        },
+        {
+          "name": "text-violet-700",
+          "description": "Blue Bird CSS class: .text-violet-700"
+        },
+        {
+          "name": "text-violet-800",
+          "description": "Blue Bird CSS class: .text-violet-800"
+        },
+        {
+          "name": "text-violet-900",
+          "description": "Blue Bird CSS class: .text-violet-900"
+        },
+        {
+          "name": "text-white",
+          "description": "Blue Bird CSS class: .text-white"
+        },
+        {
+          "name": "text-xl",
+          "description": "Blue Bird CSS class: .text-xl"
+        },
+        {
+          "name": "text-yellow",
+          "description": "Blue Bird CSS class: .text-yellow"
+        },
+        {
+          "name": "text-yellow-100",
+          "description": "Blue Bird CSS class: .text-yellow-100"
+        },
+        {
+          "name": "text-yellow-200",
+          "description": "Blue Bird CSS class: .text-yellow-200"
+        },
+        {
+          "name": "text-yellow-300",
+          "description": "Blue Bird CSS class: .text-yellow-300"
+        },
+        {
+          "name": "text-yellow-400",
+          "description": "Blue Bird CSS class: .text-yellow-400"
+        },
+        {
+          "name": "text-yellow-50",
+          "description": "Blue Bird CSS class: .text-yellow-50"
+        },
+        {
+          "name": "text-yellow-500",
+          "description": "Blue Bird CSS class: .text-yellow-500"
+        },
+        {
+          "name": "text-yellow-600",
+          "description": "Blue Bird CSS class: .text-yellow-600"
+        },
+        {
+          "name": "text-yellow-700",
+          "description": "Blue Bird CSS class: .text-yellow-700"
+        },
+        {
+          "name": "text-yellow-800",
+          "description": "Blue Bird CSS class: .text-yellow-800"
+        },
+        {
+          "name": "text-yellow-900",
+          "description": "Blue Bird CSS class: .text-yellow-900"
+        },
+        {
+          "name": "toast",
+          "description": "Blue Bird CSS class: .toast"
+        },
+        {
+          "name": "toast-close",
+          "description": "Blue Bird CSS class: .toast-close"
+        },
+        {
+          "name": "toast-container",
+          "description": "Blue Bird CSS class: .toast-container"
+        },
+        {
+          "name": "toast-content",
+          "description": "Blue Bird CSS class: .toast-content"
+        },
+        {
+          "name": "toast-description",
+          "description": "Blue Bird CSS class: .toast-description"
+        },
+        {
+          "name": "toast-destructive",
+          "description": "Blue Bird CSS class: .toast-destructive"
+        },
+        {
+          "name": "toast-error",
+          "description": "Blue Bird CSS class: .toast-error"
+        },
+        {
+          "name": "toast-info",
+          "description": "Blue Bird CSS class: .toast-info"
+        },
+        {
+          "name": "toast-success",
+          "description": "Blue Bird CSS class: .toast-success"
+        },
+        {
+          "name": "toast-title",
+          "description": "Blue Bird CSS class: .toast-title"
+        },
+        {
+          "name": "toast-warning",
+          "description": "Blue Bird CSS class: .toast-warning"
+        },
+        {
+          "name": "top",
+          "description": "Blue Bird CSS class: .top"
+        },
+        {
+          "name": "top-0",
+          "description": "Blue Bird CSS class: .top-0"
+        },
+        {
+          "name": "top-10",
+          "description": "Blue Bird CSS class: .top-10"
+        },
+        {
+          "name": "top-100",
+          "description": "Blue Bird CSS class: .top-100"
+        },
+        {
+          "name": "top-25",
+          "description": "Blue Bird CSS class: .top-25"
+        },
+        {
+          "name": "top-3",
+          "description": "Blue Bird CSS class: .top-3"
+        },
+        {
+          "name": "top-50",
+          "description": "Blue Bird CSS class: .top-50"
+        },
+        {
+          "name": "top-75",
+          "description": "Blue Bird CSS class: .top-75"
+        },
+        {
+          "name": "top-center",
+          "description": "Blue Bird CSS class: .top-center"
+        },
+        {
+          "name": "top-left",
+          "description": "Blue Bird CSS class: .top-left"
+        },
+        {
+          "name": "top-right",
+          "description": "Blue Bird CSS class: .top-right"
+        },
+        {
+          "name": "tracking-normal",
+          "description": "Blue Bird CSS class: .tracking-normal"
+        },
+        {
+          "name": "tracking-tight",
+          "description": "Blue Bird CSS class: .tracking-tight"
+        },
+        {
+          "name": "tracking-tighter",
+          "description": "Blue Bird CSS class: .tracking-tighter"
+        },
+        {
+          "name": "tracking-wide",
+          "description": "Blue Bird CSS class: .tracking-wide"
+        },
+        {
+          "name": "tracking-wider",
+          "description": "Blue Bird CSS class: .tracking-wider"
+        },
+        {
+          "name": "tracking-widest",
+          "description": "Blue Bird CSS class: .tracking-widest"
+        },
+        {
+          "name": "transition-all",
+          "description": "Blue Bird CSS class: .transition-all"
+        },
+        {
+          "name": "transition-colors",
+          "description": "Blue Bird CSS class: .transition-colors"
+        },
+        {
+          "name": "truncate",
+          "description": "Blue Bird CSS class: .truncate"
+        },
+        {
+          "name": "underline",
+          "description": "Blue Bird CSS class: .underline"
+        },
+        {
+          "name": "up",
+          "description": "Blue Bird CSS class: .up"
+        },
+        {
+          "name": "up-left",
+          "description": "Blue Bird CSS class: .up-left"
+        },
+        {
+          "name": "up-right",
+          "description": "Blue Bird CSS class: .up-right"
+        },
+        {
+          "name": "visible-lg",
+          "description": "Blue Bird CSS class: .visible-lg"
+        },
+        {
+          "name": "visible-md",
+          "description": "Blue Bird CSS class: .visible-md"
+        },
+        {
+          "name": "visible-sm",
+          "description": "Blue Bird CSS class: .visible-sm"
+        },
+        {
+          "name": "w-10",
+          "description": "Blue Bird CSS class: .w-10"
+        },
+        {
+          "name": "w-100",
+          "description": "Blue Bird CSS class: .w-100"
+        },
+        {
+          "name": "w-100-px",
+          "description": "Blue Bird CSS class: .w-100-px"
+        },
+        {
+          "name": "w-1000-px",
+          "description": "Blue Bird CSS class: .w-1000-px"
+        },
+        {
+          "name": "w-1050-px",
+          "description": "Blue Bird CSS class: .w-1050-px"
+        },
+        {
+          "name": "w-1100-px",
+          "description": "Blue Bird CSS class: .w-1100-px"
+        },
+        {
+          "name": "w-1150-px",
+          "description": "Blue Bird CSS class: .w-1150-px"
+        },
+        {
+          "name": "w-1200-px",
+          "description": "Blue Bird CSS class: .w-1200-px"
+        },
+        {
+          "name": "w-15",
+          "description": "Blue Bird CSS class: .w-15"
+        },
+        {
+          "name": "w-150-px",
+          "description": "Blue Bird CSS class: .w-150-px"
+        },
+        {
+          "name": "w-20",
+          "description": "Blue Bird CSS class: .w-20"
+        },
+        {
+          "name": "w-200-px",
+          "description": "Blue Bird CSS class: .w-200-px"
+        },
+        {
+          "name": "w-25",
+          "description": "Blue Bird CSS class: .w-25"
+        },
+        {
+          "name": "w-250-px",
+          "description": "Blue Bird CSS class: .w-250-px"
+        },
+        {
+          "name": "w-30",
+          "description": "Blue Bird CSS class: .w-30"
+        },
+        {
+          "name": "w-300-px",
+          "description": "Blue Bird CSS class: .w-300-px"
+        },
+        {
+          "name": "w-35",
+          "description": "Blue Bird CSS class: .w-35"
+        },
+        {
+          "name": "w-350-px",
+          "description": "Blue Bird CSS class: .w-350-px"
+        },
+        {
+          "name": "w-40",
+          "description": "Blue Bird CSS class: .w-40"
+        },
+        {
+          "name": "w-400-px",
+          "description": "Blue Bird CSS class: .w-400-px"
+        },
+        {
+          "name": "w-45",
+          "description": "Blue Bird CSS class: .w-45"
+        },
+        {
+          "name": "w-450-px",
+          "description": "Blue Bird CSS class: .w-450-px"
+        },
+        {
+          "name": "w-5",
+          "description": "Blue Bird CSS class: .w-5"
+        },
+        {
+          "name": "w-50",
+          "description": "Blue Bird CSS class: .w-50"
+        },
+        {
+          "name": "w-50-px",
+          "description": "Blue Bird CSS class: .w-50-px"
+        },
+        {
+          "name": "w-500-px",
+          "description": "Blue Bird CSS class: .w-500-px"
+        },
+        {
+          "name": "w-55",
+          "description": "Blue Bird CSS class: .w-55"
+        },
+        {
+          "name": "w-550-px",
+          "description": "Blue Bird CSS class: .w-550-px"
+        },
+        {
+          "name": "w-60",
+          "description": "Blue Bird CSS class: .w-60"
+        },
+        {
+          "name": "w-600-px",
+          "description": "Blue Bird CSS class: .w-600-px"
+        },
+        {
+          "name": "w-65",
+          "description": "Blue Bird CSS class: .w-65"
+        },
+        {
+          "name": "w-650-px",
+          "description": "Blue Bird CSS class: .w-650-px"
+        },
+        {
+          "name": "w-70",
+          "description": "Blue Bird CSS class: .w-70"
+        },
+        {
+          "name": "w-700-px",
+          "description": "Blue Bird CSS class: .w-700-px"
+        },
+        {
+          "name": "w-75",
+          "description": "Blue Bird CSS class: .w-75"
+        },
+        {
+          "name": "w-750-px",
+          "description": "Blue Bird CSS class: .w-750-px"
+        },
+        {
+          "name": "w-80",
+          "description": "Blue Bird CSS class: .w-80"
+        },
+        {
+          "name": "w-800-px",
+          "description": "Blue Bird CSS class: .w-800-px"
+        },
+        {
+          "name": "w-85",
+          "description": "Blue Bird CSS class: .w-85"
+        },
+        {
+          "name": "w-850-px",
+          "description": "Blue Bird CSS class: .w-850-px"
+        },
+        {
+          "name": "w-90",
+          "description": "Blue Bird CSS class: .w-90"
+        },
+        {
+          "name": "w-900-px",
+          "description": "Blue Bird CSS class: .w-900-px"
+        },
+        {
+          "name": "w-95",
+          "description": "Blue Bird CSS class: .w-95"
+        },
+        {
+          "name": "w-950-px",
+          "description": "Blue Bird CSS class: .w-950-px"
+        },
+        {
+          "name": "w-auto",
+          "description": "Blue Bird CSS class: .w-auto"
+        },
+        {
+          "name": "w-full",
+          "description": "Blue Bird CSS class: .w-full"
+        },
+        {
+          "name": "w-mx-100-px",
+          "description": "Blue Bird CSS class: .w-mx-100-px"
+        },
+        {
+          "name": "w-mx-1000-px",
+          "description": "Blue Bird CSS class: .w-mx-1000-px"
+        },
+        {
+          "name": "w-mx-1050-px",
+          "description": "Blue Bird CSS class: .w-mx-1050-px"
+        },
+        {
+          "name": "w-mx-1100-px",
+          "description": "Blue Bird CSS class: .w-mx-1100-px"
+        },
+        {
+          "name": "w-mx-1150-px",
+          "description": "Blue Bird CSS class: .w-mx-1150-px"
+        },
+        {
+          "name": "w-mx-1200-px",
+          "description": "Blue Bird CSS class: .w-mx-1200-px"
+        },
+        {
+          "name": "w-mx-150-px",
+          "description": "Blue Bird CSS class: .w-mx-150-px"
+        },
+        {
+          "name": "w-mx-200-px",
+          "description": "Blue Bird CSS class: .w-mx-200-px"
+        },
+        {
+          "name": "w-mx-250-px",
+          "description": "Blue Bird CSS class: .w-mx-250-px"
+        },
+        {
+          "name": "w-mx-300-px",
+          "description": "Blue Bird CSS class: .w-mx-300-px"
+        },
+        {
+          "name": "w-mx-350-px",
+          "description": "Blue Bird CSS class: .w-mx-350-px"
+        },
+        {
+          "name": "w-mx-400-px",
+          "description": "Blue Bird CSS class: .w-mx-400-px"
+        },
+        {
+          "name": "w-mx-450-px",
+          "description": "Blue Bird CSS class: .w-mx-450-px"
+        },
+        {
+          "name": "w-mx-50-px",
+          "description": "Blue Bird CSS class: .w-mx-50-px"
+        },
+        {
+          "name": "w-mx-500-px",
+          "description": "Blue Bird CSS class: .w-mx-500-px"
+        },
+        {
+          "name": "w-mx-550-px",
+          "description": "Blue Bird CSS class: .w-mx-550-px"
+        },
+        {
+          "name": "w-mx-600-px",
+          "description": "Blue Bird CSS class: .w-mx-600-px"
+        },
+        {
+          "name": "w-mx-650-px",
+          "description": "Blue Bird CSS class: .w-mx-650-px"
+        },
+        {
+          "name": "w-mx-700-px",
+          "description": "Blue Bird CSS class: .w-mx-700-px"
+        },
+        {
+          "name": "w-mx-750-px",
+          "description": "Blue Bird CSS class: .w-mx-750-px"
+        },
+        {
+          "name": "w-mx-800-px",
+          "description": "Blue Bird CSS class: .w-mx-800-px"
+        },
+        {
+          "name": "w-mx-850-px",
+          "description": "Blue Bird CSS class: .w-mx-850-px"
+        },
+        {
+          "name": "w-mx-900-px",
+          "description": "Blue Bird CSS class: .w-mx-900-px"
+        },
+        {
+          "name": "w-mx-950-px",
+          "description": "Blue Bird CSS class: .w-mx-950-px"
+        },
+        {
+          "name": "w-screen",
+          "description": "Blue Bird CSS class: .w-screen"
+        },
+        {
+          "name": "w3",
+          "description": "Blue Bird CSS class: .w3"
+        },
+        {
+          "name": "warning",
+          "description": "Blue Bird CSS class: .warning"
+        },
+        {
+          "name": "z-0",
+          "description": "Blue Bird CSS class: .z-0"
+        },
+        {
+          "name": "z-10",
+          "description": "Blue Bird CSS class: .z-10"
+        },
+        {
+          "name": "z-20",
+          "description": "Blue Bird CSS class: .z-20"
+        },
+        {
+          "name": "z-30",
+          "description": "Blue Bird CSS class: .z-30"
+        },
+        {
+          "name": "z-40",
+          "description": "Blue Bird CSS class: .z-40"
+        },
+        {
+          "name": "z-50",
+          "description": "Blue Bird CSS class: .z-50"
+        }
+      ]
+    }
+  ]
+}
