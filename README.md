@@ -9,7 +9,8 @@ A lightweight, semantic, modern design framework inspired by modern aesthetics a
 ## 📋 Table of Contents
 
 - [⚡ Key Features](#-key-features)
-- [🚀 Quick Start (CDN)](#-quick-start-cdn)
+- [🚀 Quick Start (NPM & CDN)](#-quick-start-npm--cdn)
+- [✨ VS Code Autocompletion & TypeScript](#-vs-code-autocompletion--typescript)
 - [🧠 JavaScript Engine (`bluebird.js`) & API](#-javascript-engine-bluebirdjs--api)
   - [Core `bluebird()` Function](#core-bluebird-function)
   - [Responsive Data Table (`ResponsiveDataTable`)](#responsive-data-table-responsivedatatable)
@@ -61,14 +62,64 @@ A lightweight, semantic, modern design framework inspired by modern aesthetics a
 
 ---
 
-## 🚀 Quick Start (CDN)
+## 🚀 Quick Start (NPM & CDN)
 
-Simply include `bluebird.css` and `bluebird.js` in your HTML `<head>` or template:
+### Option A: Install via NPM (Recommended for modern bundlers)
+
+```bash
+npm install @seip/blue-bird
+```
+
+In your main entry point (`main.js`, `index.js`, `App.jsx`, etc.):
+
+```javascript
+// Import CSS (compiled with @layer for zero specificity conflicts)
+import '@seip/blue-bird/css';
+
+// Import JS helpers with full TypeScript autocomplete
+import { toast, snackbar, ResponsiveDataTable, bluebird } from '@seip/blue-bird';
+
+// Ready to use!
+toast({ message: 'Hello from Blue Bird!', type: 'success' });
+```
+
+---
+
+### Option B: Vanilla HTML / JS via CDN (Zero Build Step)
+
+Include the minified stylesheet and JavaScript helper directly in your `<head>`:
 
 ```html
-<link rel="stylesheet" href="https://seip25.github.io/Blue-bird-css/bluebird.css" />
-<script src="https://seip25.github.io/Blue-bird-css/bluebird.js"></script>
+<!-- Blue Bird CSS (Minified, only ~113 KB, with Eye-Care Dark Mode & @layer) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@seip/blue-bird@latest/dist/bluebird.min.css" />
+
+<!-- Blue Bird JS Helper (Automatic drawers, toasts, carousels, command palette) -->
+<script src="https://cdn.jsdelivr.net/npm/@seip/blue-bird@latest/dist/bluebird.min.js" defer></script>
 ```
+
+---
+
+## ✨ VS Code Autocompletion & TypeScript
+
+Blue Bird includes first-class autocompletion tools:
+
+### 1. HTML & CSS Class Autocomplete in VS Code
+All 700+ utility and component classes are indexed in `dist/bluebird.html-data.json`. To enable instant autocompletion and hover descriptions in your project, add this to `.vscode/settings.json`:
+
+```json
+{
+  "html.customData": [
+    "./node_modules/@seip/blue-bird/dist/bluebird.html-data.json"
+  ]
+}
+```
+
+Now, when you type `class="` in any `.html` or `.jsx` file, VS Code will suggest classes (`btn-primary`, `btn-cyberpunk-cut`, `glow-blue`, `floating-fill`, etc.) with documentation!
+
+### 2. TypeScript Declarations
+Blue Bird provides comprehensive typings in `dist/bluebird.d.ts` for all JavaScript functions, components, and DataTable APIs with full IntelliSense.
+
+---
 
 ### Complete Basic HTML Example:
 
@@ -844,17 +895,23 @@ Ready-to-use motion keyframes and utility classes:
 
 ---
 
-## 🎨 Theming & Light / Dark Mode
+## 🎨 Theming & Eye-Care Light / Dark Mode
 
-Blue Bird CSS relies on native CSS design tokens and custom variables. Toggle between light and dark themes effortlessly by changing the `data-theme` attribute on `<html>`.
+Blue Bird CSS features an **Eye-Care Dark Mode** crafted to protect your vision during long development and browsing sessions. Instead of harsh `#000000` pitch black and blinding `#ffffff` stark white, it uses soothing charcoal-slate backgrounds (`#101419` and `#171d25`) paired with soft slate-white typography (`#e2e8f0`).
+
+### Automatic OS Detection & Manual Toggle
+Blue Bird automatically respects the operating system's `prefers-color-scheme: dark` preference, and allows instant manual toggling via the `data-theme` attribute:
 
 ```html
-<!-- Dark Theme Active -->
+<!-- Forced Dark Theme -->
 <html data-theme="dark">
+
+<!-- Forced Light Theme -->
+<html data-theme="light">
 ```
 
 ```javascript
-// Toggle light/dark theme via JS:
+// Dynamic toggle function:
 function toggleTheme() {
   const html = document.documentElement;
   const current = html.getAttribute('data-theme');

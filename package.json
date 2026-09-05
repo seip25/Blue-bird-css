@@ -1,17 +1,69 @@
 {
-  "name": "blue-bird-css",
-  "private": true,
-  "version": "0.0.1",
+  "name": "@seip/blue-bird",
+  "version": "0.1.0",
+  "description": "Semantic, modern, eye-care CSS framework with zero build step, Pico.css simplicity and Shadcn/Tailwind aesthetics.",
   "type": "module",
+  "author": "Seip25",
+  "license": "MIT",
+  "homepage": "https://seip25.github.io/Blue-bird-css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seip25/Blue-bird-css.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./dist/bluebird.js",
+  "module": "./dist/bluebird.esm.js",
+  "types": "./dist/bluebird.d.ts",
+  "style": "./dist/bluebird.min.css",
+  "exports": {
+    ".": {
+      "types": "./dist/bluebird.d.ts",
+      "import": "./dist/bluebird.esm.js",
+      "require": "./dist/bluebird.js"
+    },
+    "./css": "./dist/bluebird.min.css",
+    "./style": "./dist/bluebird.css",
+    "./min.css": "./dist/bluebird.min.css",
+    "./html-data": "./dist/bluebird.html-data.json"
+  },
+  "files": [
+    "dist/bluebird.css",
+    "dist/bluebird.min.css",
+    "dist/bluebird.js",
+    "dist/bluebird.min.js",
+    "dist/bluebird.esm.js",
+    "dist/bluebird.d.ts",
+    "dist/bluebird.html-data.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "css",
+    "framework",
+    "semantic",
+    "eye-care",
+    "dark-mode",
+    "tailwind",
+    "shadcn",
+    "pico",
+    "minimal",
+    "responsive",
+    "cyberpunk"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build:css": "node scripts/build-framework.js",
+    "build:docs": "vite build",
+    "build": "npm run build:docs && npm run build:css",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy:gh": "gh-pages -d dist",
+    "deploy:npm": "npm publish --access public",
+    "deploy": "npm run build && npm run deploy:gh && npm run deploy:npm"
   },
-  "homepage": "https://seip25.github.io/Blue-bird-css",
   "dependencies": {
     "gh-pages": "^6.3.0",
     "highlight.js": "^11.11.1",

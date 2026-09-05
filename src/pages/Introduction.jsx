@@ -53,13 +53,30 @@ export default function Introduction() {
       </article>
 
       <article className="glass p-6 rounded-xl mb-6">
-        <h2 className="text-2xl font-semibold mb-2">Quick CDN Install</h2>
-        <p className="text-muted mb-4">Include Blue Bird CSS directly in your HTML file via CDN:</p>
-        <CodeBlock language="html">
-          {`<link rel="stylesheet" href="https://seip25.github.io/Blue-bird-css/bluebird.css" />
-<script src="https://seip25.github.io/Blue-bird-css/bluebird.js"></script>`}
+        <h2 className="text-2xl font-semibold mb-2">Installation &amp; Setup</h2>
+        <p className="text-muted mb-4">Install via npm for modern bundlers, or use zero-build CDN links in vanilla HTML:</p>
+
+        <h3 className="font-bold text-base mt-3 mb-2">Option A: NPM Package</h3>
+        <CodeBlock language="bash">
+          {`npm install @seip/blue-bird`}
         </CodeBlock>
-        <p className="mt-4 text-muted">Or download files locally and include them in your head tag:</p>
+        <p className="text-sm text-muted my-2">Import stylesheet and JS helpers into your JavaScript / React / Vite entry point:</p>
+        <CodeBlock language="javascript">
+          {`import '@seip/blue-bird/css';
+import { toast, snackbar, ResponsiveDataTable } from '@seip/blue-bird';`}
+        </CodeBlock>
+
+        <h3 className="font-bold text-base mt-6 mb-2">Option B: Vanilla HTML / CDN</h3>
+        <p className="text-sm text-muted mb-2">Include Blue Bird directly via jsDelivr CDN (zero setup required):</p>
+        <CodeBlock language="html">
+          {`<!-- Blue Bird CSS (Minified with @layer & Eye-Care Dark Mode) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@seip/blue-bird@latest/dist/bluebird.min.css" />
+
+<!-- Blue Bird JS Helper -->
+<script src="https://cdn.jsdelivr.net/npm/@seip/blue-bird@latest/dist/bluebird.min.js" defer></script>`}
+        </CodeBlock>
+
+        <h3 className="font-bold text-base mt-6 mb-2">Option C: Local Download</h3>
         <CodeBlock language="html">
           {`<link rel="stylesheet" href="bluebird.css" />
 <script src="bluebird.js"></script>`}

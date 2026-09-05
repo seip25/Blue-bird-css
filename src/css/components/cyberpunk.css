@@ -1,0 +1,557 @@
+@layer components {
+/* Cyberpunk Glow Buttons & Color Variants */
+button.bg-pink,
+a[role="button"].bg-pink {
+  background-color: #ec4899;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.bg-pink {
+  background-color: #ec4899;
+  color: #ffffff;
+}
+
+.text-pink {
+  color: var(--pink-500);
+}
+
+[data-theme="dark"] .text-pink {
+  color: var(--pink-400);
+}
+
+.glow {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.45);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.glow:hover {
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.75);
+  transform: translateY(-2px);
+}
+
+.glow-blue {
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.glow-blue:hover {
+  box-shadow: 0 0 25px rgba(37, 99, 235, 0.85);
+  transform: translateY(-2px);
+}
+
+.glow-indigo {
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.glow-indigo:hover {
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.85);
+  transform: translateY(-2px);
+}
+
+.glow-red {
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.glow-red:hover {
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.85);
+  transform: translateY(-2px);
+}
+
+.glow-pink {
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.55);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.glow-pink:hover {
+  box-shadow: 0 0 25px rgba(236, 72, 153, 0.85);
+  transform: translateY(-2px);
+}
+
+.glow-purple {
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.glow-purple:hover {
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.85);
+  transform: translateY(-2px);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.5);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.glow-cyan:hover {
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.85);
+  transform: translateY(-2px);
+}
+
+.glow-green {
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.glow-green:hover {
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.85);
+  transform: translateY(-2px);
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.object-contain {
+  object-fit: contain;
+}
+
+
+/* ==========================================
+   ENHANCED CYBERPUNK STYLES & GLOW BUTTONS
+   ========================================== */
+
+/* Base Cyberpunk Button Class (Cyan / Neon 2077) */
+.btn-cyberpunk,
+.glow-cyberpunk,
+.cyberpunk-cyan,
+.glow-cyan,
+.btn-cyberpunk-cyan {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #090d16;
+  color: #00f0ff;
+  border: 1px solid #00f0ff;
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.5), inset 0 0 10px rgba(0, 240, 255, 0.25);
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.8);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border-radius: 0.375rem;
+}
+
+.btn-cyberpunk:hover,
+.glow-cyberpunk:hover,
+.cyberpunk-cyan:hover,
+.glow-cyan:hover,
+.btn-cyberpunk-cyan:hover {
+  background: #00f0ff;
+  color: #090d16;
+  box-shadow: 0 0 20px #00f0ff, 0 0 40px rgba(0, 240, 255, 0.7), inset 0 0 15px #ffffff;
+  text-shadow: none;
+  transform: translateY(-2px);
+}
+
+.btn-cyberpunk:active,
+.glow-cyberpunk:active,
+.cyberpunk-cyan:active,
+.glow-cyan:active,
+.btn-cyberpunk-cyan:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 0 15px #00f0ff, inset 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Red Cyberpunk */
+.btn-cyberpunk-red,
+.glow-red,
+.cyberpunk-red {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #140509;
+  color: #ff003c;
+  border: 1px solid #ff003c;
+  box-shadow: 0 0 12px rgba(255, 0, 60, 0.5), inset 0 0 10px rgba(255, 0, 60, 0.25);
+  text-shadow: 0 0 8px rgba(255, 0, 60, 0.8);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border-radius: 0.375rem;
+}
+
+.btn-cyberpunk-red:hover,
+.glow-red:hover,
+.cyberpunk-red:hover {
+  background: #ff003c;
+  color: #000000;
+  box-shadow: 0 0 20px #ff003c, 0 0 40px rgba(255, 0, 60, 0.7), inset 0 0 15px #ffffff;
+  text-shadow: none;
+  transform: translateY(-2px);
+}
+
+.btn-cyberpunk-red:active,
+.glow-red:active,
+.cyberpunk-red:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Pink Cyberpunk */
+.btn-cyberpunk-pink,
+.glow-pink,
+.cyberpunk-pink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #180512;
+  color: #ff007f;
+  border: 1px solid #ff007f;
+  box-shadow: 0 0 12px rgba(255, 0, 127, 0.5), inset 0 0 10px rgba(255, 0, 127, 0.25);
+  text-shadow: 0 0 8px rgba(255, 0, 127, 0.8);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border-radius: 0.375rem;
+}
+
+.btn-cyberpunk-pink:hover,
+.glow-pink:hover,
+.cyberpunk-pink:hover {
+  background: #ff007f;
+  color: #000000;
+  box-shadow: 0 0 20px #ff007f, 0 0 40px rgba(255, 0, 127, 0.7), inset 0 0 15px #ffffff;
+  text-shadow: none;
+  transform: translateY(-2px);
+}
+
+.btn-cyberpunk-pink:active,
+.glow-pink:active,
+.cyberpunk-pink:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Blue Cyberpunk */
+.btn-cyberpunk-blue,
+.glow-blue,
+.cyberpunk-blue {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #060e1e;
+  color: #3b82f6;
+  border: 1px solid #3b82f6;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.5), inset 0 0 10px rgba(59, 130, 246, 0.25);
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.8);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border-radius: 0.375rem;
+}
+
+.btn-cyberpunk-blue:hover,
+.glow-blue:hover,
+.cyberpunk-blue:hover {
+  background: #3b82f6;
+  color: #ffffff;
+  box-shadow: 0 0 20px #3b82f6, 0 0 40px rgba(59, 130, 246, 0.7), inset 0 0 15px #ffffff;
+  text-shadow: none;
+  transform: translateY(-2px);
+}
+
+.btn-cyberpunk-blue:active,
+.glow-blue:active,
+.cyberpunk-blue:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Yellow Cyberpunk */
+.btn-cyberpunk-yellow,
+.glow-yellow,
+.cyberpunk-yellow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #191605;
+  color: #ffe600;
+  border: 1px solid #ffe600;
+  box-shadow: 0 0 12px rgba(255, 230, 0, 0.5), inset 0 0 10px rgba(255, 230, 0, 0.25);
+  text-shadow: 0 0 8px rgba(255, 230, 0, 0.8);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border-radius: 0.375rem;
+}
+
+.btn-cyberpunk-yellow:hover,
+.glow-yellow:hover,
+.cyberpunk-yellow:hover {
+  background: #ffe600;
+  color: #000000;
+  box-shadow: 0 0 20px #ffe600, 0 0 40px rgba(255, 230, 0, 0.7), inset 0 0 15px #ffffff;
+  text-shadow: none;
+  transform: translateY(-2px);
+}
+
+.btn-cyberpunk-yellow:active,
+.glow-yellow:active,
+.cyberpunk-yellow:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Green Cyberpunk */
+.btn-cyberpunk-green,
+.glow-green,
+.cyberpunk-green {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #03180b;
+  color: #00ff66;
+  border: 1px solid #00ff66;
+  box-shadow: 0 0 12px rgba(0, 255, 102, 0.5), inset 0 0 10px rgba(0, 255, 102, 0.25);
+  text-shadow: 0 0 8px rgba(0, 255, 102, 0.8);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border-radius: 0.375rem;
+}
+
+.btn-cyberpunk-green:hover,
+.glow-green:hover,
+.cyberpunk-green:hover {
+  background: #00ff66;
+  color: #03180b;
+  box-shadow: 0 0 20px #00ff66, 0 0 40px rgba(0, 255, 102, 0.7), inset 0 0 15px #ffffff;
+  text-shadow: none;
+  transform: translateY(-2px);
+}
+
+.btn-cyberpunk-green:active,
+.glow-green:active,
+.cyberpunk-green:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Purple Cyberpunk */
+.btn-cyberpunk-purple,
+.glow-purple,
+.cyberpunk-purple {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #14041d;
+  color: #bd00ff;
+  border: 1px solid #bd00ff;
+  box-shadow: 0 0 12px rgba(189, 0, 255, 0.5), inset 0 0 10px rgba(189, 0, 255, 0.25);
+  text-shadow: 0 0 8px rgba(189, 0, 255, 0.8);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border-radius: 0.375rem;
+}
+
+.btn-cyberpunk-purple:hover,
+.glow-purple:hover,
+.cyberpunk-purple:hover {
+  background: #bd00ff;
+  color: #ffffff;
+  box-shadow: 0 0 20px #bd00ff, 0 0 40px rgba(189, 0, 255, 0.7), inset 0 0 15px #ffffff;
+  text-shadow: none;
+  transform: translateY(-2px);
+}
+
+.btn-cyberpunk-purple:active,
+.glow-purple:active,
+.cyberpunk-purple:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Orange Cyberpunk */
+.btn-cyberpunk-orange,
+.glow-orange,
+.cyberpunk-orange {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a0b03;
+  color: #ff6600;
+  border: 1px solid #ff6600;
+  box-shadow: 0 0 12px rgba(255, 102, 0, 0.5), inset 0 0 10px rgba(255, 102, 0, 0.25);
+  text-shadow: 0 0 8px rgba(255, 102, 0, 0.8);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border-radius: 0.375rem;
+}
+
+.btn-cyberpunk-orange:hover,
+.glow-orange:hover,
+.cyberpunk-orange:hover {
+  background: #ff6600;
+  color: #000000;
+  box-shadow: 0 0 20px #ff6600, 0 0 40px rgba(255, 102, 0, 0.7), inset 0 0 15px #ffffff;
+  text-shadow: none;
+  transform: translateY(-2px);
+}
+
+.btn-cyberpunk-orange:active,
+.glow-orange:active,
+.cyberpunk-orange:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Indigo Cyberpunk */
+.btn-cyberpunk-indigo,
+.glow-indigo,
+.cyberpunk-indigo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #090a1f;
+  color: #6366f1;
+  border: 1px solid #6366f1;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.5), inset 0 0 10px rgba(99, 102, 241, 0.25);
+  text-shadow: 0 0 8px rgba(99, 102, 241, 0.8);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border-radius: 0.375rem;
+}
+
+.btn-cyberpunk-indigo:hover,
+.glow-indigo:hover,
+.cyberpunk-indigo:hover {
+  background: #6366f1;
+  color: #ffffff;
+  box-shadow: 0 0 20px #6366f1, 0 0 40px rgba(99, 102, 241, 0.7), inset 0 0 15px #ffffff;
+  text-shadow: none;
+  transform: translateY(-2px);
+}
+
+/* White / Chrome Cyberpunk */
+.btn-cyberpunk-white,
+.glow-white,
+.cyberpunk-white {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #111827;
+  color: #f8fafc;
+  border: 1px solid #f8fafc;
+  box-shadow: 0 0 12px rgba(248, 250, 252, 0.5), inset 0 0 10px rgba(248, 250, 252, 0.25);
+  text-shadow: 0 0 8px rgba(248, 250, 252, 0.8);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border-radius: 0.375rem;
+}
+
+.btn-cyberpunk-white:hover,
+.glow-white:hover,
+.cyberpunk-white:hover {
+  background: #f8fafc;
+  color: #0f172a;
+  box-shadow: 0 0 20px #ffffff, 0 0 40px rgba(255, 255, 255, 0.8), inset 0 0 15px #ffffff;
+  text-shadow: none;
+  transform: translateY(-2px);
+}
+
+/* Cyberpunk Chamfered Cut Corner Modifier */
+.btn-cyberpunk-cut,
+.cyberpunk-cut,
+.glow-cut {
+  border-radius: 0;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+
+/* Glitch Cyberpunk Animation Modifier */
+.btn-cyberpunk-glitch,
+.glow-glitch,
+.cyberpunk-glitch {
+  animation: cyberpunk-glitch-pulse 3s infinite;
+}
+
+.btn-cyberpunk-glitch:hover,
+.glow-glitch:hover,
+.cyberpunk-glitch:hover {
+  animation: cyberpunk-glitch-shake 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
+}
+
+@keyframes cyberpunk-glitch-pulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 12px rgba(0, 240, 255, 0.5), inset 0 0 10px rgba(0, 240, 255, 0.25);
+  }
+
+  50% {
+    box-shadow: 0 0 18px rgba(255, 0, 127, 0.6), inset 0 0 12px rgba(255, 0, 127, 0.3);
+    border-color: #ff007f;
+    color: #ff007f;
+  }
+}
+
+@keyframes cyberpunk-glitch-shake {
+  0% {
+    transform: translate(0, 0);
+    text-shadow: -2px 0 #ff003c, 2px 0 #00f0ff;
+  }
+
+  25% {
+    transform: translate(-2px, 2px);
+    text-shadow: 2px 0 #ff003c, -2px 0 #00f0ff;
+  }
+
+  50% {
+    transform: translate(2px, -1px);
+    text-shadow: -1px 0 #ff003c, 1px 0 #00f0ff;
+  }
+
+  75% {
+    transform: translate(-1px, -1px);
+    text-shadow: 1px 0 #ff003c, -1px 0 #00f0ff;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    text-shadow: -2px 0 #ff003c, 2px 0 #00f0ff;
+  }
+}
+
+.glow-pulse {
+  animation: animate-glow-pulse 2s infinite alternate;
+}
+
+@keyframes animate-glow-pulse {
+  0% {
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+  }
+
+  100% {
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.9), 0 0 40px rgba(168, 85, 247, 0.5);
+  }
+}
+
+}
