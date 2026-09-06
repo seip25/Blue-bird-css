@@ -35,7 +35,7 @@ export default function Buttons() {
           <button className="destructive hover-lift">Destructive</button>
           <button className="ghost hover-lift">Ghost</button>
         </div>
-        <div className="flex items-center gap-3 flex-wrap hover-glow">
+        <div className="flex items-center gap-3 flex-wrap">
           <button className="rounded-full">Rounded</button>
           <button className="rounded-full outline hover-lift" data-tooltip="Rounded full">Rounded</button>
           <button className="rounded-full secondary hover-lift" data-tooltip="Rounded full">Rounded</button>
