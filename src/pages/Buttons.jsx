@@ -132,13 +132,18 @@ export default function Buttons() {
       <div className="example border p-4 rounded-xl my-4 flex items-center gap-3 flex-wrap">
         <button className="primary">Solid Button</button>
         <button className="secondary">Secondary Button</button>
-        <a href="#/buttons" className="btn-link">Link Button (Anchor)</a>
+        <a href="#/buttons" role='button'  >Link Button  </a>
+        <a href="#/buttons" role='button' className='secondary'>Link Button </a>
+        <a href="#/buttons" role='button' className='outline'>Link Button </a>
+        <a href="#/buttons" className="btn-link">Link Button -btn link  </a>
         <button className="btn-link">Link Button (Button Tag)</button>
       </div>
       <CodeBlock language="html">
         {`<button class="primary">Solid Button</button>
-<a href="#" class="btn-link">Link Button (Anchor)</a>
-<button class="btn-link">Link Button (Button)</button>`}
+ <a href="#/buttons" role='button'  >Link Button  </a>
+<a href="#/buttons" role='button' className='secondary'>Link Button </a>
+<a href="#/buttons" role='button' className='outline'>Link Button </a>
+<a href="#/buttons" className="btn-link">Link Button -btn link  </a>`}
       </CodeBlock>
 
       {/* Cyberpunk Glow & Futuristic Buttons */}
