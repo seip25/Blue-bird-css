@@ -72,11 +72,11 @@ function Layout() {
       <header className="glass">
         <nav>
           <div className="flex items-center gap-2">
-            <h2 className="font-bold text-xl tracking-tight">Blue Bird CSS</h2>
-            <span className="badge badge-secondary badge-sm hidden-sm">v1.0</span>
+            <h2 className="font-bold text-xl tracking-tight ">Blue Bird CSS</h2>
+            <span className="badge badge-secondary badge-sm hidden-sm">v0.1.1</span>
           </div>
-          <div className="flex items-center gap-2 flex-wrap">
-            <button 
+          <div className="flex items-center gap-2 flex-wrap hidden-sm">
+            <button
               className="secondary flex items-center gap-2 text-sm text-muted"
               onClick={() => window.bluebird && window.bluebird('command', { action: 'open' })}
               style={{ padding: '0.35rem 0.75rem' }}
