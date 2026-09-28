@@ -319,7 +319,7 @@ console.log(`   - .vscode/settings.json created for instant IDE autocomplete`);
 ensureDir('dist/react');
 
 const reactBundleContent = `'use client';
-import React, { createContext, useContext, useEffect, useState, useMemo, useCallback, forwardRef, useRef } from 'react';
+import React, { createContext, useContext, useEffect, useState, useMemo, useCallback, useSyncExternalStore, forwardRef, useRef } from 'react';
 
 // --- ThemeProvider ---
 ${fs.readFileSync('src/react/ThemeProvider.jsx', 'utf-8').replace(/'use client';/g, '').replace(/import React[^;]+;/g, '').trim()}

@@ -16,7 +16,26 @@ export function ThemeToggle({
   renderIcon,
   ...props
 }) {
-  const { toggleTheme, isDark } = useTheme();
+  const { toggleTheme, isDark, mounted } = useTheme();
+
+  // If not mounted yet (SSR or initial client hydration), render a stable neutral placeholder to avoid mismatch
+  if (!mounted) {
+    return React.createElement(
+      'button',
+      {
+        type: 'button',
+        className: `btn-secondary inline-flex items-center gap-2 cursor-pointer ${className}`.trim(),
+        'aria-label': ariaLabel,
+        title: 'Toggle theme',
+        ...props,
+      },
+      React.createElement('span', {
+        style: { width: '18px', height: '18px', display: 'inline-block' },
+        'aria-hidden': 'true',
+      }),
+      showLabel ? React.createElement('span', null, lightLabel) : null
+    );
+  }
 
   const iconElement = renderIcon
     ? renderIcon(isDark)
