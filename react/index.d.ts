@@ -18,6 +18,7 @@ export interface ThemeContextValue {
   setTheme: (theme: Theme) => void;
   toggleTheme: () => void;
   isDark: boolean;
+  mounted: boolean;
 }
 
 export declare function ThemeProvider(props: ThemeProviderProps): React.JSX.Element;
