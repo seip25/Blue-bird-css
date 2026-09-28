@@ -1,6 +1,6 @@
 {
   "name": "@seip/blue-bird-css",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Semantic, modern, eye-care CSS framework with zero build step, Pico.css simplicity and Shadcn/Tailwind aesthetics.",
   "type": "module",
   "author": "Seip25",
