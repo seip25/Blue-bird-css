@@ -68,6 +68,34 @@
       "name": "bluebird-classes",
       "values": [
         {
+          "name": "2xl:block",
+          "description": "Blue Bird CSS class: .2xl:block"
+        },
+        {
+          "name": "2xl:flex",
+          "description": "Blue Bird CSS class: .2xl:flex"
+        },
+        {
+          "name": "2xl:grid",
+          "description": "Blue Bird CSS class: .2xl:grid"
+        },
+        {
+          "name": "2xl:grid-cols-5",
+          "description": "Blue Bird CSS class: .2xl:grid-cols-5"
+        },
+        {
+          "name": "2xl:grid-cols-6",
+          "description": "Blue Bird CSS class: .2xl:grid-cols-6"
+        },
+        {
+          "name": "2xl:hidden",
+          "description": "Blue Bird CSS class: .2xl:hidden"
+        },
+        {
+          "name": "2xl:max-w-screen-2xl",
+          "description": "Blue Bird CSS class: .2xl:max-w-screen-2xl"
+        },
+        {
           "name": "absolute",
           "description": "Blue Bird CSS class: .absolute"
         },
