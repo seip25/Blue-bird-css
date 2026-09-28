@@ -74,7 +74,7 @@ function Layout() {
         <nav>
           <div className="flex items-center gap-2">
             <h2 className="font-bold text-xl tracking-tight ">Blue Bird CSS</h2>
-            <span className="badge badge-secondary badge-sm hidden-sm">v0.1.1</span>
+            <span className="badge badge-secondary badge-sm hidden-sm">v0.2.1</span>
           </div>
           <div className="flex items-center gap-2 flex-wrap hidden-sm">
             <button
