@@ -148,17 +148,17 @@ import { toast, snackbar, ResponsiveDataTable } from '@seip/blue-bird-css';`}
           <div className="border p-4 rounded-lg bg-background">
             <h3 className="font-bold text-lg mb-1">Touch Carousel</h3>
             <p className="text-sm text-secondary mb-3">Mobile-first touch swipe &amp; autoplay card carousels for modern web apps.</p>
-            <a href="#/carousel" className="btn-subtle-purple px-3 py-1 text-sm font-medium inline-block">Explore Carousel &rarr;</a>
+            <a href="#/carousel" className="btn-subtle-purple px-4 py-2 text-sm font-medium inline-block rounded">Explore Carousel &rarr;</a>
           </div>
           <div className="border p-4 rounded-lg bg-background">
-            <h3 className="font-bold text-lg mb-1">4-Direction Drawers</h3>
+            <h3 className="font-bold text-lg mb-1">Direction Drawers</h3>
             <p className="text-sm text-secondary mb-3">Slide-out panels from left, right, top, or bottom with auto-mobile navigation support.</p>
-            <a href="#/aside-drawer" className="btn-subtle-green px-3 py-1 text-sm font-medium inline-block">Explore Drawers &rarr;</a>
+            <a href="#/aside-drawer" className="btn-subtle-green px-4 py-2 text-sm font-medium inline-block rounded">Explore Drawers &rarr;</a>
           </div>
           <div className="border p-4 rounded-lg bg-background">
             <h3 className="font-bold text-lg mb-1">CSS Animations</h3>
             <p className="text-sm text-secondary mb-3">Spin, bounce, pulse, float, slide, shimmer, and cyberpunk glow animations.</p>
-            <a href="#/animations" className="btn-subtle-pink px-3 py-1 text-sm font-medium inline-block">Explore Animations &rarr;</a>
+            <a href="#/animations" className="btn-subtle-pink px-4 py-2 text-sm font-medium inline-block rounded">Explore Animations &rarr;</a>
           </div>
         </div>
       </article>
