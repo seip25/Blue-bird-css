@@ -50,7 +50,7 @@ export default function ComponentsDoc() {
           </div>
         </div>
         <CodeBlock language="html">
-{`<div class="alert alert-info">
+          {`<div class="alert alert-info">
   <div>
     <div class="alert-title">Information</div>
     <p class="alert-description">System update scheduled.</p>
@@ -71,19 +71,19 @@ export default function ComponentsDoc() {
         </p>
         <div className="tabs border p-4 rounded-xl my-4">
           <div className="tab-list">
-            <button 
+            <button
               className={`tab-trigger ${activeTab === 'account' ? 'active' : ''}`}
               onClick={() => setActiveTab('account')}
             >
               Account
             </button>
-            <button 
+            <button
               className={`tab-trigger ${activeTab === 'password' ? 'active' : ''}`}
               onClick={() => setActiveTab('password')}
             >
               Password
             </button>
-            <button 
+            <button
               className={`tab-trigger ${activeTab === 'settings' ? 'active' : ''}`}
               onClick={() => setActiveTab('settings')}
             >
@@ -97,7 +97,7 @@ export default function ComponentsDoc() {
           </div>
         </div>
         <CodeBlock language="html">
-{`<div class="tabs">
+          {`<div class="tabs">
   <div class="tab-list">
     <button class="tab-trigger active">Account</button>
     <button class="tab-trigger">Password</button>
@@ -125,7 +125,7 @@ export default function ComponentsDoc() {
           </nav>
         </div>
         <CodeBlock language="html">
-{`<nav class="breadcrumb">
+          {`<nav class="breadcrumb">
   <a href="#" class="breadcrumb-item">Home</a>
   <span class="breadcrumb-separator">/</span>
   <a href="#" class="breadcrumb-item">Components</a>
@@ -144,16 +144,16 @@ export default function ComponentsDoc() {
         <div className="border p-4 rounded-xl my-4 flex items-center justify-between">
           <span className="font-medium">Enable Email Notifications</span>
           <label className="switch">
-            <input 
-              type="checkbox" 
-              checked={enabled} 
-              onChange={(e) => setEnabled(e.target.checked)} 
+            <input
+              type="checkbox"
+              checked={enabled}
+              onChange={(e) => setEnabled(e.target.checked)}
             />
             <span className="switch-slider"></span>
           </label>
         </div>
         <CodeBlock language="html">
-{`<label class="switch">
+          {`<label class="switch">
   <input type="checkbox" checked />
   <span class="switch-slider"></span>
 </label>`}
@@ -174,7 +174,7 @@ export default function ComponentsDoc() {
           </div>
         </div>
         <CodeBlock language="html">
-{`<div class="flex items-center gap-4">
+          {`<div class="flex items-center gap-4">
   <div class="skeleton skeleton-avatar"></div>
   <div class="w-full">
     <div class="skeleton skeleton-text w-full"></div>
@@ -200,7 +200,7 @@ export default function ComponentsDoc() {
           </div>
         </div>
         <CodeBlock language="html">
-{`<div class="avatar-group">
+          {`<div class="avatar-group">
   <div class="avatar bg-blue">JD</div>
   <div class="avatar bg-purple">AS</div>
   <div class="avatar bg-emerald">MK</div>
@@ -234,7 +234,7 @@ export default function ComponentsDoc() {
           </span>
         </div>
         <CodeBlock language="html">
-{`<!-- Live Pulsing Status Badge -->
+          {`<!-- Live Pulsing Status Badge -->
 <span class="badge badge-secondary badge-dot">
   <span class="dot dot-success dot-pulse"></span>
   <span>Online</span>
@@ -258,7 +258,7 @@ export default function ComponentsDoc() {
             <span>Community</span>
           </div>
           <div className="separator separator-horizontal"></div>
-          <div className="grid cols-2 gap-4 mt-4">
+          <div className="grid  gap-4 mt-4">
             <div className="aspect-video bg-secondary rounded-lg flex items-center justify-center font-medium">
               16:9 Aspect Video
             </div>
@@ -268,7 +268,7 @@ export default function ComponentsDoc() {
           </div>
         </div>
         <CodeBlock language="html">
-{`<!-- Separators -->
+          {`<!-- Separators -->
 <div class="separator separator-horizontal"></div>
 <div class="separator separator-vertical"></div>
 

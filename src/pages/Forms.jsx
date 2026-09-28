@@ -21,10 +21,10 @@ export default function Forms() {
           <button data-password-toggle="#pwdPassword" aria-pressed="true" class="outline showing">👁️</button>
         </div>
         <input type="number" placeholder="Number" />
-        
+
       </div>
       <CodeBlock language="html">
-{`<div><label>Label</label><input type="text" placeholder="Text Input" /></div>
+        {`<div><label>Label</label><input type="text" placeholder="Text Input" /></div>
 <input type="email" placeholder="Email Input">
 <div class="input-group">
   <input type="password" placeholder="Password" id="pwdPassword" />
@@ -38,7 +38,7 @@ export default function Forms() {
       <div className="example">
         <h4 className="text-sm font-semibold mb-2">Fill Variant (.fill)</h4>
         <input type="text" className="fill" placeholder="Fill Input" />
-        
+
         <h4 className="text-sm font-semibold mb-2 mt-4">Outline Variant (.outline)</h4>
         <input type="text" className="outline" placeholder="Outline Input" />
         <select className="outline">
@@ -48,7 +48,7 @@ export default function Forms() {
         <textarea className="outline" placeholder="Outline Textarea" rows="2"></textarea>
       </div>
       <CodeBlock language="html">
-{`<!-- Fill Variant -->
+        {`<!-- Fill Variant -->
 <input type="text" class="fill" placeholder="Fill Input">
 
 <!-- Outline Variant -->
@@ -70,7 +70,7 @@ export default function Forms() {
         </select>
       </div>
       <CodeBlock language="html">
-{`<select>
+        {`<select>
   <option>Standard Select</option>
   <option>Option 2</option>
 </select>
@@ -85,7 +85,7 @@ export default function Forms() {
         <textarea placeholder="Write something..." rows="3"></textarea>
       </div>
       <CodeBlock language="html">
-{`<textarea placeholder="Write something..." rows="3"></textarea>`}
+        {`<textarea placeholder="Write something..." rows="3"></textarea>`}
       </CodeBlock>
 
       <h3>Floating Labels (Outline &amp; Filled Style)</h3>
@@ -101,7 +101,7 @@ export default function Forms() {
         </div>
       </div>
       <CodeBlock language="html">
-{`<!-- Outline Floating Input -->
+        {`<!-- Outline Floating Input -->
 <div class="floating">
   <input type="email" id="email" placeholder=" " />
   <label for="email">Email Address</label>
@@ -124,24 +124,19 @@ export default function Forms() {
               <input type="checkbox" role="switch" defaultChecked />
               <span>Standard Pill Switch</span>
             </label>
-            <label className="flex items-center gap-2">
-              <input type="checkbox" className="switch-android" defaultChecked />
-              <span>Android Material Switch (.switch-android)</span>
-            </label>
+
           </div>
         </div>
       </div>
       <CodeBlock language="html">
-{`<!-- Checkbox & Radio -->
+        {`<!-- Checkbox & Radio -->
 <label><input type="checkbox" checked> Checked</label>
 <label><input type="radio" name="group" checked> Option A</label>
 
 <!-- Standard Pill Switch -->
 <label><input type="checkbox" role="switch" checked> Pill Switch</label>
 
-<!-- Android Material Switch -->
-<label><input type="checkbox" class="switch-android" checked> Android Switch</label>`}
-      </CodeBlock>
+ `}</CodeBlock>
 
       <h3>Fieldset & Legend</h3>
       <p>Group related inputs with <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code>:</p>
@@ -162,7 +157,7 @@ export default function Forms() {
         <button>Submit</button>
       </fieldset>
       <CodeBlock language="html">
-{`<fieldset>
+        {`<fieldset>
   <legend>Personal Information</legend>
   <div class="floating">
     <input type="text" placeholder=" " />
@@ -192,7 +187,7 @@ export default function Forms() {
         </div>
       </div>
       <CodeBlock language="html">
-{`<!-- Styled File Input -->
+        {`<!-- Styled File Input -->
 <input type="file">
 
 <!-- Custom Range Slider -->
@@ -206,7 +201,7 @@ export default function Forms() {
       <p className="text-secondary mb-3">
         BlueBird.js adds powerful data attributes for common UI interactions without writing a single line of JavaScript:
       </p>
-      
+
       {/* 1. Quick Action Triggers */}
       <div className="example flex flex-wrap items-center gap-3">
         <button className="secondary" data-copy="npm install bluebird-css">
@@ -261,10 +256,10 @@ export default function Forms() {
         Type in the input to filter list items or table rows instantly in real time (works like a live filter, Datalist, or Select2 dropdown):
       </p>
       <div className="example flex flex-col gap-3">
-        <input 
-          type="text" 
-          data-filter-target="#filterable-list" 
-          placeholder="Filter frameworks (e.g. React, Vue, Svelte, Tailwind)..." 
+        <input
+          type="text"
+          data-filter-target="#filterable-list"
+          placeholder="Filter frameworks (e.g. React, Vue, Svelte, Tailwind)..."
         />
         <ul id="filterable-list" className="border rounded-xl p-2 flex flex-col gap-1 bg-surface">
           <li className="p-2 rounded-lg hover:bg-secondary cursor-pointer flex justify-between">
@@ -290,7 +285,7 @@ export default function Forms() {
       </div>
 
       <CodeBlock language="html">
-{`<!-- 1. Real-time Live Filter / Searchable Dropdown -->
+        {`<!-- 1. Real-time Live Filter / Searchable Dropdown -->
 <input type="text" data-filter-target="#my-list" placeholder="Search...">
 <ul id="my-list">
   <li>React.js</li>
@@ -324,7 +319,7 @@ export default function Forms() {
 
       <h3>Validation States</h3>
       <CodeBlock language="html">
-{`<!-- Invalid select -->
+        {`<!-- Invalid select -->
 <select aria-invalid="true">
   <option>Please select...</option>
 </select>

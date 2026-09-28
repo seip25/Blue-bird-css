@@ -23,7 +23,7 @@ export default function Cards() {
           <p className="text-secondary">Subtle blur backdrop filter with smooth borders and glow effects.</p>
         </article>
 
-        <article className="glass-card glow-purple hover-lift p-5">
+        <article className="glass-card glow-purple hover-lift p-5 flex flex-col">
           <div className="flex items-center gap-2 mb-2">
             <span className="badge badge-secondary">Purple Glow</span>
           </div>
@@ -32,7 +32,7 @@ export default function Cards() {
         </article>
       </div>
       <CodeBlock language="html">
-{`<!-- Glassmorphic Card -->
+        {`<!-- Glassmorphic Card -->
 <article class="glass-card border-glow p-5">
   <div class="flex items-center gap-2 mb-2">
     <span class="avatar avatar-sm">AI</span>
@@ -61,7 +61,7 @@ export default function Cards() {
         </figure>
       </div>
       <CodeBlock language="html">
-{`<article>
+        {`<article>
   <h4>Article Card</h4>
   <p>Content...</p>
 </article>
