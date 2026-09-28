@@ -189,10 +189,145 @@ details[open] summary {
   padding-bottom: 0.6rem;
 }
 
-li {
+nav ul,
+nav ol,
+.nav ul,
+.nav ol,
+.menu,
+.tabs,
+.bottom-nav ul,
+[role="tablist"],
+[role="menu"] {
   list-style: none;
   padding-left: 0;
   margin-left: 0;
+}
+
+/* Semantic Sections & Structure */
+main, article, section, aside, header, footer, nav {
+  display: block;
+}
+
+/* <hr> Semantic Divider */
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 1.5rem 0;
+  color: inherit;
+}
+
+/* Text Level Semantics */
+address {
+  font-style: normal;
+  color: var(--text-secondary);
+}
+
+time {
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+del {
+  color: var(--text-error);
+  text-decoration: line-through;
+}
+
+ins {
+  color: var(--text-success);
+  text-decoration: underline;
+}
+
+small {
+  font-size: 0.875em;
+  color: var(--text-secondary);
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+em, i {
+  font-style: italic;
+}
+
+/* Native HTML5 <dialog> */
+dialog {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg, 0.75rem);
+  padding: 1.5rem;
+  background-color: var(--surface);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-lg);
+  max-width: min(90vw, 32rem);
+  margin: auto;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Native HTML5 <progress> */
+progress {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 0.5rem;
+  border: none;
+  border-radius: var(--border-radius-full, 9999px);
+  overflow: hidden;
+  background-color: var(--secondary);
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--secondary);
+  border-radius: var(--border-radius-full, 9999px);
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--primary);
+  border-radius: var(--border-radius-full, 9999px);
+  transition: width 0.3s ease;
+}
+
+progress::-moz-progress-bar {
+  background-color: var(--primary);
+  border-radius: var(--border-radius-full, 9999px);
+}
+
+/* Native HTML5 <meter> */
+meter {
+  width: 100%;
+  height: 0.5rem;
+  border-radius: var(--border-radius-full, 9999px);
+}
+
+/* Native HTML5 <fieldset> & <legend> */
+fieldset {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius, 0.5rem);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  background-color: var(--surface);
+}
+
+legend {
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0 0.5rem;
+  color: var(--text-primary);
 }
 
 }

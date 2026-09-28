@@ -5,6 +5,7 @@ import './App.css';
 
 import Sidebar from './components/Sidebar';
 import Introduction from './pages/Introduction';
+import NextjsDoc from './pages/NextjsDoc';
 import Buttons from './pages/Buttons';
 import Forms from './pages/Forms';
 import Typography from './pages/Typography';
@@ -119,6 +120,7 @@ function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Introduction />} />
+        <Route path="/nextjs" element={<NextjsDoc />} />
         <Route path="/buttons" element={<Buttons />} />
         <Route path="/forms" element={<Forms />} />
         <Route path="/typography" element={<Typography />} />

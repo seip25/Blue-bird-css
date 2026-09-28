@@ -200,7 +200,6 @@
 
   .flex {
     display: flex;
-    gap: 1rem;
   }
 
   .flex-col {
@@ -506,7 +505,7 @@
   }
 
   .font-semibold {
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .bottom-nav {
@@ -995,4 +994,107 @@
   .gap-y-10 {
     row-gap: 2.5rem;
   }
+
+  /* --- Inset (Top / Right / Bottom / Left) --- */
+  .inset-0 { top: 0px; right: 0px; bottom: 0px; left: 0px; }
+  .inset-x-0 { left: 0px; right: 0px; }
+  .inset-y-0 { top: 0px; bottom: 0px; }
+  .inset-auto { top: auto; right: auto; bottom: auto; left: auto; }
+
+  /* --- Full Grid Columns (Tailwind parity) --- */
+  .grid-cols-1  { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+  .grid-cols-2  { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-cols-3  { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .grid-cols-4  { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .grid-cols-5  { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .grid-cols-6  { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .grid-cols-7  { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+  .grid-cols-8  { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+  .grid-cols-9  { grid-template-columns: repeat(9, minmax(0, 1fr)); }
+  .grid-cols-10 { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+  .grid-cols-11 { grid-template-columns: repeat(11, minmax(0, 1fr)); }
+  .grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+  .grid-cols-none { grid-template-columns: none; }
+
+  /* Grid Column Span */
+  .col-auto { grid-column: auto; }
+  .col-span-1 { grid-column: span 1 / span 1; }
+  .col-span-2 { grid-column: span 2 / span 2; }
+  .col-span-3 { grid-column: span 3 / span 3; }
+  .col-span-4 { grid-column: span 4 / span 4; }
+  .col-span-5 { grid-column: span 5 / span 5; }
+  .col-span-6 { grid-column: span 6 / span 6; }
+  .col-span-7 { grid-column: span 7 / span 7; }
+  .col-span-8 { grid-column: span 8 / span 8; }
+  .col-span-9 { grid-column: span 9 / span 9; }
+  .col-span-10 { grid-column: span 10 / span 10; }
+  .col-span-11 { grid-column: span 11 / span 11; }
+  .col-span-12 { grid-column: span 12 / span 12; }
+  .col-span-full { grid-column: 1 / -1; }
+
+  /* Grid Row Span */
+  .row-auto { grid-row: auto; }
+  .row-span-1 { grid-row: span 1 / span 1; }
+  .row-span-2 { grid-row: span 2 / span 2; }
+  .row-span-3 { grid-row: span 3 / span 3; }
+  .row-span-4 { grid-row: span 4 / span 4; }
+  .row-span-5 { grid-row: span 5 / span 5; }
+  .row-span-6 { grid-row: span 6 / span 6; }
+  .row-span-full { grid-row: 1 / -1; }
+
+  /* Alignment: Place Items & Place Content */
+  .place-items-start { place-items: start; }
+  .place-items-end { place-items: end; }
+  .place-items-center { place-items: center; }
+  .place-items-stretch { place-items: stretch; }
+
+  .place-content-center { place-content: center; }
+  .place-content-start { place-content: start; }
+  .place-content-end { place-content: end; }
+  .place-content-between { place-content: space-between; }
+  .place-content-around { place-content: space-around; }
+  .place-content-evenly { place-content: space-evenly; }
+  .place-content-stretch { place-content: stretch; }
+
+  .content-center { align-content: center; }
+  .content-start { align-content: flex-start; }
+  .content-end { align-content: flex-end; }
+  .content-between { align-content: space-between; }
+  .content-around { align-content: space-around; }
+  .content-evenly { align-content: space-evenly; }
+
+  /* Accessibility / Screen Readers */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  .not-sr-only {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  /* List Style Utilities */
+  .list-none { list-style-type: none; }
+  .list-disc { list-style-type: disc; }
+  .list-decimal { list-style-type: decimal; }
+  .list-inside { list-style-position: inside; }
+  .list-outside { list-style-position: outside; }
+
+  /* Visibility */
+  .visible { visibility: visible; }
+  .invisible { visibility: hidden; }
+  .collapse { visibility: collapse; }
 }

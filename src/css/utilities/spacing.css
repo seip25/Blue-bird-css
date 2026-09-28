@@ -332,4 +332,42 @@
   padding-right: 1.5rem;
 }
 
+/* --- Space Between (Children Spacing) --- */
+.space-x-0 > * + * { margin-left: 0px; }
+.space-x-1 > * + * { margin-left: 0.25rem; }
+.space-x-2 > * + * { margin-left: 0.5rem; }
+.space-x-3 > * + * { margin-left: 0.75rem; }
+.space-x-4 > * + * { margin-left: 1rem; }
+.space-x-5 > * + * { margin-left: 1.25rem; }
+.space-x-6 > * + * { margin-left: 1.5rem; }
+.space-x-8 > * + * { margin-left: 2rem; }
+.space-x-10 > * + * { margin-left: 2.5rem; }
+
+.space-y-0 > * + * { margin-top: 0px; }
+.space-y-1 > * + * { margin-top: 0.25rem; }
+.space-y-2 > * + * { margin-top: 0.5rem; }
+.space-y-3 > * + * { margin-top: 0.75rem; }
+.space-y-4 > * + * { margin-top: 1rem; }
+.space-y-5 > * + * { margin-top: 1.25rem; }
+.space-y-6 > * + * { margin-top: 1.5rem; }
+.space-y-8 > * + * { margin-top: 2rem; }
+.space-y-10 > * + * { margin-top: 2.5rem; }
+
+/* --- Divide Borders Between Children --- */
+.divide-x > * + * { border-left: 1px solid var(--border-color); }
+.divide-y > * + * { border-top: 1px solid var(--border-color); }
+.divide-transparent > * + * { border-color: transparent; }
+
+/* --- Directional Borders --- */
+.border-t { border-top: 1px solid var(--border-color); }
+.border-b { border-bottom: 1px solid var(--border-color); }
+.border-l { border-left: 1px solid var(--border-color); }
+.border-r { border-right: 1px solid var(--border-color); }
+.border-x { border-left: 1px solid var(--border-color); border-right: 1px solid var(--border-color); }
+.border-y { border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+.border-t-0 { border-top-width: 0px; }
+.border-b-0 { border-bottom-width: 0px; }
+.border-l-0 { border-left-width: 0px; }
+.border-r-0 { border-right-width: 0px; }
+
 }

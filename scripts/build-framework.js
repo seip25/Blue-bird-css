@@ -1,3 +1,4 @@
+/* global Buffer */
 import fs from 'fs';
 import path from 'path';
 
@@ -32,6 +33,7 @@ const cssModules = [
   'src/css/utilities/colors.css',
   'src/css/utilities/typography.css',
   'src/css/utilities/effects.css',
+  'src/css/utilities/responsive.css',
 ];
 
 const banner = `/* ==========================================================================
@@ -222,12 +224,12 @@ console.log(`✅ TypeScript Definitions Generated: dist/bluebird.d.ts`);
 // 4. AUTOCOMPLETION CUSTOM DATA (VS Code / IDE)
 // ==========================================
 // Extract class names from the CSS to generate customData for autocomplete
-const classMatches = fullCss.match(/\.([a-zA-Z0-9_\-\\]+)(?=[\s{,:.])/g) || [];
+const classMatches = fullCss.match(/\.([a-zA-Z0-9_\-\\:/]+)(?=[\s{,>+~:])/g) || [];
 const uniqueClasses = Array.from(
   new Set(
     classMatches
       .map(c => c.slice(1).replace(/\\/g, ''))
-      .filter(c => !c.match(/^[0-9]/) && c.length > 1)
+      .filter(c => !c.match(/^[0-9]/) && c.length > 1 && !c.includes('hover') && !c.includes('focus'))
   )
 ).sort();
 
@@ -293,5 +295,33 @@ fs.writeFileSync('.vscode/settings.json', JSON.stringify(vscodeSettings, null, 2
 console.log(`✅ VS Code Custom Data Generated:`);
 console.log(`   - dist/bluebird.html-data.json (${uniqueClasses.length} classes indexed for autocomplete)`);
 console.log(`   - .vscode/settings.json created for instant IDE autocomplete`);
+
+// ==========================================
+// 5. BUILD REACT / NEXT.JS MODULE
+// ==========================================
+ensureDir('dist/react');
+
+const reactBundleContent = `'use client';
+import React, { createContext, useContext, useEffect, useState, useMemo, useCallback, forwardRef, useRef } from 'react';
+
+// --- ThemeProvider ---
+${fs.readFileSync('src/react/ThemeProvider.jsx', 'utf-8').replace(/'use client';/g, '').replace(/import React[^;]+;/g, '').trim()}
+
+// --- ThemeToggle ---
+${fs.readFileSync('src/react/ThemeToggle.jsx', 'utf-8').replace(/'use client';/g, '').replace(/import React[^;]+;/g, '').replace(/import { useTheme }[^;]+;/g, '').trim()}
+
+// --- Hooks ---
+${fs.readFileSync('src/react/hooks.js', 'utf-8').replace(/'use client';/g, '').replace(/import {[^}]+} from 'react';/g, '').trim()}
+
+// --- Components ---
+${fs.readFileSync('src/react/components.jsx', 'utf-8').replace(/'use client';/g, '').replace(/import React[^;]+;/g, '').trim()}
+`;
+
+fs.writeFileSync('dist/react/index.js', reactBundleContent);
+fs.writeFileSync('dist/react/index.d.ts', fs.readFileSync('src/react/index.d.ts', 'utf-8'));
+
+console.log(`✅ React / Next.js Module Compiled:`);
+console.log(`   - dist/react/index.js (with 'use client' and universal React.createElement)`);
+console.log(`   - dist/react/index.d.ts (TypeScript definitions)`);
 
 console.log('🎉 Framework build completed successfully!\n');

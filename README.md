@@ -62,42 +62,126 @@ A lightweight, semantic, modern design framework inspired by modern aesthetics a
 
 ---
 
-## 🚀 Quick Start (NPM & CDN)
+## 🚀 Quick Start (NPM, Next.js & CDN)
 
-### Option A: Install via NPM (Recommended for modern bundlers)
+### Option A: Next.js & React (App Router & Pages Router)
+
+Instala el paquete oficial:
 
 ```bash
-npm install @seip/blue-bird
+npm install @seip/blue-bird-css
 ```
 
-In your main entry point (`main.js`, `index.js`, `App.jsx`, etc.):
+#### 1. Importa el CSS en `app/layout.tsx`:
+
+```tsx
+import type { Metadata } from 'next';
+import '@seip/blue-bird-css/css';
+import { ThemeProvider } from '@seip/blue-bird-css/react';
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="es" suppressHydrationWarning>
+      <body>
+        <ThemeProvider defaultTheme="system">
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
+```
+
+#### 2. Usa componentes y hooks en tus páginas (`app/page.tsx`):
+
+```tsx
+'use client';
+
+import { ThemeToggle, useToast, Button, Card, CardHeader, CardTitle, CardContent } from '@seip/blue-bird-css/react';
+
+export default function Page() {
+  const { toast } = useToast();
+
+  return (
+    <main className="container py-8 space-y-6">
+      <header className="flex items-center justify-between">
+        <h1 className="text-3xl font-bold">Mi App Next.js</h1>
+        <ThemeToggle />
+      </header>
+
+      {/* Clases idénticas a Tailwind con soporte responsive */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Card hoverable className="p-6">
+          <CardHeader>
+            <CardTitle>Card Semántica</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-secondary">
+              Totalmente compatible con Tailwind CSS y HTML semántico nativo.
+            </p>
+            <Button
+              variant="primary"
+              className="mt-4"
+              onClick={() => toast({ title: '¡Guardado!', type: 'success' })}
+            >
+              Lanzar Toast
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    </main>
+  );
+}
+```
+
+---
+
+### Option B: Install via NPM (Vite / React / Bundlers)
+
+```bash
+npm install @seip/blue-bird-css
+```
+
+En tu punto de entrada principal (`main.jsx`, `index.js`, etc.):
 
 ```javascript
-// Import CSS (compiled with @layer for zero specificity conflicts)
-import '@seip/blue-bird/css';
+// Import CSS (compilado con @layer para evitar conflictos de especificidad)
+import '@seip/blue-bird-css/css';
 
-// Import JS helpers with full TypeScript autocomplete
-import { toast, snackbar, ResponsiveDataTable, bluebird } from '@seip/blue-bird';
+// Import JS helpers
+import { toast, snackbar, ResponsiveDataTable, bluebird } from '@seip/blue-bird-css';
 
-// Ready to use!
+// Listo para usar!
 toast({ message: 'Hello from Blue Bird!', type: 'success' });
 ```
 
 ---
 
-### Option B: Vanilla HTML / JS via CDN (Zero Build Step)
+### Option C: Vanilla HTML / JS via CDN (Zero Build Step)
 
-Include the minified stylesheet and JavaScript helper directly in your `<head>`:
+Incluye la hoja de estilos y el helper JavaScript en tu `<head>`:
 
 ```html
-<!-- Blue Bird CSS (Minified, only ~113 KB, with Eye-Care Dark Mode & @layer) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@seip/blue-bird@latest/dist/bluebird.min.css" />
+<!-- Blue Bird CSS (Minified, con Eye-Care Dark Mode, utilidades Tailwind y @layer) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@seip/blue-bird-css@latest/dist/bluebird.min.css" />
 
 <!-- Blue Bird JS Helper (Automatic drawers, toasts, carousels, command palette) -->
-<script src="https://cdn.jsdelivr.net/npm/@seip/blue-bird@latest/dist/bluebird.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@seip/blue-bird-css@latest/dist/bluebird.min.js" defer></script>
 ```
 
 ---
+
+## 🎯 Compatibilidad con Tailwind CSS (88%+ Parity)
+
+Blue Bird CSS ofrece pasaje directo e intuitivo para desarrolladores habituados a Tailwind CSS:
+
+- **Flexbox & Grid**: `flex`, `flex-col`, `flex-row`, `items-center`, `justify-between`, `grid`, `grid-cols-1` a `grid-cols-12`, `col-span-*`, `gap-0` a `gap-12`.
+- **Responsive Prefixes**: `sm:`, `md:`, `lg:`, `xl:`, `2xl:` para layout, flex, grid, gap, padding, margin, width y typography.
+- **Tipografía Completa**: `text-xs` hasta `text-9xl`, `font-thin` a `font-black`, `uppercase`, `lowercase`, `capitalize`, `italic`, `truncate`, `text-balance`.
+- **Dimensiones Semánticas**: `max-w-xs` a `max-w-7xl`, `max-w-prose`, `size-0` a `size-32`, `min-h-screen`, `h-screen`, `h-dvh`, fracciones `w-1/2`, `w-1/3`, `w-2/3`, `w-1/4`, `w-3/4`.
+- **Espaciado Inteligente**: `space-x-*`, `space-y-*`, `divide-x`, `divide-y`, `border-t`, `border-b`, `border-l`, `border-r`.
+- **Efectos e Interactividad**: `opacity-0` a `opacity-100`, `pointer-events-none`, `cursor-not-allowed`, `sr-only`, `not-sr-only`.
+- **HTML Semántico Nativo**: Estilos elegantes para `<dialog>`, `<progress>`, `<meter>`, `<fieldset>`, `<legend>`, `<hr>`, `<time>`, `<del>`, `<ins>`.
 
 ## ✨ VS Code Autocompletion & TypeScript
 
