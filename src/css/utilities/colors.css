@@ -2020,7 +2020,7 @@ button.text-pink {
   color: var(--pink-500);
 }
 
-[data-theme="dark"]button.text-pink {
+[data-theme="dark"] button.text-pink {
   color: var(--pink-400);
 }
 
@@ -2028,7 +2028,7 @@ button.text-red {
   color: var(--red-500);
 }
 
-[data-theme="dark"]button.text-red {
+[data-theme="dark"] button.text-red {
   color: var(--red-400);
 }
 
@@ -2037,7 +2037,7 @@ button.text-blue {
   color: var(--blue-500);
 }
 
-[data-theme="dark"]button.text-blue {
+[data-theme="dark"] button.text-blue {
   color: var(--blue-400);
 }
 
@@ -2045,7 +2045,7 @@ button.text-green {
   color: var(--green-500);
 }
 
-[data-theme="dark"]button.text-green {
+[data-theme="dark"] button.text-green {
   color: var(--green-400);
 }
 
@@ -2053,7 +2053,7 @@ button.text-yellow {
   color: var(--yellow-500);
 }
 
-[data-theme="dark"]button.text-yellow {
+[data-theme="dark"] button.text-yellow {
   color: var(--yellow-400);
 }
 
@@ -2061,7 +2061,7 @@ button.text-indigo {
   color: var(--indigo-500);
 }
 
-[data-theme="dark"]button.text-indigo {
+[data-theme="dark"] button.text-indigo {
   color: var(--indigo-400);
 }
 
@@ -2069,7 +2069,7 @@ button.text-violet {
   color: var(--violet-500);
 }
 
-[data-theme="dark"]button.text-violet {
+[data-theme="dark"] button.text-violet {
   color: var(--violet-400);
 }
 

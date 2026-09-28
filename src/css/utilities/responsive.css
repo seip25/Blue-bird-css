@@ -381,14 +381,14 @@
      2X EXTRA LARGE (2xl: >= 1536px)
      -------------------------------------------------------------------------- */
   @media (min-width: 1536px) {
-    .2xl\:hidden { display: none !important; }
-    .2xl\:block  { display: block !important; }
-    .2xl\:flex   { display: flex !important; }
-    .2xl\:grid   { display: grid !important; }
+    .\32 xl\:hidden { display: none !important; }
+    .\32 xl\:block  { display: block !important; }
+    .\32 xl\:flex   { display: flex !important; }
+    .\32 xl\:grid   { display: grid !important; }
 
-    .2xl\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-    .2xl\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-    .2xl\:max-w-screen-2xl { max-width: 1536px; }
+    .\32 xl\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .\32 xl\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .\32 xl\:max-w-screen-2xl { max-width: 1536px; }
   }
 
 }

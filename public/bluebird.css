@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BLUE BIRD CSS FRAMEWORK — v0.1.0
+   BLUE BIRD CSS FRAMEWORK — v0.2.1
    Semantic, Modern & Lightweight UI System
    MIT License © Seip25 | https://github.com/seip25/Blue-bird-css
    ========================================================================== */
@@ -9922,7 +9922,7 @@ button.text-pink {
   color: var(--pink-500);
 }
 
-[data-theme="dark"]button.text-pink {
+[data-theme="dark"] button.text-pink {
   color: var(--pink-400);
 }
 
@@ -9930,7 +9930,7 @@ button.text-red {
   color: var(--red-500);
 }
 
-[data-theme="dark"]button.text-red {
+[data-theme="dark"] button.text-red {
   color: var(--red-400);
 }
 
@@ -9939,7 +9939,7 @@ button.text-blue {
   color: var(--blue-500);
 }
 
-[data-theme="dark"]button.text-blue {
+[data-theme="dark"] button.text-blue {
   color: var(--blue-400);
 }
 
@@ -9947,7 +9947,7 @@ button.text-green {
   color: var(--green-500);
 }
 
-[data-theme="dark"]button.text-green {
+[data-theme="dark"] button.text-green {
   color: var(--green-400);
 }
 
@@ -9955,7 +9955,7 @@ button.text-yellow {
   color: var(--yellow-500);
 }
 
-[data-theme="dark"]button.text-yellow {
+[data-theme="dark"] button.text-yellow {
   color: var(--yellow-400);
 }
 
@@ -9963,7 +9963,7 @@ button.text-indigo {
   color: var(--indigo-500);
 }
 
-[data-theme="dark"]button.text-indigo {
+[data-theme="dark"] button.text-indigo {
   color: var(--indigo-400);
 }
 
@@ -9971,7 +9971,7 @@ button.text-violet {
   color: var(--violet-500);
 }
 
-[data-theme="dark"]button.text-violet {
+[data-theme="dark"] button.text-violet {
   color: var(--violet-400);
 }
 
@@ -11091,14 +11091,14 @@ button.text-violet {
      2X EXTRA LARGE (2xl: >= 1536px)
      -------------------------------------------------------------------------- */
   @media (min-width: 1536px) {
-    .2xl\:hidden { display: none !important; }
-    .2xl\:block  { display: block !important; }
-    .2xl\:flex   { display: flex !important; }
-    .2xl\:grid   { display: grid !important; }
+    .\32 xl\:hidden { display: none !important; }
+    .\32 xl\:block  { display: block !important; }
+    .\32 xl\:flex   { display: flex !important; }
+    .\32 xl\:grid   { display: grid !important; }
 
-    .2xl\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-    .2xl\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-    .2xl\:max-w-screen-2xl { max-width: 1536px; }
+    .\32 xl\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .\32 xl\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .\32 xl\:max-w-screen-2xl { max-width: 1536px; }
   }
 
 }

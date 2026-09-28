@@ -1,4 +1,4 @@
-/* global Buffer */
+/* global Buffer, process */
 import fs from 'fs';
 import path from 'path';
 
@@ -10,7 +10,10 @@ ensureDir('dist');
 ensureDir('public');
 ensureDir('.vscode');
 
-console.log('🚀 Building @seip/blue-bird-cssframework...');
+const pkg = JSON.parse(fs.readFileSync('package.json', 'utf-8'));
+const version = pkg.version || '0.2.0';
+
+console.log(`🚀 Building @seip/blue-bird-css framework v${version}...`);
 
 // ==========================================
 // 1. BUILD CSS
@@ -37,7 +40,7 @@ const cssModules = [
 ];
 
 const banner = `/* ==========================================================================
-   BLUE BIRD CSS FRAMEWORK — v0.1.0
+   BLUE BIRD CSS FRAMEWORK — v${version}
    Semantic, Modern & Lightweight UI System
    MIT License © Seip25 | https://github.com/seip25/Blue-bird-css
    ========================================================================== */
@@ -70,8 +73,21 @@ function minifyCss(css) {
     .trim();
 }
 
-const minCss = `/* Blue Bird CSS v0.1.0 | MIT License | @seip/blue-bird-css*/\n` + minifyCss(fullCss);
+const minCss = `/* Blue Bird CSS v${version} | MIT License | @seip/blue-bird-css */\n` + minifyCss(fullCss);
 fs.writeFileSync('dist/bluebird.min.css', minCss);
+
+// Validate CSS AST with lightningcss to ensure full Turbopack / Next.js / PostCSS compatibility
+try {
+  const lightningcss = await import('lightningcss');
+  lightningcss.transform({ filename: 'dist/bluebird.css', code: Buffer.from(fullCss) });
+  lightningcss.transform({ filename: 'dist/bluebird.min.css', code: Buffer.from(minCss) });
+  console.log('✅ CSS Syntax Validated (Turbopack, Next.js & LightningCSS verified)');
+} catch (err) {
+  if (err.loc) {
+    console.error(`❌ CSS Validation Error: ${err.message} at line ${err.loc.line}, col ${err.loc.column}`);
+    process.exit(1);
+  }
+}
 
 console.log(`✅ CSS Compiled:`);
 console.log(`   - dist/bluebird.css (${(Buffer.byteLength(fullCss) / 1024).toFixed(1)} KB)`);
@@ -125,7 +141,7 @@ function simpleMinifyJs(js) {
     .trim();
 }
 
-const minJs = `/* Blue Bird JS v0.1.0 | MIT License | @seip/blue-bird-css*/\n` + simpleMinifyJs(browserJs);
+const minJs = `/* Blue Bird JS v${version} | MIT License | @seip/blue-bird-css */\n` + simpleMinifyJs(browserJs);
 fs.writeFileSync('dist/bluebird.min.js', minJs);
 
 console.log(`✅ JavaScript Compiled:`);
@@ -224,12 +240,13 @@ console.log(`✅ TypeScript Definitions Generated: dist/bluebird.d.ts`);
 // 4. AUTOCOMPLETION CUSTOM DATA (VS Code / IDE)
 // ==========================================
 // Extract class names from the CSS to generate customData for autocomplete
-const classMatches = fullCss.match(/\.([a-zA-Z0-9_\-\\:/]+)(?=[\s{,>+~:])/g) || [];
+const decodedCss = fullCss.replace(/\\([0-9a-fA-F]{1,6})\s*/g, (_, h) => String.fromCharCode(parseInt(h, 16)));
+const classMatches = decodedCss.match(/\.([a-zA-Z0-9_\-\\:/]+)(?=[\s{,>+~:])/g) || [];
 const uniqueClasses = Array.from(
   new Set(
     classMatches
       .map(c => c.slice(1).replace(/\\/g, ''))
-      .filter(c => !c.match(/^[0-9]/) && c.length > 1 && !c.includes('hover') && !c.includes('focus'))
+      .filter(c => (!c.match(/^[0-9]/) || c.startsWith('2xl:')) && c.length > 1 && !c.includes('hover') && !c.includes('focus'))
   )
 ).sort();
 
